@@ -14,6 +14,23 @@ html {
   --my-font: "Bebas Neue", cursive;
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+  transition: all 1s;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 0, 0, 0.486);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
 h2 {
   font-weight: 700;
   padding: 5rem 0 2rem 0;
@@ -372,14 +389,14 @@ h2 > p {
 }
 
 .about-me-inside-wrapper > h3 {
-  opacity: 0.8;
   text-align: left;
+  letter-spacing: 0.1rem;
   font-family: var(--my-font);
   font-size: clamp(25px, 2vw, 3rem);
 }
 .about-me-inside-wrapper > p {
   text-align: left;
-  font-size: clamp(15px, 2vw, 1rem);
+  font-size: clamp(15px, 2vw, 1.2rem);
 }
 
 .myFace {

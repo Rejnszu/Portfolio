@@ -13,18 +13,31 @@ navOpenBtn.addEventListener("click", function () {
 window.onscroll = function () {
   scrollNav();
 };
+word.innerHTML = word.textContent.replace(
+  /\S/g,
+  "<span class='letter'>$&</span>"
+);
+let letters = document.querySelectorAll(".letter");
 function showDownGlobal() {
   let navLinks = document.querySelectorAll(".nav-link");
   navLinks.forEach(function (link, i) {
     function showDown() {
       link.style.transform = "translateX(0px)";
     }
-    setInterval(showDown, 200 * i);
+    setTimeout(showDown, 200 * i);
+  });
+
+  Array.from(letters).forEach(function (letter, i) {
+    function down() {
+      letter.classList.add("animate");
+    }
+    setTimeout(down, (i + 2) * 100);
   });
 }
-setInterval(showDownGlobal, 2000);
+
+setTimeout(showDownGlobal, 2000);
 function scrollNav() {
-  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+  if (window.pageYOffset > 40) {
     naviContainer.classList.add("active");
   } else {
     naviContainer.classList.remove("active");
@@ -235,6 +248,24 @@ sendBtn.addEventListener("click", function () {
 });
 
 // ANIMACJE ELEMENTÓW
+// let spanLower;
+// let spanUpper;
+// function appendSpan() {
+//   sliderContainer.style.position = "relative";
+//   containerReview.style.position = "relative";
+//   spanUpper = document.createElement("span");
+//   spanLower = document.createElement("span");
+
+//   spanUpper.className = "upperCover";
+//   spanLower.className = "lowerCover";
+//   // spanUpper.classList.add("animate");
+//   // spanLower.classList.add("animate");
+//   sliderContainer.append(spanUpper);
+//   sliderContainer.append(spanLower);
+//   // containerReview.append(spanUpper);
+//   // containerReview.append(spanLower);
+// }
+// appendSpan();
 let animateOptions = {
   root: null,
   rootMargin: "-100px 0px -100px 0px",
@@ -258,4 +289,95 @@ animateOptions);
 
 moveObserverAnimate.observe(sliderContainer);
 moveObserverAnimate.observe(containerReview);
+// moveObserverAnimate.observe(spanUpper);
+// moveObserverAnimate.observe(spanLower);
 contactInput.forEach((input) => moveObserverAnimate.observe(input));
+
+// moving background elements
+let backgroundElements = [
+  { className: "background-element" },
+  { className: "background-element1" },
+  { className: "background-element2" },
+  { className: "background-element3" },
+];
+
+backgroundElements.forEach(function (n) {
+  let backgroundEl = document.createElement("div");
+  backgroundEl.className = n.className;
+  backgroundEl.classList.add("animate");
+  backgroundEl.classList.add("background-elements");
+  content.append(backgroundEl);
+});
+
+quizH3.innerHTML = quizH3.textContent.replace(
+  /\S/g,
+  "<span class='letterH3'>$&</span>"
+);
+
+let quizLetters = document.querySelectorAll(".letterH3");
+
+let animateLettersOptions = {
+  root: null,
+  rootMargin: "-100px 0px -100px 0px",
+  threshold: 0.3,
+};
+
+let moveObserverLetterAnimate = new IntersectionObserver(function Moving(
+  entries,
+  observer
+) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      Array.from(quizLetters).forEach(function (letter, i) {
+        function down() {
+          letter.classList.add("animate");
+        }
+        setTimeout(down, i * 50);
+      });
+      moveObserver.unobserve(entry.target);
+    }
+  });
+},
+animateLettersOptions);
+moveObserverLetterAnimate.observe(quizH3);
+
+let h2InsideContact = document.querySelectorAll(".h2-inside-contact");
+h2InsideContact.forEach(
+  (n) =>
+    (n.innerHTML = n.textContent.replace(
+      /\S/g,
+      "<span class='letterContact'>$&</span>"
+    ))
+);
+let contactLetters = document.querySelectorAll(".letterContact");
+
+let animateLettersOptionsContact = {
+  root: null,
+  rootMargin: "-100px 0px -100px 0px",
+  threshold: 0.3,
+};
+
+let moveObserverLetterAnimateContact = new IntersectionObserver(function Moving(
+  entries,
+  observer
+) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      Array.from(contactLetters).forEach(function (letter, i) {
+        function down() {
+          letter.classList.add("animate");
+        }
+        setTimeout(down, i * 50);
+      });
+      moveObserver.unobserve(entry.target);
+    }
+  });
+},
+animateLettersOptionsContact);
+h2InsideContact.forEach((input) =>
+  moveObserverLetterAnimateContact.observe(input)
+);

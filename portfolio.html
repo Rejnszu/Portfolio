@@ -48,22 +48,22 @@
       </div>
       <div class="col-sm-12 navi-container-mobile">
 
-        <a href="#aboutMe" class="nav-link">About me</a>
-        <a href="#mySkills" class="nav-link">My skills</a>
-        <a href="#port" class="nav-link">Portfolio</a>
-        <a href="" class="nav-link">Random</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <span class="nav-link-wrapper"> <a href="#aboutMe" class="nav-link">About me</a></span>
+        <span class="nav-link-wrapper"> <a href="#mySkills" class="nav-link">My skills</a></span>
+        <span class="nav-link-wrapper"> <a href="#port" class="nav-link">Portfolio</a></span>
+        <span class="nav-link-wrapper"> <a href="#containerReview" class="nav-link">Reviews</a></span>
+        <span class="nav-link-wrapper"> <a href="#contact" class="nav-link">Contact</a></span>
       </div>
 
 
 
       <div class="col-sm-12 navi-container">
 
-        <a href="#aboutMe" class="nav-link">About me</a>
-        <a href="#mySkills" class="nav-link">My skills</a>
-        <a href="#port" class="nav-link">Portfolio</a>
-        <a href="" class="nav-link">Random</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <span class="nav-link-wrapper"> <a href="#aboutMe" class="nav-link">About me</a></span>
+        <span class="nav-link-wrapper"> <a href="#mySkills" class="nav-link">My skills</a></span>
+        <span class="nav-link-wrapper"> <a href="#port" class="nav-link">Portfolio</a></span>
+        <span class="nav-link-wrapper"> <a href="#containerReview" class="nav-link">Reviews</a></span>
+        <span class="nav-link-wrapper"> <a href="#contact" class="nav-link">Contact</a></span>
       </div>
     </div>
   </div>
@@ -78,12 +78,12 @@
 
       </h1>
 
-
-      <img src="https://i.gifer.com/iLx.gif" alt="aboutgif">
+      <video src="assets/aboutmecompress.webm" autoplay loop muted> Your browser does not support the video tag.</video>
+      <!-- <img src="assets/aboutme.gif" alt="aboutgif"> -->
       <div class="row">
         <div class="col-sm-12 col-lg-7 about-me-col d-flex justify-content-center align-items-center">
           <fieldset class="about-me">
-            <legend>About me:</legend>
+            <legend id="word">About me:</legend>
             <div class="about-me-inside-wrapper">
               <h3>Introduction:</h3>
               <p>Hello everyone! My name is Lukas and Welcome to my portfolio site which was made to encourage You to
@@ -114,9 +114,12 @@
             class="imgWrapperFace"><img src="assets/hobbiton-min.png" alt="myface" class=" myFace"></span>
         </div>
       </div>
-      <a href="esklep.newtool.pl"><button class="custom-button">
-          <p>QUIZ</p>
-        </button></a>
+      <div class="quiz-container">
+        <h3 id="quizH3">If u want to know me better try out me quiz!</h3>
+        <a href="esklep.newtool.pl"><button class="custom-button">
+            <p>QUIZ</p>
+          </button></a>
+      </div>
     </div>
     <!-- UMIEJETNOŚCI -->
     <div class="container-fluid">
@@ -279,43 +282,72 @@
 
         </h2>
       </div>
-      <div class="row input-container">
-        <div class="col-sm-12">
-          <div class="styled-input wide">
-            <input type="text" required />
-            <label>Name</label>
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-12">
-          <div class="styled-input">
-            <input type="text" required />
-            <label>Email</label>
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-12">
-          <div class="styled-input" style="float:right;">
-            <input type="text" required />
-            <label>Phone Number</label>
-          </div>
-        </div>
-        <div class="col-sm-12">
 
-          <select id="reason" name="reason" class="styled-input">
-            <option value="australia">Website</option>
+      <div class="row">
+        <div class="col-sm-12 col-md-6 form-input">
+          <div class="h2-wrapper">
+            <h2>
+              <span class="h2-inside-contact h2-inside"> Through form!</span>
 
-            <option value="usa">Job offer</option>
-          </select>
-        </div>
-        <div class="col-sm-12">
-          <div class="styled-input wide">
-            <textarea required></textarea>
-            <label>Message</label>
+
+            </h2>
+          </div>
+          <div class="row input-container">
+
+            <div class="col-sm-12">
+              <div class="styled-input wide">
+                <input type="text" required />
+                <label>Name</label>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="styled-input">
+                <input type="text" required />
+                <label>Email</label>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="styled-input">
+                <input type="text" required />
+                <label>Phone Number</label>
+              </div>
+            </div>
+            <div class="col-sm-12">
+
+              <select id="reason" name="reason" class="styled-input">
+                <option value="australia">Website</option>
+
+                <option value="usa">Job offer</option>
+              </select>
+            </div>
+            <div class="col-sm-12">
+              <div class="styled-input wide">
+                <textarea required></textarea>
+                <label>Message</label>
+              </div>
+            </div>
+            <div class="col-sm-12 d-flex justify-content-center">
+              <div id="sendBtn" class="custom-button-contact">
+                <p>Send Message</p> <i class="bi bi-send-check"></i>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-sm-12 d-flex justify-content-end">
-          <div id="sendBtn" class="custom-button-contact">
-            <p>Send Message</p> <i class="bi bi-send-check"></i>
+        <div class="col-sm-12 col-md-6">
+
+          <div class="h2-wrapper">
+            <h2>
+              <span class="h2-inside-contact h2-inside"> Directly!</span>
+
+
+            </h2>
+
           </div>
+          <ul class="contact-list">
+            <li>Phone number: 609-660-472</li>
+            <li>E-mail: lukaszrejnsz@op.pl</li>
+
+          </ul>
         </div>
       </div>
     </div>

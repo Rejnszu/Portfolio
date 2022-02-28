@@ -17,9 +17,9 @@ word.innerHTML = word.textContent.replace(
   /\S/g,
   "<span class='letter'>$&</span>"
 );
+let navLinks = document.querySelectorAll(".nav-link");
 let letters = document.querySelectorAll(".letter");
 function showDownGlobal() {
-  let navLinks = document.querySelectorAll(".nav-link");
   navLinks.forEach(function (link, i) {
     function showDown() {
       link.style.transform = "translateX(0px)";
@@ -43,6 +43,37 @@ function scrollNav() {
     naviContainer.classList.remove("active");
   }
 }
+let containers = document.querySelectorAll(".section");
+
+let linkOptions = {
+  root: null,
+  rootMargin: "-50px 0px -50px 0px",
+  threshold: 0.3,
+};
+
+let linksObserver = new IntersectionObserver(function Moving(
+  entries,
+  observer
+) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      navLinks.forEach(function (n) {
+        n.children[0].classList.remove("active");
+        if (
+          entry.target.dataset.name ==
+          n.href.replace("http://127.0.0.1:5500/portfolio.html#", "")
+        ) {
+          n.children[0].classList.add("active");
+        }
+      });
+    }
+  });
+},
+linkOptions);
+
+containers.forEach((container) => linksObserver.observe(container));
 
 let skillObj = [
   { name: "HTML", percent: "70%" },
@@ -65,7 +96,7 @@ skillObj.forEach(function (skill) {
   dataPercent.textContent = skill.percent;
   skillCardContainer.append(skillCard);
 });
-
+let skillDiv = document.querySelectorAll(".skills-div");
 let skillBoxInside = document.querySelectorAll(".skill-box-dot");
 
 let options = {
@@ -83,8 +114,29 @@ let moveObserver = new IntersectionObserver(function Moving(entries, observer) {
     }
   });
 }, options);
-
+let options1 = {
+  root: null,
+  rootMargin: "0px 0px 0px 0px",
+  threshold: 0,
+};
 skillBoxInside.forEach((move) => moveObserver.observe(move));
+
+let moveObserver1 = new IntersectionObserver(function Moving(
+  entries,
+  observer
+) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add("active");
+      moveObserver.unobserve(entry.target);
+    }
+  });
+},
+options1);
+
+skillDiv.forEach((move) => moveObserver1.observe(move));
 
 let prev = document.querySelector(".prev");
 let next = document.querySelector(".next");
@@ -248,24 +300,7 @@ sendBtn.addEventListener("click", function () {
 });
 
 // ANIMACJE ELEMENTÓW
-// let spanLower;
-// let spanUpper;
-// function appendSpan() {
-//   sliderContainer.style.position = "relative";
-//   containerReview.style.position = "relative";
-//   spanUpper = document.createElement("span");
-//   spanLower = document.createElement("span");
 
-//   spanUpper.className = "upperCover";
-//   spanLower.className = "lowerCover";
-//   // spanUpper.classList.add("animate");
-//   // spanLower.classList.add("animate");
-//   sliderContainer.append(spanUpper);
-//   sliderContainer.append(spanLower);
-//   // containerReview.append(spanUpper);
-//   // containerReview.append(spanLower);
-// }
-// appendSpan();
 let animateOptions = {
   root: null,
   rootMargin: "-100px 0px -100px 0px",
@@ -289,8 +324,7 @@ animateOptions);
 
 moveObserverAnimate.observe(sliderContainer);
 moveObserverAnimate.observe(containerReview);
-// moveObserverAnimate.observe(spanUpper);
-// moveObserverAnimate.observe(spanLower);
+
 contactInput.forEach((input) => moveObserverAnimate.observe(input));
 
 // moving background elements
@@ -381,3 +415,16 @@ animateLettersOptionsContact);
 h2InsideContact.forEach((input) =>
   moveObserverLetterAnimateContact.observe(input)
 );
+
+let socialIcon = document.querySelectorAll(".social-icon");
+socialIcon.forEach(function (icon) {
+  icon.addEventListener("mouseenter", function () {
+    if (this.classList.contains("active")) {
+      return;
+    } else this.classList.add("active");
+    setTimeout(() => this.classList.remove("active"), 2000);
+  });
+});
+
+let html = document.getElementsByTagName("html");
+console.log(html[0].getAttribute("lang"));

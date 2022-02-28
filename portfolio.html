@@ -48,22 +48,32 @@
       </div>
       <div class="col-sm-12 navi-container-mobile">
 
-        <span class="nav-link-wrapper"> <a href="#aboutMe" class="nav-link">About me</a></span>
-        <span class="nav-link-wrapper"> <a href="#mySkills" class="nav-link">My skills</a></span>
-        <span class="nav-link-wrapper"> <a href="#port" class="nav-link">Portfolio</a></span>
-        <span class="nav-link-wrapper"> <a href="#containerReview" class="nav-link">Reviews</a></span>
-        <span class="nav-link-wrapper"> <a href="#contact" class="nav-link">Contact</a></span>
+        <span class="nav-link-wrapper"> <a href="#aboutMe" class="nav-link">About me<span
+              class="borderBottom"></span></a></span>
+        <span class="nav-link-wrapper"> <a href="#mySkills" class="nav-link">My skills<span
+              class="borderBottom"></span></a></span>
+        <span class="nav-link-wrapper"> <a href="#port" class="nav-link">Portfolio<span
+              class="borderBottom"></span></a></span>
+        <span class="nav-link-wrapper"> <a href="#containerReview" class="nav-link">Reviews<span
+              class="borderBottom"></span></a></span>
+        <span class="nav-link-wrapper"> <a href="#contact" class="nav-link">Contact<span
+              class="borderBottom"></span></a></span>
       </div>
 
 
 
       <div class="col-sm-12 navi-container">
 
-        <span class="nav-link-wrapper"> <a href="#aboutMe" class="nav-link">About me</a></span>
-        <span class="nav-link-wrapper"> <a href="#mySkills" class="nav-link">My skills</a></span>
-        <span class="nav-link-wrapper"> <a href="#port" class="nav-link">Portfolio</a></span>
-        <span class="nav-link-wrapper"> <a href="#containerReview" class="nav-link">Reviews</a></span>
-        <span class="nav-link-wrapper"> <a href="#contact" class="nav-link">Contact</a></span>
+        <span class="nav-link-wrapper"> <a href="#aboutMe" class="nav-link">About me <span
+              class="borderBottom"></span></a></span>
+        <span class="nav-link-wrapper"> <a href="#mySkills" class="nav-link">My skills <span
+              class="borderBottom"></span></a></span>
+        <span class="nav-link-wrapper"> <a href="#port" class="nav-link">Portfolio <span
+              class="borderBottom"></span></a></span>
+        <span class="nav-link-wrapper"> <a href="#containerReview" class="nav-link">Reviews <span
+              class="borderBottom"></span></a></span>
+        <span class="nav-link-wrapper"> <a href="#contact" class="nav-link">Contact <span
+              class="borderBottom"></span></a></span>
       </div>
     </div>
   </div>
@@ -72,7 +82,7 @@
 
     <!-- O MNIE -->
 
-    <div class="container-fluid about-me-container">
+    <div class="container-fluid about-me-container section" data-name="aboutMe">
       <h1 id="aboutMe">
         <p> &#10094</p> Welcome to my portfolio site<p>&#10095</p>
 
@@ -87,25 +97,28 @@
             <div class="about-me-inside-wrapper">
               <h3>Introduction:</h3>
               <p>Hello everyone! My name is Lukas and Welcome to my portfolio site which was made to encourage You to
-                hire
-                me as your
-                professional or maybe semi-professional... nah just web developer. Everything You will see here is the
-                example of my skills, dedication to this job and so on.</p>
+                hire me as your professional or maybe semi-professional... nah just web developer. Everything You will
+                see here is the example of my skills and dedication to this job which I'm constantly trying to improve.
+              </p>
               <h3>Some facts about me:</h3>
               <p>I am self-taught web developer trying to get into the professional world of creating websites,
-                applications
-                and everything connected with design. My journey with coding started around one and a half year ago,
-                when
-                I
-                decided that my current job is quite boring and won't get me anywhere, I liked it but I needed something
+                applications and everything connected with design. My journey with coding started around one and a half
+                year ago,
+                when I decided that my current job is quite boring and won't get me anywhere, I liked it but I needed
+                something
                 more
-                challenging.
+                challenging. As a big fan of new technologies and also enquiring person I wanted to see by myself how
+                the programming word looks from the inside.
               </p>
               <h3>My career:</h3>
-              <p>I finished university of technology with engineering degree in energy production, but I knew that's not
+              <p>I have finished university of technology with engineering degree in energy production, but I knew
+                that's not
                 for
-                me. When I was choosing I didn't really know what I want to do in the future. I was thinking about going
-                on computer science course, but at that time I wasn't really intrested in it.
+                me. When I was choosing it I didn't really know what I want to do in the future. I was thinking about
+                going
+                on computer science course, but at that time I wasn't really intrested in it. In my last 7 year work
+                career I've been doing many different activities including sales, lighting projecting, managing online
+                stores, helping to develop some big projects from different industries.
               </p>
             </div>
           </fieldset>
@@ -122,17 +135,17 @@
       </div>
     </div>
     <!-- UMIEJETNOŚCI -->
-    <div class="container-fluid">
+    <div class="container-fluid section" data-name="mySkills">
       <div class="h2-wrapper">
         <h2 id="mySkills">
-          <p class="left-bracket"> &#10094</p> <span class="h2-inside"> Current level of my skills</span>
+          <p class="left-bracket"> &#10094</p> <span class="h2-inside"> Current level of my coding skills</span>
           <p class='right-bracket'>&#10095</p>
 
         </h2>
       </div>
       <div class="row skills" skill-card-container>
         <template data-skill-template>
-          <div class="col-sm-12 col-md-4 col-lg-3">
+          <div class="col-sm-12 col-md-4 col-lg-3 skills-div">
             <p data-skill></p>
             <div class="skill-box-new"><span class="skill-box-dot">
                 <p data-percent></p>
@@ -152,7 +165,7 @@
 
       </h2>
     </div>
-    <div id="sliderContainer" class="container-fluid  slider-container">
+    <div id="sliderContainer" class="container-fluid  slider-container section" data-name="port">
 
       <span class="prev"><i class="bi bi-arrow-left-square"></i></span>
       <span class="next"><i class="bi bi-arrow-right-square"></i></span>
@@ -206,8 +219,8 @@
 
       </div>
     </div>
-
-    <div id="containerReview" class="container-fluid container-review">
+    <!-- Opinie -->
+    <div id="containerReview" class="container-fluid container-review section" data-name="containerReview">
       <div class="h2-wrapper">
         <h2 id="port">
           <p class="left-bracket"> &#10094</p><span class="h2-inside"> What people think about me?</span>
@@ -219,11 +232,10 @@
         <div class="col-sm-7 col-review">
           <div class="wrapper-review text-center wrapper-review-1">
             <span class="img-wrapper"><i class="bi bi-quote"></i> <img src="assets/happy1.png" alt="happy1"> </span>
-            <h2 class="fullname">Peter Mcalister</h2>
-            <h3 class="proffesion">Cook</h3>
-            <p class="random-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum
-              has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
+            <h2 class="fullname">My Future boss</h2>
+            <h3 class="proffesion">Boss</h3>
+            <p class="random-text">I have no idea how it is possible that i didn't hire him years ago, he is the person
+              everyone is looking for.</p>
             <div class="arrows-wrapper">
               <span class="arrow-review-left"><i class="bi bi-arrow-left-square-fill"></i></span>
               <span class="arrow-review-right"><i class="bi bi-arrow-right-square-fill"></i></span>
@@ -233,11 +245,10 @@
         <div class="col-sm-7 col-review">
           <div class="wrapper-review text-center wrapper-review-2">
             <span class="img-wrapper"><i class="bi bi-quote"></i> <img src="assets/happy2.jpg" alt="happy2"></span>
-            <h2 class="fullname">Susan Gucci</h2>
-            <h3 class="proffesion">Web Developer</h3>
-            <p class="random-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
-              a
-              piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <h2 class="fullname">My ex boss</h2>
+            <h3 class="proffesion">Boss</h3>
+            <p class="random-text">I hate that guy from previous review, he stole my best employee, where will I find
+              another one like that.</p>
             <div class="arrows-wrapper">
               <span class="arrow-review-left"><i class="bi bi-arrow-left-square-fill"></i></span>
               <span class="arrow-review-right"><i class="bi bi-arrow-right-square-fill"></i></span>
@@ -247,11 +258,9 @@
         <div class="col-sm-7 col-review">
           <div class="wrapper-review  text-center wrapper-review-3">
             <span class="img-wrapper"><i class="bi bi-quote"></i><img src="assets/happy3.png" alt="happy3"></span>
-            <h2 class="fullname">Mathew Kowalsky</h2>
-            <h3 class="proffesion">Forklift Certified</h3>
-            <p class="random-text">There are many variations of passages of Lorem Ipsum available, but the majority
-              have
-              suffered alteration in some form, by injected humour, or</p>
+            <h2 class="fullname">Wiesław Rejnsz</h2>
+            <h3 class="proffesion">Father</h3>
+            <p class="random-text">Talented, but lazy.</p>
             <div class="arrows-wrapper">
               <span class="arrow-review-left"><i class="bi bi-arrow-left-square-fill"></i></span>
               <span class="arrow-review-right"><i class="bi bi-arrow-right-square-fill"></i></span>
@@ -261,11 +270,9 @@
         <div class="col-sm-7 col-review">
           <div class="wrapper-review text-center wrapper-review-4">
             <span class="img-wrapper"><i class="bi bi-quote"></i> <img src="assets/happy2.jpg" alt="happy2"></span>
-            <h2 class="fullname">Luisa Dolce</h2>
-            <h3 class="proffesion">Engineer</h3>
-            <p class="random-text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
-              a
-              piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <h2 class="fullname">Joanna Rejnsz</h2>
+            <h3 class="proffesion">Mother</h3>
+            <p class="random-text">Get, a job already and leave this house!</p>
             <div class="arrows-wrapper">
               <span class="arrow-review-left"><i class="bi bi-arrow-left-square-fill"></i></span>
               <span class="arrow-review-right"><i class="bi bi-arrow-right-square-fill"></i></span>
@@ -274,7 +281,8 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid footer">
+    <!-- KONTAKT/FOOTER -->
+    <div class="container-fluid footer section" data-name="contact">
       <div class="h2-wrapper">
         <h2 id="contact">
           <p class="left-bracket"> &#10094</p> <span class="h2-inside"> If you like my work, contact me!</span>
@@ -347,6 +355,12 @@
             <li>Phone number: 609-660-472</li>
             <li>E-mail: lukaszrejnsz@op.pl</li>
 
+          </ul>
+          <ul class="social-list">
+            <li class="social-list-li"><a href=""> <i class="bi bi-facebook social-icon"></i></a></li>
+            <li class="social-list-li"><a href=""> <i class="bi bi-instagram social-icon"></i></a></li>
+            <li class="social-list-li"><a href=""> <i class="bi bi-twitter social-icon"></i></a></li>
+            <li class="social-list-li"><a href=""> <i class="bi bi-linkedin social-icon"></i></a></li>
           </ul>
         </div>
       </div>

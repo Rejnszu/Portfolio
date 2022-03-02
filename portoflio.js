@@ -1,6 +1,27 @@
 "use strict";
 
 // NAWGIACJA
+let html = document.getElementsByTagName("html");
+
+let langWrapper = document.querySelector(".language-wrapper");
+let langButton = document.querySelector(".language-button");
+
+langWrapper.addEventListener("click", function () {
+  langButton.classList.toggle("active");
+  setTimeout(function () {
+    if (location.href == "http://127.0.0.1:5500/portfolio.html") {
+      location.href = "http://127.0.0.1:5500/portfolioPL.html";
+    } else {
+      location.href = "http://127.0.0.1:5500/portfolio.html";
+    }
+  }, 500);
+});
+
+if (location.href == "http://127.0.0.1:5500/portfolioPL.html") {
+  langButton.classList.toggle("active");
+  html[0].setAttribute("lang", "pl");
+}
+
 let navOpenBtn = document.querySelector(".openbtn-wrapper");
 let naviContainer = document.querySelector(".navi-container");
 navOpenBtn.addEventListener("click", function () {
@@ -37,10 +58,12 @@ function showDownGlobal() {
 
 setTimeout(showDownGlobal, 2000);
 function scrollNav() {
-  if (window.pageYOffset > 40) {
+  if (window.pageYOffset > 80) {
     naviContainer.classList.add("active");
+    langWrapper.style.display = "none";
   } else {
     naviContainer.classList.remove("active");
+    langWrapper.style.display = "block";
   }
 }
 let containers = document.querySelectorAll(".section");
@@ -63,7 +86,9 @@ let linksObserver = new IntersectionObserver(function Moving(
         n.children[0].classList.remove("active");
         if (
           entry.target.dataset.name ==
-          n.href.replace("http://127.0.0.1:5500/portfolio.html#", "")
+            n.href.replace("http://127.0.0.1:5500/portfolio.html#", "") ||
+          entry.target.dataset.name ==
+            n.href.replace("http://127.0.0.1:5500/portfolioPL.html#", "")
         ) {
           n.children[0].classList.add("active");
         }
@@ -265,8 +290,20 @@ function reviews() {
   hide();
 
   function arrowMove() {
-    wrappers.forEach((n) => (n.style.display = "none"));
+    wrappers.forEach(function (n, i) {
+      n.style.display = "none";
+      n.style.opacity = "0";
+      if (i % 2 == 0) {
+        n.style.transform = "translateX(-50px)";
+      } else {
+        n.style.transform = "translateX(50px)";
+      }
+    });
     wrappers[g].style.display = "flex";
+    setTimeout(() => {
+      wrappers[g].style.opacity = "1";
+      wrappers[g].style.transform = "translateX(0)";
+    }, 50);
   }
 
   arrRight.forEach(function (arrow) {
@@ -416,6 +453,30 @@ h2InsideContact.forEach((input) =>
   moveObserverLetterAnimateContact.observe(input)
 );
 
+// let contactLi = document.querySelectorAll(".contact-list > li");
+// contactLi.forEach(
+//   (n) =>
+//     (n.innerHTML = n.textContent.replace(
+//       /\S/g,
+//       "<span class='contact-li'>$&</span>"
+//     ))
+// );
+// let contaLiSpan = document.querySelectorAll(".contact-li");
+
+// contactLi.forEach(function (contact) {
+//   contact.addEventListener("mouseenter", function () {
+//     let repeat = true;
+//     Array.from(contaLiSpan).forEach(function (letter, i) {
+//       letter.style.opacity = "0";
+//       letter.style.transform = "translateX(50px)";
+
+//       setTimeout(() => {
+//         letter.style.opacity = "1";
+//         letter.style.transform = "translateX(0)";
+//       }, 100 * i);
+//     });
+//   });
+// });
 let socialIcon = document.querySelectorAll(".social-icon");
 socialIcon.forEach(function (icon) {
   icon.addEventListener("mouseenter", function () {
@@ -425,6 +486,3 @@ socialIcon.forEach(function (icon) {
     setTimeout(() => this.classList.remove("active"), 2000);
   });
 });
-
-let html = document.getElementsByTagName("html");
-console.log(html[0].getAttribute("lang"));

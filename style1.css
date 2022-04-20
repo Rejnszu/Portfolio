@@ -1,0 +1,265 @@
+/*
+Theme Name: portfolio
+Text Domain: portfolio
+Version: 1.0
+Description: portfolio
+Author:Łukasz Rejnsz
+
+*/
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: radial-gradient(circle, #292929 40%, #2200ff 100%);
+}
+.nav-wrapper {
+  display: none;
+}
+.entry {
+  display: flex;
+  background: black;
+  background: radial-gradient(circle, #292929 40%, #2200ff 100%);
+  padding: 3rem 0 3rem 0;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.entry h1 {
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 4rem);
+  padding: 1rem;
+  color: white;
+}
+
+.entry p {
+  text-align: center;
+  color: white;
+  padding: 0 3rem 0 3rem;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+}
+.entry.animate-fadein {
+  animation: fadein 1s forwards ease-in;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.lets-start {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px black;
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
+.lets-start:focus {
+  outline: none;
+  border: none;
+}
+
+.main {
+  display: none;
+  background: black;
+  background: radial-gradient(circle, #292929 40%, #2200ff 100%);
+  padding: 3rem 0 3rem 0;
+  min-height: 100%;
+  flex-direction: column;
+  position: relative;
+  opacity: 0;
+}
+.main.animate {
+  animation: fadein 1s forwards ease-in;
+}
+
+.round-number {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+}
+
+.main h1 {
+  font-size: clamp(2rem, 3vw, 4rem);
+  font-weight: 700;
+  color: white;
+}
+.btn {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-size: clamp(1rem, 4vw, 2rem);
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px black;
+  background-color: white;
+  border: none;
+  outline: none;
+}
+@keyframes buttonAnimation {
+  0% {
+    transform: scale(1);
+    box-shadow: 0px 0px 5px blue;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px blue;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0px 0px 5px blue;
+  }
+}
+.btn:hover {
+  animation: buttonAnimation 1.5s infinite;
+}
+.question-col {
+  text-align: center;
+  background-color: black;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 0.5rem;
+  font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+.row-answers {
+  display: flex;
+  justify-content: center;
+}
+
+.answer-col {
+  height: clamp(3rem, 6vw, 5rem);
+  background-color: white;
+  margin: 1rem 1rem 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.answer-col:hover {
+  background-color: black;
+  color: white;
+}
+
+.nextRound {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px black;
+  background-color: white;
+  border: none;
+  outline: none;
+}
+
+.nextRound:focus {
+  outline: none;
+  border: none;
+}
+
+.answer-col.good {
+  background-color: green;
+  box-shadow: 0px 0px 15px green;
+}
+
+.answer-col.bad {
+  background-color: red;
+  box-shadow: 0px 0px 15px red;
+}
+
+.answer-col.winning-col {
+  border: 5px solid green;
+  box-shadow: 0 0 5px green;
+}
+
+.container-end {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+}
+.container-end.animate {
+  animation: fadein 1s forwards ease-in;
+}
+
+.wynik-koncowy {
+  font-size: clamp(1.5rem, 4vw, 4rem);
+  color: white;
+  background-color: black;
+  padding: 1.5rem;
+  border-radius: 20px;
+}
+
+.comment {
+  font-size: 1.5rem;
+  color: white;
+  padding: 0 1rem 0 1rem;
+  text-align: center;
+}
+
+.restart:focus {
+  outline: none;
+  border: none;
+}
+.helper-wrapper {
+  margin-bottom: 2rem;
+  position: relative;
+}
+.left-right {
+  position: absolute;
+  top: 8%;
+  left: 15%;
+  width: 0%;
+  height: 1rem;
+  background-color: red;
+  transform-origin: top left;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+.right-left {
+  position: absolute;
+  top: 8%;
+  right: 15%;
+  width: 0%;
+  height: 1rem;
+  background-color: red;
+  transform-origin: top right;
+  transform: rotate(315deg);
+  transition: all 0.5s;
+}
+.helper {
+  border-radius: 50%;
+  height: clamp(6rem, 8vw, 8rem);
+  width: clamp(6rem, 8vw, 8rem);
+
+  cursor: pointer;
+}
+.btn-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=quiz.css.map */

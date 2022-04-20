@@ -1,7 +1,7 @@
 /*
 Theme Name: portfolio
 Text Domain: portfolio
-Version: 1.9
+Version: 2.0
 Description: portfolio
 Author:Łukasz Rejnsz
 
@@ -111,7 +111,30 @@ h2 > p {
   width: 100%;
   overflow: hidden;
 }
+.go_top {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: transparent;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  outline: none;
+  border: 2px solid white;
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  color: white;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  overflow: hidden;
 
+  transition: all 0.5s;
+  font-family: var(--my-font);
+  letter-spacing: 0.1rem;
+}
+.go_top:focus,
+.go_top:hover {
+  outline: none;
+  box-shadow: inset 0 0 15px black;
+  border: 2px solid var(--dimmed-main-color);
+}
 .custom-button {
   font-size: clamp(1rem, 2vw, 1.5rem);
   outline: none;
@@ -452,6 +475,16 @@ h2 > p {
   display: none;
   overflow: hidden;
   position: relative;
+}
+.content > video {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.6;
+  box-shadow: 20px 0 50px 50px black;
 }
 .content > .background-elements {
   position: fixed;
@@ -825,236 +858,7 @@ h2 > p {
     background-size: cover;
   }
 }
-/* .slider-container {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding-top: clamp(2rem, 5vw, 5rem);
-  padding-bottom: clamp(3rem, 6vw, 7rem);
-  overflow: hidden;
-  box-shadow: 0 0 50px 20px black;
-  opacity: 0;
-  transition: all 1s;
-}
 
-.slider-container.animate {
-  opacity: 1;
-}
-
-.slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: clamp(1rem, 30vw, 33rem);
-  position: relative;
-}
-.slider::before {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 17%;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0 10px 20px black;
-  z-index: 10;
-}
-.slider::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 17%;
-  right: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  box-shadow: 0 0 10px 20px black;
-  z-index: 10;
-}
-
-.slide {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 1.5s;
-  text-decoration: none !important;
-  font-size: 2rem;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-.slide_1 {
-  background-image: url(assets/rebro-min.png);
-}
-.slide_1::before {
-  content: "rebro";
-}
-.slide_2 {
-  background-image: url(assets/newtool_port_mid.png);
-}
-.slide_2::before {
-  content: "newtool";
-}
-.slide_3 {
-  background-image: url(assets/sprawdzauto-min.png);
-}
-.slide_3::before {
-  content: "sprawdzauto";
-}
-.slide_4 {
-  background-image: url(assets/reha_port_mid.png);
-}
-.slide_4::before {
-  content: "rehasquad";
-}
-.slide::before {
-  position: absolute;
-  font-size: clamp(1rem, 4vw, 3rem);
-  font-weight: 500;
-  color: white;
-  font-family: var(--my-font);
-  top: -2vw;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.slide-inside {
-  width: 58%;
-  height: 105%;
-  font-size: 1rem;
-  background-color: rgba(0, 0, 0, 0.582);
-  opacity: 0;
-  transform: translateX(100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.5s;
-  border-radius: var(--border-radius);
-}
-.slide-inside > ul {
-  list-style: none;
-}
-.slide-inside > ul > li {
-  padding: 0.5rem;
-  font-size: clamp(0.5rem, 3vw, 2rem);
-  font-weight: 600;
-  font-family: var(--my-font);
-  letter-spacing: 0.1rem;
-}
-
-.slide:hover .slide-inside {
-  opacity: 1;
-  transform: translateX(0%);
-  animation: border 0.5s 0.5s forwards linear;
-}
-
-@keyframes border {
-  0% {
-    box-shadow: inset 0 0 2px 2px var(--dimmed-main-color),
-      0 0 2px 2px var(--dimmed-main-color);
-  }
-  100% {
-    box-shadow: var(--my-shadow);
-  }
-}
-.prev {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: clamp(2rem, 4vw, 4rem);
-  font-weight: 700;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 20px;
-  width: auto;
-  height: auto;
-  font-family: var(--my-font);
-  z-index: 100;
-  cursor: pointer;
-}
-
-.next {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: clamp(2rem, 4vw, 4rem);
-  font-weight: 700;
-  z-index: 100;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 20px;
-  width: auto;
-  height: auto;
-  font-family: var(--my-font);
-  cursor: pointer;
-}
-
-.prev > i,
-.next > i {
-  color: white;
-  position: relative;
-  transition: all 0.5s linear;
-}
-.prev > i:hover,
-.next > i:hover {
-  color: white;
-}
-
-.dot-wrapper {
-  display: flex;
-  position: absolute;
-  bottom: clamp(-4rem, -6vw, -1.5rem);
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 90;
-}
-
-.dot {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--dimmed-main-color);
-  width: clamp(0.2rem, 2vw, 0.7rem);
-  height: clamp(0.2rem, 2vw, 0.7rem);
-  border-radius: 50%;
-  padding: clamp(0.5rem, 2vw, 1rem);
-  font-size: clamp(0.5rem, 3vw, 1.5rem);
-  font-weight: 600;
-  margin-right: clamp(0.3rem, 2vw, 1rem);
-  box-shadow: inset 0 0 5px 0px white;
-  position: relative;
-  z-index: 100;
-  bottom: 0px;
-  cursor: pointer;
-}
-
-.dot.active {
-  background-color: white;
-  box-shadow: inset 0 0 5px 0px black;
-}
-
-@media (max-width: 800px) {
-  .slider {
-    height: clamp(10rem, 50vw, 30rem);
-  }
-  .slider::before,
-  .slider::after {
-    display: none;
-  }
-
-  .prev,
-  .next {
-    top: 45%;
-  }
-
-  .slide-inside {
-    display: none;
-  }
-} */
 /* PORTFOLIO */
 .col-portfolio {
   display: flex;

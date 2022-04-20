@@ -33,7 +33,7 @@ wp_head();
 
 <!-- GŁOWNA TREŚĆ STRONY -->
 <div class="container-fluid content  text-center">
-
+  <button class="go_top">Go up!</button>
   <!-- O MNIE -->
 
   <div class="container-fluid about-me-container section" data-name="aboutMe">

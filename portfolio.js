@@ -1,6 +1,6 @@
 ("use strict");
 
-// NAWGIACJA
+// NAWIGACJA
 
 let navOpenBtn = document.querySelector(".openbtn-wrapper");
 let naviContainer = document.querySelector(".navi-container");
@@ -51,39 +51,6 @@ function scrollNav() {
     navLinksDesktop.forEach((n) => n.children[0].classList.remove("color"));
   }
 }
-// let containers = document.querySelectorAll(".section");
-
-// let linkOptions = {
-//   root: null,
-//   rootMargin: "-40px 0px -40px 0px",
-//   threshold: 0.3,
-// };
-
-// let linksObserver = new IntersectionObserver(function Moving(
-//   entries,
-//   observer
-// ) {
-//   entries.forEach(function (entry) {
-//     if (!entry.isIntersecting) {
-//       return;
-//     } else {
-//       navLinks.forEach(function (n) {
-//         n.children[0].classList.remove("active");
-//         if (
-//           entry.target.dataset.name ==
-//             n.href.replace("https://esklep.newtool.pl/#", "") ||
-//           entry.target.dataset.name ==
-//             n.href.replace("https://esklep.newtool.pl/portfolio_pl/#", "")
-//         ) {
-//           n.children[0].classList.add("active");
-//         }
-//       });
-//     }
-//   });
-// },
-// linkOptions);
-
-// containers.forEach((container) => linksObserver.observe(container));
 
 let skillObj = [
   { name: "HTML", percent: "70%" },
@@ -91,7 +58,7 @@ let skillObj = [
   { name: "JAVASCRIPT", percent: "65%" },
   { name: "BOOSTRAP", percent: "80%" },
   { name: "GIT", percent: "50%" },
-  { name: "WORDPRESS", percent: "60%" },
+  { name: "WORDPRESS", percent: "50%" },
   { name: "PHP", percent: "35%" },
   { name: "UI/UX", percent: "30%" },
 ];
@@ -147,78 +114,6 @@ let moveObserver1 = new IntersectionObserver(function Moving(
 options1);
 
 skillDiv.forEach((move) => moveObserver1.observe(move));
-
-// PORTFOLIO
-// let prev = document.querySelector(".prev");
-// let next = document.querySelector(".next");
-// let slides = document.querySelectorAll(".slide");
-// let dots = document.querySelectorAll(".dot");
-// let sliderOffsetX = 110;
-// let s = 0;
-
-// function initialSlidesPosition() {
-//   slides.forEach(
-//     (slide, i) =>
-//       (slide.style.transform = "translateX(" + sliderOffsetX * i + "%" + ")")
-//   );
-// }
-
-// function previousSlide() {
-//   s -= 1;
-//   if (s < 0) {
-//     s = slides.length - 1;
-//   }
-//   dots.forEach((dotActive) => dotActive.classList.remove("active"));
-//   dots[s].classList.add("active");
-//   slides.forEach(function (slide, i) {
-//     slide.style.transform =
-//       "translateX(" + -sliderOffsetX * (-i + s) + "%" + ")";
-//   });
-// }
-// function nextSlide() {
-//   s += 1;
-//   if (s >= slides.length) {
-//     s = 0;
-//   }
-//   dots.forEach((dotActive) => dotActive.classList.remove("active"));
-//   dots[s].classList.add("active");
-//   slides.forEach(function (slide, i) {
-//     slide.style.transform =
-//       "translateX(" + -sliderOffsetX * (-i + s) + "%" + ")";
-//   });
-// }
-// initialSlidesPosition();
-// function moveSlides() {
-//   prev.addEventListener("click", function () {
-//     previousSlide();
-//   });
-//   document.addEventListener("keydown", function (event) {
-//     if (event.code == "ArrowLeft") {
-//       previousSlide();
-//     }
-//   });
-//   next.addEventListener("click", function () {
-//     nextSlide();
-//   });
-//   document.addEventListener("keydown", function (event) {
-//     if (event.code == "ArrowRight") {
-//       nextSlide();
-//     }
-//   });
-//   dots.forEach(function (dot, dotIndex) {
-//     dot.addEventListener("click", function () {
-//       dots.forEach((dotActive) => dotActive.classList.remove("active"));
-//       this.classList.add("active");
-//       s = dotIndex;
-//       slides.forEach(function (slide, i) {
-//         slide.style.transform =
-//           "translateX(" + -sliderOffsetX * (-i + s) + "%" + ")";
-//       });
-//     });
-//   });
-// }
-
-// moveSlides();
 
 let leftBracket = document.querySelectorAll(".left-bracket");
 let rightBracket = document.querySelectorAll(".right-bracket");
@@ -545,3 +440,10 @@ infoBtn.forEach(function (btn) {
     this.previousElementSibling.classList.toggle("active");
   });
 });
+
+// SCROLL TOP
+document.querySelectorAll(".go_top").forEach((n) =>
+  n.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  })
+);

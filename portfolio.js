@@ -58,8 +58,8 @@ let skillObj = [
   { name: "JAVASCRIPT", percent: "65%" },
   { name: "BOOSTRAP", percent: "80%" },
   { name: "GIT", percent: "50%" },
-  { name: "WORDPRESS", percent: "50%" },
-  { name: "PHP", percent: "35%" },
+  { name: "WORDPRESS", percent: "40%" },
+  { name: "PHP", percent: "30%" },
   { name: "UI/UX", percent: "30%" },
 ];
 let dataSkillTemplate = document.querySelector("[data-skill-template]");
@@ -207,15 +207,6 @@ function reviews() {
   });
 }
 reviews();
-
-let sendBtn = document.getElementById("sendBtn");
-let sendIcon = document.querySelector(".bi-send-check");
-let sendText = document.querySelectorAll("#sendBtn > p");
-
-sendBtn.addEventListener("click", function () {
-  sendIcon.style.opacity = "1";
-  this.children[0].style.opacity = "0";
-});
 
 // ANIMACJE ELEMENTÓW
 let portfolioColumns = document.querySelectorAll(".col-portfolio");
@@ -447,3 +438,46 @@ document.querySelectorAll(".go_top").forEach((n) =>
     window.scrollTo({ top: 0, behavior: "smooth" });
   })
 );
+
+// KONTAKT FORM
+
+let inputs = document.querySelectorAll(".styled-input input");
+let textAreas = document.querySelectorAll(".styled-input textarea");
+
+inputs.forEach(function (input) {
+  let label = document.createElement("label");
+  label.innerHTML = input.id;
+  label.htmlFor = input.id;
+  input.parentNode.insertBefore(label, input.nextSibling);
+});
+textAreas.forEach(function (textArea) {
+  let label = document.createElement("label");
+  label.innerHTML = textArea.id;
+  label.htmlFor = textArea.id;
+  textArea.parentNode.insertBefore(label, textArea.nextSibling);
+});
+
+// LAZY LOADING BACKGROUND IMAGE
+let codeSectionBackground = document.querySelector(".code-background");
+let lazyLoadingOptions = {
+  root: null,
+  rootMargin: "-100px 0px -100px 0px",
+  threshold: 0,
+};
+
+let moveObserverLazyLoading = new IntersectionObserver(function Moving(
+  entries,
+  observer
+) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add("load");
+      moveObserver.unobserve(entry.target);
+    }
+  });
+},
+lazyLoadingOptions);
+
+moveObserverLazyLoading.observe(codeSectionBackground);

@@ -30,9 +30,9 @@
                 <span class=""></span>
             </div>
             <div class="language-wrapper"><span class="language-button"></span><span class="en">
-                    <p>PL</p>
-                </span><span class="pl">
                     <p>EN</p>
+                </span><i class="bi bi-arrow-left-short"></i><span class="pl">
+                    <p>PL</p>
                 </span></div>
             <div class="col-sm-12 navi-container-mobile">
 

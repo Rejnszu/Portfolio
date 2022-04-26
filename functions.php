@@ -13,6 +13,9 @@ function portfolio_register_styles()
     if (is_page(array('portfolio_en'))) {
         wp_enqueue_style('portfolio-style', get_template_directory_uri() . "/style.css", array("portfolio-bootstrap-style"), $version, 'all');
     }
+    if (is_page(array('mail'))) {
+        wp_enqueue_style('portfolio-style', get_template_directory_uri() . "/style.css", array("portfolio-bootstrap-style"), $version, 'all');
+    }
     if (is_front_page()) {
         wp_enqueue_style('portfolio-style', get_template_directory_uri() . "/style.css", array("portfolio-bootstrap-style"), $version, 'all');
     }
@@ -26,6 +29,7 @@ add_action('wp_enqueue_scripts', 'portfolio_register_styles');
 
 function portfolio_register_scripts()
 {
+
     wp_enqueue_script('portfolio-jq-script', "https://code.jquery.com/jquery-3.5.1.min.js", array(), '3.5.1', true);
     wp_enqueue_script('portfolio-jqcColor-script', "https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js", array(), '2.1.2', true);
     wp_enqueue_script('portfolio-popper-script', "https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js", array(), '1.0', true);
@@ -35,9 +39,12 @@ function portfolio_register_scripts()
     }
 
     if (is_front_page()) {
-        wp_enqueue_script('portfolio-main-script', get_template_directory_uri() . "/portfolio.js", array(), '3.7', true);
+        wp_enqueue_script('portfolio-main-script', get_template_directory_uri() . "/portfolio.js", array(), '3.8', true);
     }
     if (is_page(array('portfolio_en'))) {
+        wp_enqueue_script('portfolio-main-script',  get_template_directory_uri() . "/portfolio.js", array(), '1.0', false);
+    }
+    if (is_page(array('mail'))) {
         wp_enqueue_script('portfolio-main-script',  get_template_directory_uri() . "/portfolio.js", array(), '1.0', false);
     }
     $translation_array = array('templateUrl' => get_template());
@@ -54,11 +61,11 @@ add_action('wp_enqueue_scripts', 'portfolio_register_scripts');
 //     return "$url' defer ";
 // }
 // add_filter('clean_url', 'defer_parsing_of_js', 11, 1);
-function defer_parsing_of_js($url)
-{
-    if (is_user_logged_in()) return $url; //don't break WP Admin
-    if (FALSE === strpos($url, '.js')) return $url;
-    if (strpos($url, 'jquery.js')) return $url;
-    return str_replace(' src', ' defer src', $url);
-}
-add_filter('script_loader_tag', 'defer_parsing_of_js', 10);
+// function defer_parsing_of_js($url)
+// {
+//     if (is_user_logged_in()) return $url; //don't break WP Admin
+//     if (FALSE === strpos($url, '.js')) return $url;
+//     if (strpos($url, 'jquery.js')) return $url;
+//     return str_replace(' src', ' defer src', $url);
+// }
+// add_filter('script_loader_tag', 'defer_parsing_of_js', 10);

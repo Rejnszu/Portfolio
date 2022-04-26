@@ -23,7 +23,7 @@ wp_footer();
         }, 500);
     });
 
-    if (location.href == "<?php echo get_home_url() ?>/portfolio_en/") {
+    if (location.href == "<?php echo get_home_url() ?>/") {
         langButton.classList.toggle("active");
 
     }

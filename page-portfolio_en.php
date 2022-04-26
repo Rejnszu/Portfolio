@@ -9,7 +9,7 @@ $args = [
   "ogTitle" => "",
   "ogUrl" => get_home_url(),
   "ogSite_name" => "",
-  "title" => "Rejnszu portfolio"
+  "title" => "Rejnszu portfolio-en"
 ];
 if (is_page(portfolio_en)) {
   get_header('en');
@@ -77,7 +77,7 @@ wp_head();
           </div>
         </fieldset>
       </div>
-      <div class="col-sm-12 col-lg-5 d-flex align-items-center justify-content-center myFaceWrapper"><span class="imgWrapperFace"><img src=<?php echo get_template_directory_uri() . "/assets/hobbiton-min.png"; ?> alt="myface" class=" myFace"></span>
+      <div class="col-sm-12 col-lg-5 d-flex align-items-center justify-content-center myFaceWrapper"><span class="imgWrapperFace"><img src=<?php echo get_template_directory_uri() . "/assets/hobbiton-min.jpg"; ?> alt="myface" class=" myFace"></span>
       </div>
     </div>
     <div class="quiz-container">
@@ -165,7 +165,7 @@ wp_head();
     <div class="row">
       <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
         <div class="portfolio-wrapper">
-          <p>Domsi</p> <a href="https://domsi.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/domsi-min.png"; ?>" alt="domsi"></a>
+          <p>Domsi</p> <a href="https://domsi.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/domsi-min.png"; ?>" alt="domsi" loading="lazy"></a>
           <div class="hidden-info">
             In this website client had his own idea for the webiste, however he didn't have any ready project, and needed some help with styling. With a little help of proffesional designer, we created a rough design for him which he accepted with very little changes. After that we coded it and implemented all the necessary things to keep the site working smoothly.
           </div>
@@ -177,7 +177,7 @@ wp_head();
       </div>
       <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
         <div class="portfolio-wrapper">
-          <p>Sprawdzauto</p> <a href="https://www.sprawdzauto.com.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/sprawdzauto-min.png"; ?>" alt="sprawdzauto"></a>
+          <p>Sprawdzauto</p> <a href="https://www.sprawdzauto.com.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/sprawdzauto-min.png"; ?>" alt="sprawdzauto" loading="lazy"></a>
           <div class="hidden-info">
             Working on this project was pretty tough. Client had no idea what he wanted and in addition didn't want to hire any professional designer, to cut the costs. We had to improvise, so we presented him few different project layouts. He accepted it and was happy what he saw, however in the whole process of creating website he was changing his mind all the time, which finally resulted with the website, that in my opinion could look better, but customer is always right, and was really pleased with what he got. It included coding and optimalization.
           </div>
@@ -189,7 +189,7 @@ wp_head();
       </div>
       <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
         <div class="portfolio-wrapper">
-          <p>Rebro</p> <a href="https://rebro.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/rebro-min.png"; ?>" alt="rebro"></a>
+          <p>Rebro</p> <a href="https://rebro.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/rebro-min.png"; ?>" alt="rebro" loading="lazy"></a>
 
           <div class="hidden-info">
             This website was meant to be the base of my web-developing business and also a good practice. To be honest it could be better, but it was made at the time I was at the beginning of my coding journey and my styling skills weren't at the level they are at now. That's why I made my own portfolio site.
@@ -202,7 +202,7 @@ wp_head();
       </div>
       <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
         <div class="portfolio-wrapper">
-          <p>Newtool</p> <a href="https://newtool.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/newtool-min.png"; ?>" alt="newtool"></a>
+          <p>Newtool</p> <a href="https://newtool.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/newtool-min.png"; ?>" alt="newtool" loading="lazy"></a>
 
           <div class="hidden-info">
             This website was made as a simple landing page to show the most important information about company. Client didn't want to have anything reallly fancy, just a smoothly working "business card", and that's what he got.
@@ -215,7 +215,7 @@ wp_head();
       </div>
       <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
         <div class="portfolio-wrapper">
-          <p>rehasquad</p> <a href="https://rehasquad.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/reha-min.png"; ?>" alt="rehasquad"></a>
+          <p>rehasquad</p> <a href="https://rehasquad.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/reha-min.png"; ?>" alt="rehasquad" loading="lazy"></a>
 
           <div class="hidden-info">
             This was my first website I made for a client. I know it isn't a showcase of web-developer skills, but it was made really fast and almost for free. Client didn't really care how it would look, however he didn't have any objection about design. The plan was to make a simple website containing all the necessary informations about His business.
@@ -244,7 +244,7 @@ wp_head();
         <div class="wrapper-review text-center wrapper-review-1">
           <span class="arrow-review-left"><i class="bi bi-arrow-left-circle"></i></span>
           <span class="arrow-review-right"><i class="bi bi-arrow-right-circle"></i></span>
-          <span class="img-wrapper"><i class="bi bi-quote"></i> <img src=<?php echo get_template_directory_uri() . "/assets/anon.png"; ?> alt="anon"> </span>
+          <span class="img-wrapper"><i class="bi bi-quote"></i> <img src=<?php echo get_template_directory_uri() . "/assets/anon.png"; ?> alt="anon" loading="lazy"> </span>
           <h2 class="fullname">My Future boss</h2>
           <h3 class="proffesion">Boss</h3>
           <p class="random-text">"I have no idea how it is possible that i didn't hire him years ago, he is the person
@@ -256,7 +256,7 @@ wp_head();
         <div class="wrapper-review text-center wrapper-review-2">
           <span class="arrow-review-left"><i class="bi bi-arrow-left-circle"></i></span>
           <span class="arrow-review-right"><i class="bi bi-arrow-right-circle"></i></span>
-          <span class="img-wrapper"><i class="bi bi-quote"></i> <img src=<?php echo get_template_directory_uri() . "/assets/anon.png"; ?> alt="anon"></span>
+          <span class="img-wrapper"><i class="bi bi-quote"></i> <img src=<?php echo get_template_directory_uri() . "/assets/anon.png"; ?> alt="anon" loading="lazy"></span>
           <h2 class="fullname">My ex boss</h2>
           <h3 class="proffesion">Boss</h3>
           <p class="random-text">"I hate that guy from previous review, he stole my best employee, where will I find
@@ -268,7 +268,7 @@ wp_head();
         <div class="wrapper-review  text-center wrapper-review-3">
           <span class="arrow-review-left"><i class="bi bi-arrow-left-circle"></i></span>
           <span class="arrow-review-right"><i class="bi bi-arrow-right-circle"></i></span>
-          <span class="img-wrapper"><i class="bi bi-quote"></i><img src=<?php echo get_template_directory_uri() . "/assets/anon.png"; ?> alt="anon"></span>
+          <span class="img-wrapper"><i class="bi bi-quote"></i><img src=<?php echo get_template_directory_uri() . "/assets/anon.png"; ?> alt="anon" loading="lazy"></span>
           <h2 class="fullname">Wiesław Rejnsz</h2>
           <h3 class="proffesion">Father</h3>
           <p class="random-text">"Talented, but lazy. Sitting all they on computer."</p>
@@ -279,7 +279,7 @@ wp_head();
         <div class="wrapper-review text-center wrapper-review-4">
           <span class="arrow-review-left"><i class="bi bi-arrow-left-circle"></i></span>
           <span class="arrow-review-right"><i class="bi bi-arrow-right-circle"></i></span>
-          <span class="img-wrapper"><i class="bi bi-quote"></i> <img src=<?php echo get_template_directory_uri() . "/assets/anon.png"; ?> alt="anon"></span>
+          <span class="img-wrapper"><i class="bi bi-quote"></i> <img src=<?php echo get_template_directory_uri() . "/assets/anon.png"; ?> alt="anon" loading="lazy"></span>
           <h2 class="fullname">Joanna Rejnsz</h2>
           <h3 class="proffesion">Mother</h3>
           <p class="random-text">"Get a job finally, and stop playing this stupid games!"</p>
@@ -307,46 +307,8 @@ wp_head();
 
           </h2>
         </div>
-        <div class="row input-container">
 
-          <div class="col-sm-12">
-            <div class="styled-input wide">
-              <input type="text" required />
-              <label>Name</label>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="styled-input">
-              <input type="text" required />
-              <label>Email</label>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="styled-input">
-              <input type="text" required />
-              <label>Phone Number</label>
-            </div>
-          </div>
-          <div class="col-sm-12">
-
-            <select id="reason" name="reason" class="styled-input">
-              <option value="site">Website</option>
-
-              <option value="work">Job offer</option>
-            </select>
-          </div>
-          <div class="col-sm-12">
-            <div class="styled-input wide">
-              <textarea required></textarea>
-              <label>Message</label>
-            </div>
-          </div>
-          <div class="col-sm-12 d-flex justify-content-center">
-            <div id="sendBtn" class="custom-button-contact">
-              <p>Send Message</p> <i class="bi bi-send-check"></i>
-            </div>
-          </div>
-        </div>
+        <?php echo apply_shortcodes('[contact-form-7 id="29" title="Rejnszu formularz kontaktowy angielski"]'); ?>
       </div>
 
       <div class="col-sm-12 col-md-6">
@@ -365,10 +327,10 @@ wp_head();
 
         </ul>
         <ul class="social-list">
-          <li class="social-list-li"><a> <i class="bi bi-facebook social-icon"></i></a></li>
-          <li class="social-list-li"><a href="https://github.com/Rejnszu" target="_blank"> <i class="bi bi-github social-icon"></i></a></li>
-          <li class="social-list-li"><a> <i class="bi bi-twitter social-icon"></i></a></li>
-          <li class="social-list-li"><a> <i class="bi bi-linkedin social-icon"></i></a></li>
+          <li class="social-list-li"><a href="#"> <i class="bi bi-facebook social-icon" target="_blank" title="facebook"></i></a></li>
+          <li class="social-list-li"><a href="https://github.com/Rejnszu" target="_blank" title="github"> <i class="bi bi-github social-icon"></i></a></li>
+          <li class="social-list-li"><a href="#"> <i class="bi bi-twitter social-icon" target="_blank" title="twitter"></i></a></li>
+          <li class="social-list-li"><a href="https://www.linkedin.com/in/%C5%82ukasz-rejnsz-167492238/" target="_blank" title="linkedin"> <i class="bi bi-linkedin social-icon"></i></a></li>
         </ul>
       </div>
     </div>

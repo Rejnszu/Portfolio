@@ -134,6 +134,7 @@ h2 > p {
   outline: none;
   box-shadow: inset 0 0 15px black;
   border: 2px solid var(--dimmed-main-color);
+  background-color: var(--dimmed-main-color);
 }
 .custom-button {
   font-size: clamp(1rem, 2vw, 1.5rem);
@@ -447,6 +448,13 @@ h2 > p {
   left: 10px;
   top: 15%;
 }
+.language-wrapper i {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+}
 
 @media (max-width: 1150px) {
   .navi-container {
@@ -712,7 +720,7 @@ h2 > p {
 
   .about-me {
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-      url(assets/hobbiton-min.png);
+      url(assets/hobbiton-min.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0;
@@ -845,14 +853,15 @@ h2 > p {
 
 .code-background {
   max-width: 100%;
-  background-image: url(assets/code.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   filter: grayscale(1);
   box-shadow: inset 0 0 20px 30px black;
 }
-
+.code-background.load {
+  background-image: url(assets/code.jpg);
+}
 @media (max-width: 1150px) {
   .code-background {
     background-size: cover;
@@ -930,25 +939,11 @@ h2 > p {
   transition: width 0.5s, height 0.5s, opacity 0.7s;
   border-radius: var(--border-radius);
   overflow: hidden;
-}
-@media (max-width: 1700px) {
-  .hidden-info {
-    font-size: 0.7rem;
-  }
+  font-size: clamp(0.8rem, 0.8vw, 1.5rem);
 }
 @media (max-width: 992px) {
   .hidden-info {
-    font-size: 1.2rem;
-  }
-}
-@media (max-width: 700px) {
-  .hidden-info {
-    font-size: 0.7rem;
-  }
-}
-@media (max-width: 450px) {
-  .hidden-info {
-    font-size: 0.6rem;
+    font-size: clamp(0.6rem, 1vw, 1.5rem);
   }
 }
 .hidden-info.active {
@@ -1004,7 +999,7 @@ h2 > p {
   background-color: black;
   position: relative;
   width: min(80vw, 40rem);
-  height: 27rem;
+  min-height: 27rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -1105,7 +1100,7 @@ h2 > p {
 }
 @media (max-width: 400px) {
   .fullname {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 }
 .proffesion {
@@ -1131,18 +1126,6 @@ h2 > p {
 .footer {
   padding-bottom: 5rem;
 }
-
-input:focus ~ label,
-textarea:focus ~ label,
-input:valid ~ label,
-textarea:valid ~ label {
-  font-size: 0.75em;
-  color: black;
-  top: -5px;
-  -webkit-transition: all 0.225s ease;
-  transition: all 0.225s ease;
-}
-
 .styled-input {
   max-width: 100%;
   margin: 1rem 0;
@@ -1154,22 +1137,43 @@ textarea:valid ~ label {
 .styled-input.animate {
   opacity: 1;
 }
+input ~ label {
+  font-family: var(--my-font);
+  padding: 1.3rem 30px 1rem 30px;
+  position: absolute;
+  top: -40px;
+  left: -20px;
+
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+  color: black;
+}
+textarea ~ label {
+  font-family: var(--my-font);
+  padding: 1.3rem 30px 1rem 30px;
+  font-size: 1em;
+  position: absolute;
+  top: -290px;
+  left: -20px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+  color: black;
+}
+input:focus ~ label,
+textarea:focus ~ label {
+  font-size: 0.8em;
+  color: black;
+
+  -webkit-transition: all 0.225s ease;
+  transition: all 0.225s ease;
+}
 
 @media only screen and (max-width: 768px) {
   .styled-input {
     width: 100%;
   }
-}
-.styled-input label {
-  font-family: var(--my-font);
-  padding: 1.3rem 30px 1rem 30px;
-  position: absolute;
-  top: 10px;
-  left: 0;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-  pointer-events: none;
-  color: black;
 }
 
 .styled-input.wide {
@@ -1179,7 +1183,7 @@ textarea:valid ~ label {
 
 input,
 textarea {
-  padding: 30px;
+  padding: 30px 10px 30px 60px;
   border: 0;
   width: 100%;
   font-size: 1rem;
@@ -1192,13 +1196,6 @@ textarea {
 input:focus,
 textarea:focus {
   outline: 0;
-}
-
-input:focus ~ span,
-textarea:focus ~ span {
-  width: 100%;
-  -webkit-transition: all 0.075s ease;
-  transition: all 0.075s ease;
 }
 
 textarea {
@@ -1226,7 +1223,7 @@ textarea {
   transition: all 0.5s;
   font-family: var(--my-font);
   letter-spacing: 0.1rem;
-  max-width: 60%;
+  width: min-content;
 }
 .custom-button-contact:focus,
 .custom-button-contact:hover {
@@ -1382,4 +1379,6 @@ input[type="checkbox"]:checked + label {
   }
 }
 
-/*# sourceMappingURL=portfolio.css.map */
+.grecaptcha-badge {
+  opacity: 0;
+}

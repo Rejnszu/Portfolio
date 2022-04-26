@@ -14,7 +14,7 @@
     <meta property="og:url" content="<?php echo $args["ogUrl"] ?>">
     <meta property="og:site_name" content="<?php echo $args["ogSite_name"] ?>">
     <meta name="google-site-verification" content="" />
-    <title><?php echo $args["title"] ?>Rejnszu portfolio</title>
+    <title><?php echo $args["title"] ?></title>
 
     <?php
     wp_head();
@@ -29,9 +29,9 @@
                 <span class=""></span>
                 <span class=""></span>
             </div>
-            <div class="language-wrapper"><span class="language-button"></span><span class="en">
+            <div class="language-wrapper"><span class="language-button"></span><span class="pl">
                     <p>PL</p>
-                </span><span class="pl">
+                </span><i class="bi bi-arrow-right-short"></i><span class="en">
                     <p>EN</p>
                 </span></div>
             <div class="col-sm-12 navi-container-mobile">

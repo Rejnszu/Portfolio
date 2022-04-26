@@ -39,7 +39,7 @@ get_header(null, $args);
     </h1>
 
     <video src=<?php echo get_template_directory_uri() . "/assets/about-black-1.webm"; ?> autoplay loop muted> Your browser does not support the video tag.</video>
-    <!-- <img src="assets/aboutme.gif" alt="aboutgif"> -->
+
     <div class="row">
       <div class="col-sm-12 col-lg-7 about-me-col d-flex justify-content-center align-items-center">
         <fieldset class="about-me">
@@ -58,7 +58,7 @@ get_header(null, $args);
           </div>
         </fieldset>
       </div>
-      <div class="col-sm-12 col-lg-5 d-flex align-items-center justify-content-center myFaceWrapper"><span class="imgWrapperFace"><img src=<?php echo get_template_directory_uri() . "/assets/hobbiton-min.png"; ?> alt="myface" class=" myFace"></span>
+      <div class="col-sm-12 col-lg-5 d-flex align-items-center justify-content-center myFaceWrapper"><span class="imgWrapperFace"><img src=<?php echo get_template_directory_uri() . "/assets/hobbiton-min.jpg"; ?> alt="myface" class=" myFace"></span>
       </div>
     </div>
     <div class="quiz-container">
@@ -146,7 +146,7 @@ get_header(null, $args);
     <div class="row">
       <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
         <div class="portfolio-wrapper">
-          <p>Domsi</p> <a href="https://domsi.pl/"><img src="<?php echo get_template_directory_uri() . "/assets/domsi-min.png"; ?>" alt="domsi"></a>
+          <p>Domsi</p> <a href="https://domsi.pl/"><img src="<?php echo get_template_directory_uri() . "/assets/domsi-min.png"; ?>" alt="domsi" loading="lazy"></a>
           <div class="hidden-info">
             Przy tej witrynie klient miał własny pomysł na stronę internetową, aczkolwiek nie miał żadnego gotowego projektu. Przy drobnej współpracy z projektantem, oraz narzuceniu mu naszej i klienta wizji na stronę, otrzymamliśmy projekt, który w pełni zadowolił zainteresowanego, bez jakichś większych zmian. Następnym krokim było zakodowanie strony oraz zaimplementowanie wszystkich niezbędnych do prawidłowego i płynnego działania strony rzeczy.
           </div>
@@ -158,7 +158,7 @@ get_header(null, $args);
       </div>
       <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
         <div class="portfolio-wrapper">
-          <p>Sprawdzauto</p> <a href="https://www.sprawdzauto.com.pl/ " target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/sprawdzauto-min.png"; ?>" alt="sprawdzauto"></a>
+          <p>Sprawdzauto</p> <a href="https://www.sprawdzauto.com.pl/ " target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/sprawdzauto-min.png"; ?>" alt="sprawdzauto" loading="lazy"></a>
           <div class="hidden-info">
             Praca nad tym projektem, nie ukrywam, była trudna. Klient nie do końca miał pojęcie czego by chciał, a ponad to, nie chciał zatrudnić profesjonalnego projektanta, który by mu to wszystko poukładał(brak jakichkolwiek materiałów i struktury strony nie ułatwiały sprawy). Musieliśmy improwizować, w związku z czym przedstawiliśmy mu kilka wizji projektu. Spodobało mu się to co zobaczył i zaakceptował jedną z wersji, aczkolwiek podczas całego procesu tworzenia często zmieniał zdanie i narzucał swoje pomysły co finalnie dało stronę, która mogła by wyglądać moim zdaniem lepiej i być bardziej spójna, ale nasz klient nasz pan. To co się liczy to fakt, że finalny efekt bardzo mu się podobał. Po wszystkim strona została zakodowana i w pełni przygotowana do podboju internetu. </div>
           <div class="info-btn d-flex flex-column ">
@@ -169,7 +169,7 @@ get_header(null, $args);
       </div>
       <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
         <div class="portfolio-wrapper">
-          <p>Rebro</p> <a href="https://rebro.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/rebro-min.png"; ?>" alt="rebro"></a>
+          <p>Rebro</p> <a href="https://rebro.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/rebro-min.png"; ?>" alt="rebro" loading="lazy"></a>
 
           <div class="hidden-info">
             Ta strona miała być bazą pod naszą firmę zajmującą się web-developingiem oraz dobrym sposobem na pocwiczenie swoich umiejętności w praktyce. Jeśli mam być szczery to w trakcie jej tworzenia często dochodziło do odmiennych zdań co do tego tego jak ma wyglądać, w związku z czym mam pełną świadomość, iż mogła by wyglądać nieco lepiej. Tworzona była w czasie kiedy moje umiejętności były już na poziomie zadowalającym oraz umożliwiającym mi samodzielną pracę nad projektem, aczkolwiek moja wiedza była nadal mocno ograniczona, a pomysły na design nie tak rozwinięte jak teraz. Dlatego też postanowiłem na nowo stworzyć swój własny projekt, którym jest obecna strona wizytówka. </div>
@@ -181,7 +181,7 @@ get_header(null, $args);
       </div>
       <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
         <div class="portfolio-wrapper">
-          <p>Newtool</p> <a href="https://newtool.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/newtool-min.png"; ?>" alt="newtool"></a>
+          <p>Newtool</p> <a href="https://newtool.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/newtool-min.png"; ?>" alt="newtool" loading="lazy"></a>
 
           <div class="hidden-info">
             Ta strona miała być prostym landing pagem, który miał ukazać najistotniejsze informację na temat firmy. Klient nie oczekiwał niczego specjalnego, po prostu przejrzystą stronę, która będzie reprezentować jego biznes i wydaję mi się, że to właśnie dostał.
@@ -194,7 +194,7 @@ get_header(null, $args);
       </div>
       <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
         <div class="portfolio-wrapper">
-          <p>rehasquad</p> <a href="https://rehasquad.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/reha-min.png"; ?>" alt="rehasquad"></a>
+          <p>rehasquad</p> <a href="https://rehasquad.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/reha-min.png"; ?>" alt="rehasquad" loading="lazy"></a>
 
           <div class="hidden-info">
             To była moja pierwsza strona robiona dla klienta. Mam świadomość iż nie jest ona pokazem umiejętności web-developera, ale była tworzona ona w bardzo któtkim czasie i praktycznie za darmo. Bardziej w ramach poćwiczenia, aniżeli chęci osiągnięcia spektakularnego efektu. Klientowi jednak nie zależało na wyglądzie, a na szybkim wdrożeniu "wizytówki" własnej działalności. Pomimo mojego ogólnego niezadowolenia, klient zaakceptował stronę i był z niej zadowolony.
@@ -222,7 +222,7 @@ get_header(null, $args);
         <div class="wrapper-review text-center wrapper-review-1">
           <span class="arrow-review-left"><i class="bi bi-arrow-left-circle"></i></span>
           <span class="arrow-review-right"><i class="bi bi-arrow-right-circle"></i></span>
-          <span class="img-wrapper"><i class="bi bi-quote"></i> <img src=<?php echo get_template_directory_uri() . "/assets/anon.png"; ?> alt="anon"> </span>
+          <span class="img-wrapper"><i class="bi bi-quote"></i> <img src=<?php echo get_template_directory_uri() . "/assets/anon.png"; ?> alt="anon" loading="lazy"> </span>
           <h2 class="fullname">Mój przyszły szef</h2>
           <h3 class="proffesion">Szef</h3>
           <p class="random-text">"Nie wiem jakim cudem nie zatrudniłem go lata temu, jest to osoba, której każdy poszukuje do swojej firmy!"</p>
@@ -233,7 +233,7 @@ get_header(null, $args);
         <div class="wrapper-review text-center wrapper-review-2">
           <span class="arrow-review-left"><i class="bi bi-arrow-left-circle"></i></span>
           <span class="arrow-review-right"><i class="bi bi-arrow-right-circle"></i></span>
-          <span class="img-wrapper"><i class="bi bi-quote"></i> <img src=<?php echo get_template_directory_uri() . "/assets/anon.png"; ?> alt="anon"></span>
+          <span class="img-wrapper"><i class="bi bi-quote"></i> <img src=<?php echo get_template_directory_uri() . "/assets/anon.png"; ?> alt="anon" loading="lazy"></span>
           <h2 class="fullname">Mój były szef</h2>
           <h3 class="proffesion">Szef</h3>
           <p class="random-text">"Nienawidzę gościa z poprzedniej opinii, ukradł mi najlepszego pracownika, gdzie ja teraz znajdę drugiego takiego jak on?"</p>
@@ -244,7 +244,7 @@ get_header(null, $args);
         <div class="wrapper-review  text-center wrapper-review-3">
           <span class="arrow-review-left"><i class="bi bi-arrow-left-circle"></i></span>
           <span class="arrow-review-right"><i class="bi bi-arrow-right-circle"></i></span>
-          <span class="img-wrapper"><i class="bi bi-quote"></i><img src=<?php echo get_template_directory_uri() . "/assets/anon.png"; ?> alt="anon"></span>
+          <span class="img-wrapper"><i class="bi bi-quote"></i><img src=<?php echo get_template_directory_uri() . "/assets/anon.png"; ?> alt="anon" loading="lazy"></span>
           <h2 class="fullname">Wiesław Rejnsz</h2>
           <h3 class="proffesion">Ojciec</h3>
           <p class="random-text">"Utalentowany, ale leniwy. Ciągle tylko klika w ten kąkuter."</p>
@@ -255,7 +255,7 @@ get_header(null, $args);
         <div class="wrapper-review text-center wrapper-review-4">
           <span class="arrow-review-left"><i class="bi bi-arrow-left-circle"></i></span>
           <span class="arrow-review-right"><i class="bi bi-arrow-right-circle"></i></span>
-          <span class="img-wrapper"><i class="bi bi-quote"></i> <img src=<?php echo get_template_directory_uri() . "/assets/anon.png"; ?> alt="anon"></span>
+          <span class="img-wrapper"><i class="bi bi-quote"></i> <img src=<?php echo get_template_directory_uri() . "/assets/anon.png"; ?> alt="anon" loading="lazy"></span>
           <h2 class="fullname">Joanna Rejnsz</h2>
           <h3 class="proffesion">Matka</h3>
           <p class="random-text">"Znalazł byś sę w końcu porządną pracę, a nie tylko grał w te gierki..."</p>
@@ -284,47 +284,10 @@ get_header(null, $args);
 
           </h2>
         </div>
-        <div class="row input-container">
-
-          <div class="col-sm-12">
-            <div class="styled-input wide">
-              <input type="text" required />
-              <label>Imie</label>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="styled-input">
-              <input type="text" required />
-              <label>Email</label>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="styled-input">
-              <input type="text" required />
-              <label>Numer telefonu</label>
-            </div>
-          </div>
-          <div class="col-sm-12">
-
-            <select id="reason" name="reason" class="styled-input">
-              <option value="australia">Strona</option>
-
-              <option value="usa">Oferta pracy</option>
-            </select>
-          </div>
-          <div class="col-sm-12">
-            <div class="styled-input wide">
-              <textarea required></textarea>
-              <label>Wiadomość</label>
-            </div>
-          </div>
-          <div class="col-sm-12 d-flex justify-content-center">
-            <div id="sendBtn" class="custom-button-contact">
-              <p>Wyślij wiadomość</p> <i class="bi bi-send-check"></i>
-            </div>
-          </div>
-        </div>
+        <?php echo apply_shortcodes('[contact-form-7 id="25" title="Rejnszu formularz kontaktowy"]'); ?>
       </div>
+
+
       <div class="col-sm-12 col-md-6">
 
         <div class="h2-wrapper">
@@ -341,10 +304,10 @@ get_header(null, $args);
 
         </ul>
         <ul class="social-list">
-          <li class="social-list-li"><a href=""> <i class="bi bi-facebook social-icon"></i></a></li>
-          <li class="social-list-li"><a href="https://github.com/Rejnszu" target="_blank"> <i class="bi bi-github social-icon"></i></a></li>
-          <li class="social-list-li"><a href=""> <i class="bi bi-twitter social-icon"></i></a></li>
-          <li class="social-list-li"><a href=""> <i class="bi bi-linkedin social-icon"></i></a></li>
+          <li class="social-list-li"><a href="#"> <i class="bi bi-facebook social-icon" title="facebook"></i></a></li>
+          <li class="social-list-li"><a href="https://github.com/Rejnszu" target="_blank" title="github"> <i class="bi bi-github social-icon"></i></a></li>
+          <li class="social-list-li"><a href="#"> <i class="bi bi-twitter social-icon" title="twitter"></i></a></li>
+          <li class="social-list-li"><a href="https://www.linkedin.com/in/%C5%82ukasz-rejnsz-167492238/" title="linkedin"> <i class="bi bi-linkedin social-icon"></i></a></li>
         </ul>
       </div>
     </div>

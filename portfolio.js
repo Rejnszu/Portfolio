@@ -1,5 +1,19 @@
 ("use strict");
 
+// EKRAN ŁADOWANIA
+
+let content = document.querySelector(".content");
+let loader = document.querySelector(".loader");
+function appear() {
+  content.style.display = "block";
+}
+setTimeout(appear, 500);
+
+function disappear() {
+  loader.style.display = "none";
+}
+setTimeout(disappear, 1500);
+
 // NAWIGACJA
 
 let navOpenBtn = document.querySelector(".openbtn-wrapper");
@@ -11,9 +25,23 @@ navOpenBtn.addEventListener("click", function () {
   navOpenBtnSpan.forEach((span) => span.classList.toggle("active"));
 });
 
+function scrollNav() {
+  if (window.pageYOffset > 80) {
+    naviContainer.classList.add("active");
+    langWrapper.style.display = "none";
+    navLinksDesktop.forEach((n) => (n.style.color = "white"));
+    navLinksDesktop.forEach((n) => n.children[0].classList.add("color"));
+  } else {
+    naviContainer.classList.remove("active");
+    langWrapper.style.display = "block";
+    navLinksDesktop.forEach((n) => (n.style.color = "black"));
+    navLinksDesktop.forEach((n) => n.children[0].classList.remove("color"));
+  }
+}
 window.onscroll = function () {
   scrollNav();
 };
+
 word.innerHTML = word.textContent.replace(
   /\S/g,
   "<span class='letter'>$&</span>"
@@ -38,20 +66,8 @@ function showDownGlobal() {
 }
 
 setTimeout(showDownGlobal, 400);
-function scrollNav() {
-  if (window.pageYOffset > 80) {
-    naviContainer.classList.add("active");
-    langWrapper.style.display = "none";
-    navLinksDesktop.forEach((n) => (n.style.color = "white"));
-    navLinksDesktop.forEach((n) => n.children[0].classList.add("color"));
-  } else {
-    naviContainer.classList.remove("active");
-    langWrapper.style.display = "block";
-    navLinksDesktop.forEach((n) => (n.style.color = "black"));
-    navLinksDesktop.forEach((n) => n.children[0].classList.remove("color"));
-  }
-}
 
+// UMIEJĘTNOŚCI KODOWANIA
 let skillObj = [
   { name: "HTML", percent: "70%" },
   { name: "CSS", percent: "70%" },
@@ -115,6 +131,7 @@ options1);
 
 skillDiv.forEach((move) => moveObserver1.observe(move));
 
+// HEADERY
 let leftBracket = document.querySelectorAll(".left-bracket");
 let rightBracket = document.querySelectorAll(".right-bracket");
 let h2Inside = document.querySelectorAll(".h2-inside");
@@ -143,25 +160,13 @@ leftBracket.forEach((bracket) => bracketObserver.observe(bracket));
 rightBracket.forEach((bracket) => bracketObserver.observe(bracket));
 h2Inside.forEach((inside) => bracketObserver.observe(inside));
 
-let content = document.querySelector(".content");
-let loader = document.querySelector(".loader");
-function appear() {
-  content.style.display = "block";
-}
-setTimeout(appear, 500);
-
-function disappear() {
-  loader.style.display = "none";
-}
-setTimeout(disappear, 1500);
-
-// reviews
+// REVIEWS
 
 function reviews() {
   let arrLeft = document.querySelectorAll(".arrow-review-left");
   let arrRight = document.querySelectorAll(".arrow-review-right");
   let wrappers = document.querySelectorAll(".wrapper-review");
-  let g = 0;
+  let currentReview = 0;
 
   function hide() {
     for (let i = 1; i < wrappers.length; i++) {
@@ -180,27 +185,27 @@ function reviews() {
         n.style.transform = "translateX(50px)";
       }
     });
-    wrappers[g].style.display = "flex";
+    wrappers[currentReview].style.display = "flex";
     setTimeout(() => {
-      wrappers[g].style.opacity = "1";
-      wrappers[g].style.transform = "translateX(0)";
+      wrappers[currentReview].style.opacity = "1";
+      wrappers[currentReview].style.transform = "translateX(0)";
     }, 50);
   }
 
   arrRight.forEach(function (arrow) {
     arrow.addEventListener("click", function () {
-      g++;
-      if (g >= wrappers.length) {
-        g = 0;
+      currentReview++;
+      if (currentReview >= wrappers.length) {
+        currentReview = 0;
       }
       arrowMove();
     });
   });
   arrLeft.forEach(function (arrow) {
     arrow.addEventListener("click", function () {
-      g--;
-      if (g < 0) {
-        g = wrappers.length - 1;
+      currentReview--;
+      if (currentReview < 0) {
+        currentReview = wrappers.length - 1;
       }
       arrowMove();
     });
@@ -231,7 +236,6 @@ let moveObserverAnimate = new IntersectionObserver(function Moving(
 },
 animateOptions);
 
-// moveObserverAnimate.observe(sliderContainer);
 moveObserverAnimate.observe(containerReview);
 portfolioColumns.forEach((col) => moveObserverAnimate.observe(col));
 contactInput.forEach((input) => moveObserverAnimate.observe(input));
@@ -285,7 +289,7 @@ let moveObserverLetterAnimate = new IntersectionObserver(function Moving(
         function down() {
           letter.classList.add("animate");
         }
-        setTimeout(down, i * 50);
+        setTimeout(down, i * 30);
       });
       moveObserver.unobserve(entry.target);
     }
@@ -294,6 +298,7 @@ let moveObserverLetterAnimate = new IntersectionObserver(function Moving(
 animateLettersOptions);
 moveObserverLetterAnimate.observe(quizH3);
 
+// KONTAKT
 let h2InsideContact = document.querySelectorAll(".h2-inside-contact");
 h2InsideContact.forEach(
   (n) =>
@@ -370,7 +375,7 @@ let moveObserverLetterAnimateContacts = new IntersectionObserver(
           function down() {
             letter.classList.add("animate");
           }
-          setTimeout(down, i * 50);
+          setTimeout(down, i * 30);
         });
         moveObserver.unobserve(entry.target);
       }
@@ -389,6 +394,7 @@ socialIcon.forEach(function (icon) {
     setTimeout(() => this.classList.remove("active"), 2000);
   });
 });
+
 // PrACtical skills animation
 let practicalSkills = document.querySelectorAll(".practice-skills-list> li");
 practicalSkills.forEach(function (n, i) {

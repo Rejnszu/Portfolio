@@ -261,5 +261,8 @@ body {
   display: flex;
   flex-direction: column;
 }
+.grecaptcha-badge {
+  opacity: 0;
+}
 
 /*# sourceMappingURL=quiz.css.map */

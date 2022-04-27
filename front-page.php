@@ -14,7 +14,7 @@ get_header(null, $args);
 
 
 
-<!-- EKRAN ŁADOWANIA -->
+
 <!-- EKRAN ŁADOWANIA -->
 <div id="background_wrap"></div>
 

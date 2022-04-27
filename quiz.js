@@ -104,10 +104,10 @@ let questionObj = {
 };
 
 let koniecGry = questionObj.all.length;
-let disabled;
+let disabledButton;
 let disabledHelper;
-let i = 0;
-let k = 0;
+let currentRoundNumber = 0;
+let comperable = 0;
 let punkty = 0;
 let answerObjectCopy = JSON.parse(JSON.stringify(questionObj));
 
@@ -124,7 +124,7 @@ let leftSpan = document.querySelector(".left-right");
 let rightSpan = document.querySelector(".right-left");
 
 function updateRoundNumber() {
-  roundNumber.innerHTML = `${i + 1}/${questionObj.all.length}`;
+  roundNumber.innerHTML = `${currentRoundNumber + 1}/${questionObj.all.length}`;
 }
 updateRoundNumber();
 
@@ -139,7 +139,8 @@ function helper() {
       this.style.pointerEvents = "none";
 
       let nonCorrect = Array.from(answers).filter(
-        (answer) => answer.innerHTML !== questionObj.all[i].poprawna
+        (answer) =>
+          answer.innerHTML !== questionObj.all[currentRoundNumber].poprawna
       );
       let deleted1 = nonCorrect[Math.floor(Math.random() * nonCorrect.length)];
       let nonCorrectNext = nonCorrect.filter((n) => n !== deleted1);
@@ -156,19 +157,20 @@ helper();
 function showAnswer() {
   for (let j = 0; j < answers.length; j++) {
     let randomAnswer = Math.floor(
-      Math.random() * answerObjectCopy.all[i].answers.length
+      Math.random() * answerObjectCopy.all[currentRoundNumber].answers.length
     );
 
-    question.textContent = answerObjectCopy.all[i].question;
-    answers[j].textContent = answerObjectCopy.all[i].answers[randomAnswer];
-    answerObjectCopy.all[i].answers.splice(randomAnswer, 1);
+    question.textContent = answerObjectCopy.all[currentRoundNumber].question;
+    answers[j].textContent =
+      answerObjectCopy.all[currentRoundNumber].answers[randomAnswer];
+    answerObjectCopy.all[currentRoundNumber].answers.splice(randomAnswer, 1);
   }
 }
 
 function answerButtonActions() {
-  disabled = true;
+  disabledButton = true;
   koniecGry--;
-  k++;
+  comperable++;
   disabledHelper = true;
   answers.forEach((n) => (n.style.pointerEvents = "none"));
   if (koniecGry == 0) {
@@ -177,7 +179,7 @@ function answerButtonActions() {
 }
 
 function btnBasicProperties() {
-  disabled = false;
+  disabledButton = false;
   disabledHelper = false;
   answers.forEach((n) => (n.style.pointerEvents = "auto"));
   answers.forEach(function (answer) {
@@ -188,15 +190,15 @@ function btnBasicProperties() {
 }
 
 function goFurther() {
-  if (k == i) {
+  if (comperable == currentRoundNumber) {
     return;
   } else {
-    i++;
+    currentRoundNumber++;
     btnBasicProperties();
     showAnswer();
     updateRoundNumber();
     answers.forEach((answer) => (answer.style.pointerEvents = "auto"));
-    if (i == questionObj.all.length - 1) {
+    if (currentRoundNumber == questionObj.all.length - 1) {
       nextRound.style.display = "none";
     }
   }
@@ -220,10 +222,12 @@ document.addEventListener("keydown", function (event) {
 
 answers.forEach(function (answer) {
   answer.addEventListener("click", function (e) {
-    if (disabled) {
+    if (disabledButton) {
       return;
     } else {
-      if (e.target.textContent == questionObj.all[i].poprawna) {
+      if (
+        e.target.textContent == questionObj.all[currentRoundNumber].poprawna
+      ) {
         this.classList.add("good");
         punkty++;
         answerButtonActions();
@@ -231,7 +235,10 @@ answers.forEach(function (answer) {
         this.classList.add("bad");
         answerButtonActions();
         Array.from(answers)
-          .find((answer) => answer.innerHTML == questionObj.all[i].poprawna)
+          .find(
+            (answer) =>
+              answer.innerHTML == questionObj.all[currentRoundNumber].poprawna
+          )
           .classList.add("winning-col");
       }
     }
@@ -266,8 +273,8 @@ restart.addEventListener("click", function () {
   rightSpan.style.width = "0%";
   fiftyFifty.style.pointerEvents = "auto";
   koniecGry = questionObj.all.length;
-  i = 0;
-  k = 0;
+  currentRoundNumber = 0;
+  comperable = 0;
   punkty = 0;
   answerObjectCopy = JSON.parse(JSON.stringify(questionObj));
   nextRound.style.display = "block";

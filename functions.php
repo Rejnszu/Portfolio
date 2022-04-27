@@ -20,7 +20,7 @@ function portfolio_register_styles()
         wp_enqueue_style('portfolio-style', get_template_directory_uri() . "/style.css", array("portfolio-bootstrap-style"), $version, 'all');
     }
     if (is_page(array('quiz'))) {
-        wp_enqueue_style('portfolio-style', get_template_directory_uri() . "/style1.css", array("portfolio-bootstrap-style"), $version, 'all');
+        wp_enqueue_style('portfolio-style', get_template_directory_uri() . "/css/quiz.css", array("portfolio-bootstrap-style"), $version, 'all');
     }
 }
 
@@ -54,13 +54,6 @@ function portfolio_register_scripts()
 add_action('wp_enqueue_scripts', 'portfolio_register_scripts');
 
 
-// function defer_parsing_of_js($url)
-// {
-//     if (FALSE === strpos($url, '.js')) return $url;
-//     if (strpos($url, 'jquery.js')) return $url;
-//     return "$url' defer ";
-// }
-// add_filter('clean_url', 'defer_parsing_of_js', 11, 1);
 // function defer_parsing_of_js($url)
 // {
 //     if (is_user_logged_in()) return $url; //don't break WP Admin

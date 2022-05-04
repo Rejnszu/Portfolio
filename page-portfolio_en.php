@@ -42,43 +42,33 @@ wp_head();
 
     </h1>
 
-    <video src="<?php echo get_template_directory_uri() . '/assets/about-black-1.webm'; ?>" autoplay loop muted> Your browser does not support the video tag.</video>
+    <video class="aboutMe-Video" src="<?php echo get_template_directory_uri() . '/assets/about-black-1.webm'; ?>" autoplay loop muted> Your browser does not support the video tag.</video>
     <!-- <img src="assets/aboutme.gif" alt="aboutgif"> -->
     <div class="row">
-      <div class="col-sm-12 col-lg-7 about-me-col d-flex justify-content-center align-items-center">
-        <fieldset class="about-me">
+      <div class="col-sm-12  about-me-col d-flex justify-content-center align-items-center">
+        <fieldset class="about-me d-flex">
           <legend id="word" align="center">About me:</legend>
-          <div class="about-me-inside-wrapper">
+          <div class="about-me-inside-wrapper col-sm-12 col-xl-8">
             <h3>Introduction:</h3>
             <p>Hello everyone! My name is Lukas and Welcome to my portfolio site which was made to encourage You to
-              hire me as your professional or maybe semi-professional... nah just web developer. Everything You will
+              hire me as your professional or maybe semi-professional... nah just front-end/web developer. Everything You will
               see here is the example of my skills and dedication to this job which I'm constantly trying to improve.
             </p>
             <h3>Some facts about me:</h3>
-            <p>I am self-taught web developer trying to get into the professional world of creating websites,
-              applications and everything connected with design. My journey with coding started around one and a half
-              year ago,
-              when I decided that my current job is quite boring and won't get me anywhere, I liked it but I needed
-              something
-              more
-              challenging. As a big fan of new technologies and also enquiring person I wanted to see by myself how
-              the programming word looks from the inside.
+            <p>I am a self-taught person who tries to break into the world of commercial development of websites and web applications, as well as everything related to the design of web content. My adventure with "coding" began over a year and a half ago, when I came to the conclusion that my current job is not very developing and it would be appropriate to find a new challenge. Not that I didn't like her, but I needed something that would require constant development of me. As an enthusiast of new technologies and a person curious about the world, I decided that it would be worth getting interested in the subject on which half of our current civilization is based.
             </p>
             <h3>My career:</h3>
-            <p>I have finished university of technology with engineering degree in energy production, but I knew
-              that's not
-              for
-              me. When I was choosing it I didn't really know what I want to do in the future. I was thinking about
-              going
-              on computer science course, but at that time I wasn't really intrested in it. In my last 7 year work
-              career I've been doing many different activities including sales, lighting projecting, managing online
-              stores, helping to develop some big projects from different industries.
+            <p>I have finished my engineering studies in the field of energy, but basically I knew from the beginning that it was not for me. At that time, I also didn't feel any interest in computer science, maybe because I always associated it with boring connecting of monitors and mouses to computers, well, I was wrong. Over the last 7 years of my professional career, I have been doing different things. Mainly sales, both on-site and online, taking care of online stores, lighting projects design, as well as assistance in the development of large projects in the field of photovoltaics. Generally speaking, I am familiar with contact with clients and I can talk easily to people ; ).
             </p>
+            <h3>Moje goals:</h3>
+            <p>I am fully aware that I still make many mistakes, I have gaps in knowledge, and I lack certain habits that would improve the quality of my code, which is why I want to cooperate with people who have been working in the industry for some time and could guide me and show what is most important in this environment.
+            </p>
+          </div>
+          <div class="col-sm-12 col-xl-4 d-flex align-items-center justify-content-end myFaceWrapper"><span class="imgWrapperFace"><img src=<?php echo get_template_directory_uri() . "/assets/hobbiton-min.jpg"; ?> alt="myface" class=" myFace"></span>
           </div>
         </fieldset>
       </div>
-      <div class="col-sm-12 col-lg-5 d-flex align-items-center justify-content-center myFaceWrapper"><span class="imgWrapperFace"><img src=<?php echo get_template_directory_uri() . "/assets/hobbiton-min.jpg"; ?> alt="myface" class=" myFace"></span>
-      </div>
+
     </div>
     <div class="quiz-container">
       <h3 id="quizH3">If u want to know me better try out my quiz!</h3>

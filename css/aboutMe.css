@@ -43,6 +43,7 @@
   width: 100%;
   box-shadow: var(--my-shadow);
 }
+
 .about-me > legend {
   display: inline-block;
   background-color: black;
@@ -82,7 +83,7 @@
 .myFace {
   border-radius: var(--border-radius);
   max-width: 100%;
-  width: 27rem;
+  width: 32rem;
   filter: grayscale(0.6);
   cursor: pointer;
 }
@@ -109,14 +110,14 @@
     rgba(0, 0, 0, 0.7) 70%,
     rgba(255, 255, 255, 0.7) 100%
   );
-  transform: rotate(-120deg) translate(-5rem, 45rem);
+  transform: rotate(-120deg) translate(-5rem, 65rem);
   transform-origin: bottom;
   border-radius: var(--border-radius);
   z-index: 10;
   transition: all 1.5s;
 }
 .imgWrapperFace:hover.imgWrapperFace::before {
-  transform: rotate(-120deg) translate(45rem, 45rem);
+  transform: rotate(-120deg) translate(55rem, 65rem);
 }
 .imgWrapperFace::after {
   position: absolute;
@@ -134,34 +135,39 @@
     rgba(0, 0, 0, 0.7) 70%,
     rgba(255, 255, 255, 0.7) 100%
   );
-  transform: rotate(60deg) translate(-35rem, 5rem);
+  transform: rotate(60deg) translate(-45rem, 5rem);
   transform-origin: bottom;
   border-radius: var(--border-radius);
   z-index: 10;
   transition: all 1s;
 }
 .imgWrapperFace:hover.imgWrapperFace::after {
-  transform: rotate(60deg) translate(15rem, 5rem);
+  transform: rotate(60deg) translate(20rem, 5rem);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1500px) {
   .myFaceWrapper {
     display: none !important;
   }
 
   .about-me {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-      url(assets/hobbiton-min.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0;
+    background-position: top;
   }
-
+  .about-me.load {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+      url(../assets/hobbiton-min.jpg);
+  }
   .about-me-inside-wrapper {
     padding: 1rem;
     border-radius: 10px;
     font-weight: 500;
     line-height: 30px;
+  }
+  .aboutMe-Video {
+    display: none;
   }
 }
 .quiz-container {

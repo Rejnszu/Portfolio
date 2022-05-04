@@ -2,7 +2,7 @@
 .container-review {
   opacity: 0;
   padding: 3rem 0;
-  transition: all 1s;
+  transition: opacity 1s;
 }
 .container-review-row {
   display: flex;

@@ -38,28 +38,33 @@ get_header(null, $args);
 
     </h1>
 
-    <video src=<?php echo get_template_directory_uri() . "/assets/about-black-1.webm"; ?> autoplay loop muted> Your browser does not support the video tag.</video>
+    <video class="aboutMe-Video" src=<?php echo get_template_directory_uri() . "/assets/about-black-1.webm"; ?> autoplay loop muted> Your browser does not support the video tag.</video>
 
     <div class="row">
-      <div class="col-sm-12 col-lg-7 about-me-col d-flex justify-content-center align-items-center">
-        <fieldset class="about-me">
+      <div class="col-sm-12  about-me-col d-flex justify-content-center align-items-center">
+        <fieldset class="about-me d-flex ">
           <legend id="word" align="center">O mnie:</legend>
-          <div class="about-me-inside-wrapper">
+          <div class="about-me-inside-wrapper col-sm-12 col-xl-8">
             <h3>Wprowadzenie:</h3>
-            <p>Witam wszystkich! Nazywam się Łukasz, a oto moja strona wizytówka, która ma was przekonać do zatrudnienia mnie jako waszego profesjonalnego, no może nie do końca profesjonalnego...ehhh po prostu web developera. Wszystko co znajdziecie na tej stronie jest przykładem moich umiejętności i dedykacji dla tej pracy, którą cały czas staram się udoskonalać.
+            <p>Witam wszystkich! Nazywam się Łukasz, a oto moja strona wizytówka, która ma was przekonać do zatrudnienia mnie jako waszego profesjonalnego, no może nie do końca profesjonalnego...ehhh po prostu web/front-end developera. Wszystko co znajdziecie na tej stronie jest przykładem moich umiejętności i dedykacji dla tej pracy, którą cały czas staram się udoskonalać.
             </p>
             <h3>Trochę faktów o mnie:</h3>
-            <p>Jestem samoukiem, który próboje przebić się do świata komerycjnego tworzenia stron oraz aplikacji internetowych, a także wszystkiego co związane jest z designem treści internetowych. Moja przygoda z "kodowaniem" zaczęła się ponad półtora roku temu, kiedy doszedłem do wniosku, że moja obecna praca mnie nudzi oraz prowadzi mnie do nikąd, nie żebym jej nie lubił, ale potrzebowałem większych wyzwań i czegoś co będzie wymagało ode mnie ciągłego rozwoju. Jako entuzjasta nowych technologii oraz osoba ciekawa świata stwierdziłem, że warto by zainteresować się tematyką, na której opiera się połowa naszej obecnej cywilizacji.
+            <p>Jestem samoukiem, który próboje przebić się do świata komercyjnego tworzenia stron oraz aplikacji internetowych, a także wszystkiego co związane jest z designem treści internetowych. Moja przygoda z "kodowaniem" zaczęła się ponad półtora roku temu, kiedy doszedłem do wniosku, że moja obecna praca jest mało rozwijająca i wypadało by znaleźć sobie nowe wyzwanie. Nie żebym jej nie lubił, ale potrzebowałem czegoś co będzie wymagało ode mnie ciągłego rozwoju. Jako entuzjasta nowych technologii oraz osoba ciekawa świata stwierdziłem, że warto by zainteresować się tematyką, na której opiera się połowa naszej obecnej cywilizacji.
 
             </p>
             <h3>Moja kariera:</h3>
             <p>Skończyłem studia inżynierskie na kierunku energetyka, ale w zasadzie od początku wiedziałem, że to nie jest dla mnie. W tamtym okresie również nie czułem jakiegoś większego zainteresowania informatyką, może dlatego iż zawsze kojarzyło mi się to z nudnym podpinaniem monitorów i myszek pod komputery, no cóż, byłem w błędzie. Przez ostatnie 7 lat kariery zawodowej zajmowałem się różnymi rzeczami. Głównie sprzedażą, zarówno na miejscu jak i internetową, opieką nad sklepami internetowymi, projektowaniem oświetlenia, a także pomocą przy rozwoju dużych projektów z zakresu fotowoltaiki. Generalnie kontakt z klientem nie jest mi obcy i potrafię rozmawiać z ludźmi ; ).
             </p>
+            <h3>Moje cele:</h3>
+            <p>Mam pełną świadomość, iż ciągle popełniam wiele błędów, mam braki w wiedzy, a także brak mi pewnych nawyków, które poprawiły by jakość mojego kodu dlatego też zależy mi na tym, aby podjąć współpracę z ludźmi, którzy w branży siędzą już jakiś czas i mogli by mnie odpowiednio nakierować, a także pokazać mi co jest naistotniejsze w tym środowisku.
+            </p>
+          </div>
+          <div class="col-sm-12 col-xl-4 d-flex align-items-center justify-content-end myFaceWrapper"><span class="imgWrapperFace"><img src=<?php echo get_template_directory_uri() . "/assets/hobbiton-min.jpg"; ?> alt="myface" class=" myFace" loading="lazy"></span>
           </div>
         </fieldset>
+
       </div>
-      <div class="col-sm-12 col-lg-5 d-flex align-items-center justify-content-center myFaceWrapper"><span class="imgWrapperFace"><img src=<?php echo get_template_directory_uri() . "/assets/hobbiton-min.jpg"; ?> alt="myface" class=" myFace"></span>
-      </div>
+
     </div>
     <div class="quiz-container">
       <h3 id="quizH3">Chcesz dowiedzieć się wiecej o mnie, sprawdź mój quiz!</h3>
@@ -109,7 +114,7 @@ get_header(null, $args);
             <p> Witryny wielostronnicowe</p>
           </li>
           <li><i class="bi bi-check2-all"></i>
-            <p> Strony oparte na wodpressie</p>
+            <p> Strony oparte na wordpressie</p>
           </li>
           <li><i class="bi bi-check2-all"></i>
             <p> Strony w pełni interaktywne</p>

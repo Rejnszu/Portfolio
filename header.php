@@ -36,14 +36,12 @@
                 </span></div>
             <div class="col-sm-12 navi-container-mobile">
 
-                <span class="nav-link-wrapper"> <a href="#aboutMe" class="nav-link nav-link-mobile">O mnie<span class="borderBottom"></span></a></span>
-                <span class="nav-link-wrapper"> <a href="#mySkills" class="nav-link nav-link-mobile">Umiejętności
-                        kodowania<span class="borderBottom"></span></a></span>
-                <span class="nav-link-wrapper"> <a href="#mySkillsPractical" class="nav-link nav-link-mobile">Umiejętności
-                        praktyczne<span class="borderBottom"></span></a></span>
-                <span class="nav-link-wrapper"> <a href="#port" class="nav-link nav-link-mobile">Portfolio<span class="borderBottom"></span></a></span>
-                <span class="nav-link-wrapper"> <a href="#containerReview" class="nav-link nav-link-mobile">Opinie<span class="borderBottom"></span></a></span>
-                <span class="nav-link-wrapper"> <a href="#contact" class="nav-link nav-link-mobile">Kontakt<span class="borderBottom"></span></a></span>
+                <a href="#aboutMe" class="nav-link nav-link-mobile">O mnie</a>
+                <a href="#mySkills" class="nav-link nav-link-mobile">Umiejętności kodowania</a>
+                <a href="#mySkillsPractical" class="nav-link nav-link-mobile">Umiejętności praktyczne</a>
+                <a href="#port" class="nav-link nav-link-mobile">Portfolio</a>
+                <a href="#containerReview" class="nav-link nav-link-mobile">Opinie</a>
+                <a href="#contact" class="nav-link nav-link-mobile">Kontakt</a>
             </div>
 
 

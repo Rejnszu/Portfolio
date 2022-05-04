@@ -44,7 +44,7 @@ wp_footer();
                 if (!entry.isIntersecting) {
                     return;
                 } else {
-                    navLinks.forEach(function(n) {
+                    navLinksDesktop.forEach(function(n) {
                         n.children[0].classList.remove("active");
                         if (
                             entry.target.dataset.name ==

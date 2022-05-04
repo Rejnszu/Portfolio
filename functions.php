@@ -13,9 +13,7 @@ function portfolio_register_styles()
     if (is_page(array('portfolio_en'))) {
         wp_enqueue_style('portfolio-style', get_template_directory_uri() . "/style.css", array("portfolio-bootstrap-style"), $version, 'all');
     }
-    if (is_page(array('mail'))) {
-        wp_enqueue_style('portfolio-style', get_template_directory_uri() . "/style.css", array("portfolio-bootstrap-style"), $version, 'all');
-    }
+
     if (is_front_page()) {
         wp_enqueue_style('portfolio-style', get_template_directory_uri() . "/style.css", array("portfolio-bootstrap-style"), $version, 'all');
     }
@@ -44,9 +42,7 @@ function portfolio_register_scripts()
     if (is_page(array('portfolio_en'))) {
         wp_enqueue_script('portfolio-main-script',  get_template_directory_uri() . "/portfolio.js", array(), '1.0', false);
     }
-    if (is_page(array('mail'))) {
-        wp_enqueue_script('portfolio-main-script',  get_template_directory_uri() . "/portfolio.js", array(), '1.0', false);
-    }
+
     $translation_array = array('templateUrl' => get_template());
     wp_localize_script('portfolio-main-script', 'object_name', $translation_array);
 }

@@ -35,14 +35,12 @@
                     <p>PL</p>
                 </span></div>
             <div class="col-sm-12 navi-container-mobile">
-
-                <span class="nav-link-wrapper"> <a href="#aboutMe" class="nav-link nav-link-mobile">About me<span class="borderBottom"></span></a></span>
-                <span class="nav-link-wrapper"> <a href="#mySkills" class="nav-link nav-link-mobile">Coding skills<span class="borderBottom"></span></a></span>
-                <span class="nav-link-wrapper"> <a href="#mySkillsPractical" class="nav-link nav-link-mobile">Practical
-                        skills<span class="borderBottom"></span></a></span>
-                <span class="nav-link-wrapper"> <a href="#port" class="nav-link nav-link-mobile">Portfolio<span class="borderBottom"></span></a></span>
-                <span class="nav-link-wrapper"> <a href="#containerReview" class="nav-link nav-link-mobile">Reviews<span class="borderBottom"></span></a></span>
-                <span class="nav-link-wrapper"> <a href="#contact" class="nav-link nav-link-mobile">Contact<span class="borderBottom"></span></a></span>
+                <a href="#aboutMe" class="nav-link nav-link-mobile">About me</a>
+                <a href="#mySkills" class="nav-link nav-link-mobile">Coding skills</a>
+                <a href="#mySkillsPractical" class="nav-link nav-link-mobile">Practical skills</a>
+                <a href="#port" class="nav-link nav-link-mobile">Portfolio</a>
+                <a href="#containerReview" class="nav-link nav-link-mobile">Reviews</a>
+                <a href="#contact" class="nav-link nav-link-mobile">Contact</a>
             </div>
 
 

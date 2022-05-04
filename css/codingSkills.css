@@ -16,7 +16,7 @@
 .skills-div {
   transform: translateY(100px);
   opacity: 0;
-  transition: all 1s;
+  transition: opacity 1s, transform 1s;
 }
 .skills-div.active {
   transform: translateY(0);

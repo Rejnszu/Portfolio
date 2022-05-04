@@ -25,6 +25,31 @@ navOpenBtn.addEventListener("click", function () {
   navOpenBtnSpan.forEach((span) => span.classList.toggle("active"));
 });
 
+word.innerHTML = word.textContent.replace(
+  /\S/g,
+  "<span class='letter'>$&</span>"
+);
+
+let navLinksDesktop = document.querySelectorAll(".nav-link-desktop");
+let letters = document.querySelectorAll(".letter");
+function showDownGlobal() {
+  navLinksDesktop.forEach(function (link, i) {
+    function showDown() {
+      link.style.transform = "translateX(0px)";
+    }
+    setTimeout(showDown, 200 * (i + 6));
+  });
+
+  Array.from(letters).forEach(function (letter, i) {
+    function down() {
+      letter.classList.add("animate");
+    }
+    setTimeout(down, (i + 2) * 100);
+  });
+}
+
+setTimeout(showDownGlobal, 400);
+
 function scrollNav() {
   if (window.pageYOffset > 80) {
     naviContainer.classList.add("active");
@@ -42,37 +67,13 @@ window.onscroll = function () {
   scrollNav();
 };
 
-word.innerHTML = word.textContent.replace(
-  /\S/g,
-  "<span class='letter'>$&</span>"
-);
-let navLinks = document.querySelectorAll(".nav-link");
-let navLinksDesktop = document.querySelectorAll(".nav-link-desktop");
-let letters = document.querySelectorAll(".letter");
-function showDownGlobal() {
-  navLinks.forEach(function (link, i) {
-    function showDown() {
-      link.style.transform = "translateX(0px)";
-    }
-    setTimeout(showDown, 200 * i);
-  });
-
-  Array.from(letters).forEach(function (letter, i) {
-    function down() {
-      letter.classList.add("animate");
-    }
-    setTimeout(down, (i + 2) * 100);
-  });
-}
-
-setTimeout(showDownGlobal, 400);
-
 // UMIEJĘTNOŚCI KODOWANIA
 let skillObj = [
   { name: "HTML", percent: "70%" },
   { name: "CSS", percent: "70%" },
   { name: "JAVASCRIPT", percent: "65%" },
   { name: "BOOSTRAP", percent: "80%" },
+  { name: "REACT", percent: "15%" },
   { name: "GIT", percent: "50%" },
   { name: "WORDPRESS", percent: "40%" },
   { name: "PHP", percent: "30%" },
@@ -97,24 +98,29 @@ let options = {
   rootMargin: "-100px 0px -100px 0px",
   threshold: 0,
 };
-let moveObserver = new IntersectionObserver(function Moving(entries, observer) {
+let moveObserverInsideSkills = new IntersectionObserver(function Moving(
+  entries,
+  observer
+) {
   entries.forEach(function (entry) {
     if (!entry.isIntersecting) {
       return;
     } else {
       entry.target.style.width = entry.target.children[0].innerHTML;
-      moveObserver.unobserve(entry.target);
+      moveObserverInsideSkills.unobserve(entry.target);
     }
   });
-}, options);
+},
+options);
+
 let options1 = {
   root: null,
   rootMargin: "0px 0px 0px 0px",
   threshold: 0,
 };
-skillBoxInside.forEach((move) => moveObserver.observe(move));
+skillBoxInside.forEach((move) => moveObserverInsideSkills.observe(move));
 
-let moveObserver1 = new IntersectionObserver(function Moving(
+let moveObserverSkillsWrapper = new IntersectionObserver(function Moving(
   entries,
   observer
 ) {
@@ -123,13 +129,13 @@ let moveObserver1 = new IntersectionObserver(function Moving(
       return;
     } else {
       entry.target.classList.add("active");
-      moveObserver.unobserve(entry.target);
+      moveObserverSkillsWrapper.unobserve(entry.target);
     }
   });
 },
 options1);
 
-skillDiv.forEach((move) => moveObserver1.observe(move));
+skillDiv.forEach((move) => moveObserverSkillsWrapper.observe(move));
 
 // HEADERY
 let leftBracket = document.querySelectorAll(".left-bracket");
@@ -230,7 +236,7 @@ let moveObserverAnimate = new IntersectionObserver(function Moving(
       return;
     } else {
       entry.target.classList.add("animate");
-      moveObserver.unobserve(entry.target);
+      moveObserverAnimate.unobserve(entry.target);
     }
   });
 },
@@ -248,9 +254,9 @@ let backgroundElements = [
   { className: "background-element3" },
 ];
 
-backgroundElements.forEach(function (n) {
+backgroundElements.forEach(function (element) {
   let backgroundEl = document.createElement("div");
-  backgroundEl.className = n.className;
+  backgroundEl.className = element.className;
   backgroundEl.classList.add("animate");
   backgroundEl.classList.add("background-elements");
   content.append(backgroundEl);
@@ -291,7 +297,7 @@ let moveObserverLetterAnimate = new IntersectionObserver(function Moving(
         }
         setTimeout(down, i * 30);
       });
-      moveObserver.unobserve(entry.target);
+      moveObserverLetterAnimate.unobserve(entry.target);
     }
   });
 },
@@ -327,13 +333,14 @@ let moveObserverLetterAnimateContact = new IntersectionObserver(function Moving(
         function down() {
           letter.classList.add("animate");
         }
-        setTimeout(down, i * 50);
+        setTimeout(down, i * 30);
       });
-      moveObserver.unobserve(entry.target);
+      moveObserverLetterAnimateContact.unobserve(entry.target);
     }
   });
 },
 animateLettersOptionsContact);
+
 h2InsideContact.forEach((input) =>
   moveObserverLetterAnimateContact.observe(input)
 );
@@ -377,7 +384,7 @@ let moveObserverLetterAnimateContacts = new IntersectionObserver(
           }
           setTimeout(down, i * 30);
         });
-        moveObserver.unobserve(entry.target);
+        moveObserverLetterAnimateContacts.unobserve(entry.target);
       }
     });
   },
@@ -429,7 +436,6 @@ practicalSkills.forEach((input) => moveObserverPracticalSkills.observe(input));
 // PORTFOLIO
 let hiddenInfo = document.querySelectorAll(".hidden-info");
 let infoBtn = document.querySelectorAll(".info-btn");
-let infoBtnP = document.querySelectorAll(".info-btn > p");
 
 infoBtn.forEach(function (btn) {
   btn.addEventListener("click", function () {
@@ -450,21 +456,22 @@ document.querySelectorAll(".go_top").forEach((n) =>
 let inputs = document.querySelectorAll(".styled-input input");
 let textAreas = document.querySelectorAll(".styled-input textarea");
 
-inputs.forEach(function (input) {
-  let label = document.createElement("label");
-  label.innerHTML = input.id;
-  label.htmlFor = input.id;
-  input.parentNode.insertBefore(label, input.nextSibling);
-});
-textAreas.forEach(function (textArea) {
-  let label = document.createElement("label");
-  label.innerHTML = textArea.id;
-  label.htmlFor = textArea.id;
-  textArea.parentNode.insertBefore(label, textArea.nextSibling);
-});
+function addLabelForInput(inputElement) {
+  inputElement.forEach(function (input) {
+    let label = document.createElement("label");
+    label.innerHTML = input.id;
+    label.htmlFor = input.id;
+    input.parentNode.insertBefore(label, input.nextSibling);
+  });
+}
+
+addLabelForInput(inputs);
+addLabelForInput(textAreas);
 
 // LAZY LOADING BACKGROUND IMAGE
-let codeSectionBackground = document.querySelector(".code-background");
+let practicalSkillSectionBackground =
+  document.querySelector(".code-background");
+let aboutMeSectionBackground = document.querySelector(".about-me");
 let lazyLoadingOptions = {
   root: null,
   rootMargin: "-100px 0px -100px 0px",
@@ -480,10 +487,11 @@ let moveObserverLazyLoading = new IntersectionObserver(function Moving(
       return;
     } else {
       entry.target.classList.add("load");
-      moveObserver.unobserve(entry.target);
+      moveObserverLazyLoading.unobserve(entry.target);
     }
   });
 },
 lazyLoadingOptions);
 
-moveObserverLazyLoading.observe(codeSectionBackground);
+moveObserverLazyLoading.observe(practicalSkillSectionBackground);
+moveObserverLazyLoading.observe(aboutMeSectionBackground);

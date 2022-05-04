@@ -23,17 +23,20 @@
 }
 
 .navi-container-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: none;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  transition: all 0.5s;
-  height: 0;
+  transition: transform 0.5s;
+  transform: translateY(-100%);
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.9);
 }
 .navi-container-mobile.active {
-  height: 20rem;
+  transform: translateY(0);
 }
 
 .nav-link-wrapper {
@@ -52,7 +55,6 @@
   transition: all 0.5s;
   padding-bottom: 0;
   transform-style: preserve-3d;
-  transform: translateY(-100px);
 }
 .nav-link > .borderBottom {
   position: absolute;
@@ -63,6 +65,9 @@
   height: 4px;
   background-color: black;
   transition: all 1.5s;
+}
+.nav-link-desktop {
+  transform: translateY(-100px);
 }
 .nav-link > .borderBottom.active {
   width: 100%;

@@ -69,11 +69,11 @@ window.onscroll = function () {
 
 // UMIEJĘTNOŚCI KODOWANIA
 let skillObj = [
-  { name: "HTML", percent: "70%" },
-  { name: "CSS", percent: "70%" },
+  { name: "HTML", percent: "80%" },
+  { name: "CSS", percent: "80%" },
   { name: "JAVASCRIPT", percent: "65%" },
   { name: "BOOSTRAP", percent: "80%" },
-  { name: "REACT", percent: "15%" },
+  { name: "REACT", percent: "20%" },
   { name: "GIT", percent: "50%" },
   { name: "WORDPRESS", percent: "40%" },
   { name: "PHP", percent: "30%" },

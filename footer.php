@@ -12,10 +12,15 @@ wp_footer();
 <script>
     let langWrapper = document.querySelector(".language-wrapper");
     let langButton = document.querySelector(".language-button");
+    let newHref = "<?php echo get_home_url() ?>/"
+
     langWrapper.addEventListener("click", function() {
+
+
         langButton.classList.toggle("active");
         setTimeout(function() {
-            if (location.href == "<?php echo get_home_url() ?>/") {
+
+            if (location.href.replace(/\#.*/, '') == "<?php echo get_home_url() ?>/") {
                 location.href = "<?php echo get_home_url() ?>/portfolio_en/";
             } else {
                 location.href = "<?php echo get_home_url() ?>/";

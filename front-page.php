@@ -82,7 +82,12 @@ get_header(null, $args);
 
       </h2>
     </div>
+    <div class="skills__legend">
+      <p class="legend__begginer"><span>*</span> 0% oznacza, że nie mam zielonego pojęcia co dana rzecz oznacza</p>
+      <p class="legend__master"><span>*</span> 100% oznacza, iż mogę w danym języku programować rakiety kosmiczne</p>
+    </div>
     <div class="row skills" skill-card-container>
+
       <template data-skill-template>
         <div class="col-sm-12 col-md-4 col-lg-3 skills-div">
           <p data-skill></p>
@@ -151,7 +156,7 @@ get_header(null, $args);
     <div class="row">
       <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
         <div class="portfolio-wrapper">
-          <p>Domsi</p> <a href="https://domsi.pl/"><img src="<?php echo get_template_directory_uri() . "/assets/domsi-min.png"; ?>" alt="domsi" loading="lazy"></a>
+          <p>Domsi</p> <a href="https://esklep.newtool.pl/"><img src="<?php echo get_template_directory_uri() . "/assets/domsi-min.png"; ?>" alt="domsi" loading="lazy"></a>
           <div class="hidden-info">
             Przy tej witrynie klient miał własny pomysł na stronę internetową, aczkolwiek nie miał żadnego gotowego projektu. Przy drobnej współpracy z projektantem, oraz narzuceniu mu naszej i klienta wizji na stronę, otrzymamliśmy projekt, który w pełni zadowolił zainteresowanego, bez jakichś większych zmian. Następnym krokim było zakodowanie strony oraz zaimplementowanie wszystkich niezbędnych do prawidłowego i płynnego działania strony rzeczy.
           </div>
@@ -210,6 +215,11 @@ get_header(null, $args);
           </div>
         </div>
       </div>
+      <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+        <div class="portfolio-wrapper">
+          <p>github</p> <a href="https://github.com/Rejnszu?tab=repositories" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/github.png"; ?>" alt="github" loading="lazy" style="background-color:white"></a>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -261,9 +271,9 @@ get_header(null, $args);
           <span class="arrow-review-left"><i class="bi bi-arrow-left-circle"></i></span>
           <span class="arrow-review-right"><i class="bi bi-arrow-right-circle"></i></span>
           <span class="img-wrapper"><i class="bi bi-quote"></i> <img src=<?php echo get_template_directory_uri() . "/assets/anon.png"; ?> alt="anon" loading="lazy"></span>
-          <h2 class="fullname">Joanna Rejnsz</h2>
-          <h3 class="proffesion">Matka</h3>
-          <p class="random-text">"Znalazł byś sę w końcu porządną pracę, a nie tylko grał w te gierki..."</p>
+          <h2 class="fullname">Nie chciał podać</h2>
+          <h3 class="proffesion">Kolega od stronek</h3>
+          <p class="random-text">"Jest trochę rzeczy do poprawienia, ale praca z nim póki co byla czystą przyjemnością."</p>
 
         </div>
       </div>

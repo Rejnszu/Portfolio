@@ -86,6 +86,10 @@ wp_head();
 
       </h2>
     </div>
+    <div class="skills__legend">
+      <p class="legend__begginer"><span>*</span> 0% means I have no clue what's that thing means</p>
+      <p class="legend__master"><span>*</span> 100% means I can code in that language a space rocket</p>
+    </div>
     <div class="row skills" skill-card-container>
       <template data-skill-template>
         <div class="col-sm-12 col-md-4 col-lg-3 skills-div">
@@ -214,6 +218,11 @@ wp_head();
             <p>More info</p>
             <p class="hide">Less info</p>
           </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+        <div class="portfolio-wrapper">
+          <p>github</p> <a href="https://github.com/Rejnszu?tab=repositories" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/github.png"; ?>" alt="github" loading="lazy" style="background-color:white"></a>
         </div>
       </div>
 

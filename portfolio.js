@@ -15,17 +15,25 @@ function disappear() {
 setTimeout(disappear, 1500);
 
 // NAWIGACJA
-
+let mobileNavigation = document.querySelector(".navi-container-mobile");
 let navOpenBtn = document.querySelector(".openbtn-wrapper");
 let naviContainer = document.querySelector(".navi-container");
-navOpenBtn.addEventListener("click", function () {
-  let navOpenBtnSpan = document.querySelectorAll(".openbtn-wrapper > span");
-  let nav = document.querySelector(".navi-container-mobile");
-  nav.classList.toggle("active");
-  navOpenBtnSpan.forEach((span) => span.classList.toggle("active"));
+let navOpenBtnSpan = document.querySelectorAll(".openbtn-wrapper > span");
+const navLinkMobile = document.querySelectorAll(".nav-link-mobile");
+
+function mobileMenuHandler(handler) {
+  handler.addEventListener("click", function () {
+    mobileNavigation.classList.toggle("active");
+    navOpenBtnSpan.forEach((span) => span.classList.toggle("active"));
+  });
+}
+
+mobileMenuHandler(navOpenBtn);
+navLinkMobile.forEach((mobileNavLink) => {
+  mobileMenuHandler(mobileNavLink);
 });
 
-word.innerHTML = word.textContent.replace(
+legend.innerHTML = legend.textContent.replace(
   /\S/g,
   "<span class='letter'>$&</span>"
 );
@@ -92,7 +100,9 @@ skillObj.forEach(function (skill) {
 });
 let skillDiv = document.querySelectorAll(".skills-div");
 let skillBoxInside = document.querySelectorAll(".skill-box-dot");
-
+skillBoxInside.forEach((skill) => {
+  skill.style.width = skill.children[0].innerHTML;
+});
 let options = {
   root: null,
   rootMargin: "-100px 0px -100px 0px",
@@ -106,19 +116,18 @@ let moveObserverInsideSkills = new IntersectionObserver(function Moving(
     if (!entry.isIntersecting) {
       return;
     } else {
-      entry.target.style.width = entry.target.children[0].innerHTML;
+      entry.target.classList.add("active");
       moveObserverInsideSkills.unobserve(entry.target);
     }
   });
 },
 options);
-
+skillBoxInside.forEach((move) => moveObserverInsideSkills.observe(move));
 let options1 = {
   root: null,
   rootMargin: "0px 0px 0px 0px",
   threshold: 0,
 };
-skillBoxInside.forEach((move) => moveObserverInsideSkills.observe(move));
 
 let moveObserverSkillsWrapper = new IntersectionObserver(function Moving(
   entries,
@@ -246,7 +255,7 @@ moveObserverAnimate.observe(containerReview);
 portfolioColumns.forEach((col) => moveObserverAnimate.observe(col));
 contactInput.forEach((input) => moveObserverAnimate.observe(input));
 
-// moving background elements
+// Elementy latajace w tle
 let backgroundElements = [
   { className: "background-element" },
   { className: "background-element1" },
@@ -261,6 +270,8 @@ backgroundElements.forEach(function (element) {
   backgroundEl.classList.add("background-elements");
   content.append(backgroundEl);
 });
+
+// ANIMACJA HEADErA QUIZU
 
 quizH3.innerHTML = quizH3.textContent.replace(
   /\S/g,
@@ -344,53 +355,81 @@ animateLettersOptionsContact);
 h2InsideContact.forEach((input) =>
   moveObserverLetterAnimateContact.observe(input)
 );
-let contactList = document.querySelector(".contact-list");
 
-let contactLi = document.querySelectorAll(".contact-list > li");
-contactLi.forEach(
-  (n) =>
-    (n.innerHTML = n.textContent.replace(
-      /\S/g,
-      "<span class='contact-li'>$&</span>"
-    ))
-);
-let contaLiSpan = document.querySelectorAll(".contact-li");
+// GETTING CONTACT INFO
+const fetchDataForm = document.querySelector(".fetch-data__form");
+const contactList = document.querySelector(".contact-list");
+const fetchDataInput = document.querySelector(".fetch-data__input");
+const fetchDataError = document.querySelector(".fetch-data__error");
+const fetchDataLoadingText = document.querySelector(".fetch-data__loading");
+moveObserverAnimate.observe(fetchDataForm);
 
-Array.from(contaLiSpan).forEach(function (letter, i) {
-  letter.style.opacity = "0";
-  letter.style.color = "black";
-  if (i % 2 == 0) {
-    letter.style.transform = "translate(50px, 50px)";
-  } else {
-    letter.style.transform = "translate(50px, -50px)";
-  }
-});
-
-let animateLettersOptionsContacts = {
-  root: null,
-  rootMargin: "-100px 0px -100px 0px",
-  threshold: 0.3,
+const fetchPassword = async () => {
+  fetchDataLoadingText.style.display = "block";
+  fetchDataError.style.display = "none";
+  const response = await fetch(
+    "https://portfolio-7eeaf-default-rtdb.firebaseio.com/password.json"
+  );
+  const password = await response.json();
+  return password;
 };
 
-let moveObserverLetterAnimateContacts = new IntersectionObserver(
-  function Moving(entries, observer) {
-    entries.forEach(function (entry) {
-      if (!entry.isIntersecting) {
-        return;
-      } else {
-        Array.from(contaLiSpan).forEach(function (letter, i) {
-          function down() {
-            letter.classList.add("animate");
-          }
-          setTimeout(down, i * 30);
-        });
-        moveObserverLetterAnimateContacts.unobserve(entry.target);
-      }
+const fetchContact = async () => {
+  const response = await fetch(
+    "https://portfolio-7eeaf-default-rtdb.firebaseio.com/contact.json"
+  );
+  const data = await response.json();
+  return data;
+};
+
+function animateContactLetters() {
+  let contactLi = document.querySelectorAll(".contact-list > li");
+  contactLi.forEach(
+    (n) =>
+      (n.innerHTML = n.textContent.replace(
+        /\S/g,
+        "<span class='contact-li'>$&</span>"
+      ))
+  );
+  let contactLiSpan = document.querySelectorAll(".contact-li");
+
+  Array.from(contactLiSpan).forEach(function (letter, i) {
+    letter.style.opacity = "0";
+    letter.style.color = "black";
+    if (i % 2 == 0) {
+      letter.style.transform = "translate(50px, 50px)";
+    } else {
+      letter.style.transform = "translate(50px, -50px)";
+    }
+  });
+  setTimeout(() => {
+    Array.from(contactLiSpan).forEach(function (letter, i) {
+      setTimeout(() => letter.classList.add("animate"), i * 30);
     });
-  },
-  animateLettersOptionsContacts
-);
-contactLi.forEach((input) => moveObserverLetterAnimateContacts.observe(input));
+  }, 1);
+}
+
+fetchDataForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  fetchPassword().then((password) => {
+    if (fetchDataInput.value === password) {
+      fetchContact().then((data) => {
+        fetchDataLoadingText.style.display = "none";
+        contactList.children[0].innerText += data.phone;
+        contactList.children[1].innerText += data.email;
+        fetchDataForm.style.display = "none";
+        contactList.style.display = "flex";
+        fetchDataError.style.display = "none";
+        animateContactLetters();
+      });
+    } else {
+      fetchDataLoadingText.style.display = "none";
+      fetchDataError.style.display = "block";
+      return;
+    }
+  });
+});
 
 let socialIcon = document.querySelectorAll(".social-icon");
 socialIcon.forEach(function (icon) {
@@ -471,7 +510,7 @@ addLabelForInput(textAreas);
 // LAZY LOADING BACKGROUND IMAGE
 let practicalSkillSectionBackground =
   document.querySelector(".code-background");
-let aboutMeSectionBackground = document.querySelector(".about-me");
+let aboutMeSectionBackground = document.querySelector(".about-me__fieldset");
 let lazyLoadingOptions = {
   root: null,
   rootMargin: "-100px 0px -100px 0px",

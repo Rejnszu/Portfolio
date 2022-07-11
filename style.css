@@ -384,5 +384,5 @@ h2 > p {
 }
 
 .grecaptcha-badge {
-  opacity: 0;
+  display: none;
 }

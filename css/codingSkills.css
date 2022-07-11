@@ -17,6 +17,7 @@
   align-items: center;
   transform: translateY(100px);
   opacity: 0;
+
   transition: opacity 1s, transform 1s;
 }
 .skills-div p {
@@ -45,15 +46,21 @@
   margin: 2rem;
   padding: 0.2rem;
   color: black;
+  overflow: hidden;
 }
 
 .skill-box-dot {
   height: 100%;
-  width: 0%;
+  transform: translateX(-100%);
   border-radius: 5px;
   box-shadow: 0 0 40px 0px black;
-  transition: width 1s;
+  transition: all 1s;
+  opacity: 0;
   background-color: white;
+}
+.skill-box-dot.active {
+  transform: translateX(0);
+  opacity: 1;
 }
 .skill-box-dot > p {
   margin: 0;

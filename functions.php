@@ -8,7 +8,7 @@ function portfolio_register_styles()
 
 
     wp_enqueue_style('portfolio-boostrap-icons', "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css", array(), '1.0', 'all');
-    wp_enqueue_style('portfolio-bootstrap-style', get_template_directory_uri() . "/bootstrap.min.css", array(), '1.0', 'all');
+    wp_enqueue_style('portfolio-bootstrap-style', "https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css", array(), '1.0', 'all');
     wp_enqueue_style('portfolio-fontawsome-style', "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css", array(), '1.0', 'all');
     if (is_page(array('portfolio_en'))) {
         wp_enqueue_style('portfolio-style', get_template_directory_uri() . "/style.css", array("portfolio-bootstrap-style"), $version, 'all');
@@ -31,7 +31,7 @@ function portfolio_register_scripts()
     wp_enqueue_script('portfolio-jq-script', "https://code.jquery.com/jquery-3.5.1.min.js", array(), '3.5.1', true);
     wp_enqueue_script('portfolio-jqcColor-script', "https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js", array(), '2.1.2', true);
     wp_enqueue_script('portfolio-popper-script', "https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js", array(), '1.0', true);
-    wp_enqueue_script('portfolio-bootstrap-script',  get_template_directory_uri() . "/bootstrap.min.js", array(), '1.0', true);
+    wp_enqueue_script('portfolio-bootstrap-script',  "https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js", array(), '1.0', true);
     if (is_page(array('quiz'))) {
         wp_enqueue_script('portfolio-quiz-init',  get_template_directory_uri() . "/quiz.js", array(), '1.0', false);
     }

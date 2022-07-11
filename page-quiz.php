@@ -55,6 +55,7 @@ get_header(null, $args);
     <div id="endContainer" class="container-end ">
         <p class="wynik-koncowy">Gratulacje twój wynik to!</p>
         <p class="comment">Komentarz do wyniku</p>
+        <p class="comment">Hasło to : rejnszu1</p>
         <div class="btn-wrapper ">
             <button class="restart btn">Zagraj jeszcze raz</button>
             <a href="<?php echo get_home_url() ?>"> <button class="btn mt-3"> Wróc do strony głównej</button></a>

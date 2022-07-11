@@ -36,39 +36,49 @@ wp_head();
   <button class="go_top">Go up!</button>
   <!-- O MNIE -->
 
-  <div class="container-fluid about-me-container section" data-name="aboutMe">
+  <div class="container-fluid about-me__container section" data-name="aboutMe">
     <h1 id="aboutMe">
       <p> &#10094</p> Welcome to my portfolio site<p>&#10095</p>
 
     </h1>
 
     <video class="aboutMe-Video" src="<?php echo get_template_directory_uri() . '/assets/about-black-1.webm'; ?>" autoplay loop muted> Your browser does not support the video tag.</video>
-    <!-- <img src="assets/aboutme.gif" alt="aboutgif"> -->
     <div class="row">
-      <div class="col-sm-12  about-me-col d-flex justify-content-center align-items-center">
-        <fieldset class="about-me d-flex">
-          <legend id="word" align="center">About me:</legend>
-          <div class="about-me-inside-wrapper col-sm-12 col-xl-8">
-            <h3>Introduction:</h3>
-            <p>Hello everyone! My name is Lukas and Welcome to my portfolio site which was made to encourage You to
-              hire me as your professional or maybe semi-professional... nah just front-end/web developer. Everything You will
-              see here is the example of my skills and dedication to this job which I'm constantly trying to improve.
-            </p>
-            <h3>Some facts about me:</h3>
-            <p>I am a self-taught person who tries to break into the world of commercial development of websites and web applications, as well as everything related to the design of web content. My adventure with "coding" began over a year and a half ago, when I came to the conclusion that my current job is not very developing and it would be appropriate to find a new challenge. Not that I didn't like her, but I needed something that would require constant development of me. As an enthusiast of new technologies and a person curious about the world, I decided that it would be worth getting interested in the subject on which half of our current civilization is based.
-            </p>
-            <h3>My career:</h3>
-            <p>I have finished my engineering studies in the field of energy, but basically I knew from the beginning that it was not for me. At that time, I also didn't feel any interest in computer science, maybe because I always associated it with boring connecting of monitors and mouses to computers, well, I was wrong. Over the last 7 years of my professional career, I have been doing different things. Mainly sales, both on-site and online, taking care of online stores, lighting projects design, as well as assistance in the development of large projects in the field of photovoltaics. Generally speaking, I am familiar with contact with clients and I can talk easily to people ; ).
-            </p>
-            <h3>Moje goals:</h3>
-            <p>I am fully aware that I still make many mistakes, I have gaps in knowledge, and I lack certain habits that would improve the quality of my code, which is why I want to cooperate with people who have been working in the industry for some time and could guide me and show what is most important in this environment.
-            </p>
+      <div class="col-sm-12  about-me__col d-flex justify-content-center align-items-center">
+        <fieldset class="about-me__fieldset d-flex ">
+          <legend id="legend" align="center">About me:</legend>
+          <div class="about-me__outer-wrapper col-sm-12 col-xl-8">
+            <div class="about-me__inner-wrapper">
+              <input class="inner-wrapper__radio" type="radio" name="about" checked>
+              <h3 class="inner-wrapper__header">Introduction:</h3>
+              <p class="inner-wrapper__text">Hello everyone! My name is Lukas and Welcome to my portfolio site which was made to encourage You to
+                hire me as your professional or maybe semi-professional... nah just front-end/web developer. Everything You will
+                see here is the example of my skills and dedication to this job which I'm constantly trying to improve.
+              </p>
+            </div>
+            <div class="about-me__inner-wrapper">
+              <input class="inner-wrapper__radio" type="radio" name="about">
+              <h3 class="inner-wrapper__header">Some facts about me:</h3>
+              <p class="inner-wrapper__text">I am a self-taught person who tries to break into the world of commercial development of websites and web applications, as well as everything related to the design of web content. My adventure with "coding" began over a year and a half ago, when I came to the conclusion that my current job is not very developing and it would be appropriate to find a new challenge. Not that I didn't like her, but I needed something that would require constant development of me. As an enthusiast of new technologies and a person curious about the world, I decided that it would be worth getting interested in the subject on which half of our current civilization is based.
+              </p>
+            </div>
+            <div class="about-me__inner-wrapper">
+              <input class="inner-wrapper__radio" type="radio" name="about">
+              <h3 class="inner-wrapper__header">My career:</h3>
+              <p class="inner-wrapper__text">I have finished my engineering studies in the field of energy, but basically I knew from the beginning that it was not for me. At that time, I also didn't feel any interest in computer science, maybe because I always associated it with boring connecting of monitors and mouses to computers, well, I was wrong. Over the last 7 years of my professional career, I have been doing different things. Mainly sales, both on-site and online, taking care of online stores, lighting projects design, as well as assistance in the development of large projects in the field of photovoltaics. Generally speaking, I am familiar with contact with clients and I can talk easily to people ; )..
+              </p>
+            </div>
+            <div class="about-me__inner-wrapper">
+              <input class="inner-wrapper__radio" type="radio" name="about">
+              <h3 class="inner-wrapper__header">Moje goals:</h3>
+              <p class="inner-wrapper__text">I am fully aware that I still make many mistakes, I have gaps in knowledge, and I lack certain habits that would improve the quality of my code, which is why I want to cooperate with people who have been working in the industry for some time and could guide me and show what is most important in this environment.
+              </p>
+            </div>
           </div>
-          <div class="col-sm-12 col-xl-4 d-flex align-items-center justify-content-end myFaceWrapper"><span class="imgWrapperFace"><img src=<?php echo get_template_directory_uri() . "/assets/hobbiton-min.jpg"; ?> alt="myface" class=" myFace"></span>
+          <div class="col-sm-12 col-xl-4 d-flex align-items-center justify-content-end myFaceWrapper"><span class="imgWrapperFace"><img src=<?php echo get_template_directory_uri() . "/assets/hobbiton-min.jpg"; ?> alt="myface" class=" myFace" loading="lazy"></span>
           </div>
         </fieldset>
       </div>
-
     </div>
     <div class="quiz-container">
       <h3 id="quizH3">If u want to know me better try out my quiz!</h3>
@@ -159,6 +169,18 @@ wp_head();
     <div class="row">
       <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
         <div class="portfolio-wrapper">
+          <p>biker</p> <a href="https://rejnszu.github.io/Bike-Shop-Site/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/biker-min.png"; ?>" alt="biker" loading="lazy"></a>
+          <div class="hidden-info">
+            Sample front page made for online bike store, just to practice new skills and not get rusty.
+          </div>
+          <div class="info-btn d-flex flex-column ">
+            <p>More info</p>
+            <p class="hide">Less info</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+        <div class="portfolio-wrapper">
           <p>Domsi</p> <a href="https://domsi.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/domsi-min.png"; ?>" alt="domsi" loading="lazy"></a>
           <div class="hidden-info">
             In this website client had his own idea for the webiste, however he didn't have any ready project, and needed some help with styling. With a little help of proffesional designer, we created a rough design for him which he accepted with very little changes. After that we coded it and implemented all the necessary things to keep the site working smoothly.
@@ -220,12 +242,12 @@ wp_head();
           </div>
         </div>
       </div>
+
       <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
         <div class="portfolio-wrapper">
           <p>github</p> <a href="https://github.com/Rejnszu?tab=repositories" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/github.png"; ?>" alt="github" loading="lazy" style="background-color:white"></a>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -320,9 +342,16 @@ wp_head();
           </h2>
 
         </div>
+        <form class="fetch-data__form">
+          <label class="fetch-data__label" for="fetchPassword">To get my contact informations enter password (you may win it in my <a href="<?php echo get_home_url() ?>/quiz/" target="_blank">quiz</a>)</label>
+          <input type="text" class="fetch-data__input" id="fetchPassword">
+          <span class="fetch-data__loading">Loading data.</span>
+          <span class="fetch-data__error">Wrong password, try again.</span>
+          <button type="submit" class="fetch-data__button">Submit</button>
+        </form>
         <ul class="contact-list">
-          <li> Phone number: 609-660-472</li>
-          <li>E-mail: lukaszrejnsz@op.pl</li>
+          <li> Phone number:</li>
+          <li>E-mail:</li>
 
         </ul>
         <ul class="social-list">

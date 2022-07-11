@@ -32,7 +32,7 @@ get_header(null, $args);
   <button class="go_top">Do góry!</button>
   <!-- O MNIE -->
 
-  <div class="container-fluid about-me-container section" data-name="aboutMe">
+  <div class="container-fluid about-me__container section" data-name="aboutMe">
     <h1 id="aboutMe">
       <p> &#10094</p> Witaj na mojej stronie wizytówce<p>&#10095</p>
 
@@ -41,23 +41,34 @@ get_header(null, $args);
     <video class="aboutMe-Video" src=<?php echo get_template_directory_uri() . "/assets/about-black-1.webm"; ?> autoplay loop muted> Your browser does not support the video tag.</video>
 
     <div class="row">
-      <div class="col-sm-12  about-me-col d-flex justify-content-center align-items-center">
-        <fieldset class="about-me d-flex ">
-          <legend id="word" align="center">O mnie:</legend>
-          <div class="about-me-inside-wrapper col-sm-12 col-xl-8">
-            <h3>Wprowadzenie:</h3>
-            <p>Witam wszystkich! Nazywam się Łukasz, a oto moja strona wizytówka, która ma was przekonać do zatrudnienia mnie jako waszego profesjonalnego, no może nie do końca profesjonalnego...ehhh po prostu web/front-end developera. Wszystko co znajdziecie na tej stronie jest przykładem moich umiejętności i dedykacji dla tej pracy, którą cały czas staram się udoskonalać.
-            </p>
-            <h3>Trochę faktów o mnie:</h3>
-            <p>Jestem samoukiem, który próboje przebić się do świata komercyjnego tworzenia stron oraz aplikacji internetowych, a także wszystkiego co związane jest z designem treści internetowych. Moja przygoda z "kodowaniem" zaczęła się ponad półtora roku temu, kiedy doszedłem do wniosku, że moja obecna praca jest mało rozwijająca i wypadało by znaleźć sobie nowe wyzwanie. Nie żebym jej nie lubił, ale potrzebowałem czegoś co będzie wymagało ode mnie ciągłego rozwoju. Jako entuzjasta nowych technologii oraz osoba ciekawa świata stwierdziłem, że warto by zainteresować się tematyką, na której opiera się połowa naszej obecnej cywilizacji.
-
-            </p>
-            <h3>Moja kariera:</h3>
-            <p>Skończyłem studia inżynierskie na kierunku energetyka, ale w zasadzie od początku wiedziałem, że to nie jest dla mnie. W tamtym okresie również nie czułem jakiegoś większego zainteresowania informatyką, może dlatego iż zawsze kojarzyło mi się to z nudnym podpinaniem monitorów i myszek pod komputery, no cóż, byłem w błędzie. Przez ostatnie 7 lat kariery zawodowej zajmowałem się różnymi rzeczami. Głównie sprzedażą, zarówno na miejscu jak i internetową, opieką nad sklepami internetowymi, projektowaniem oświetlenia, a także pomocą przy rozwoju dużych projektów z zakresu fotowoltaiki. Generalnie kontakt z klientem nie jest mi obcy i potrafię rozmawiać z ludźmi ; ).
-            </p>
-            <h3>Moje cele:</h3>
-            <p>Mam pełną świadomość, iż ciągle popełniam wiele błędów, mam braki w wiedzy, a także brak mi pewnych nawyków, które poprawiły by jakość mojego kodu dlatego też zależy mi na tym, aby podjąć współpracę z ludźmi, którzy w branży siędzą już jakiś czas i mogli by mnie odpowiednio nakierować, a także pokazać mi co jest naistotniejsze w tym środowisku.
-            </p>
+      <div class="col-sm-12  about-me__col d-flex justify-content-center align-items-center">
+        <fieldset class="about-me__fieldset d-flex ">
+          <legend id="legend" align="center">O mnie:</legend>
+          <div class="about-me__outer-wrapper col-sm-12 col-xl-8">
+            <div class="about-me__inner-wrapper">
+              <input class="inner-wrapper__radio" type="radio" name="about" checked>
+              <h3 class="inner-wrapper__header">Wprowadzenie: <span><i class="bi bi-plus"></i></span></h3>
+              <p class="inner-wrapper__text">Witam wszystkich! Nazywam się Łukasz, a oto moja strona wizytówka, która ma was przekonać do zatrudnienia mnie jako waszego profesjonalnego, no może nie do końca profesjonalnego...ehhh po prostu web/front-end developera. Wszystko co znajdziecie na tej stronie jest przykładem moich umiejętności i dedykacji dla tej pracy, którą cały czas staram się udoskonalać.
+              </p>
+            </div>
+            <div class="about-me__inner-wrapper">
+              <input class="inner-wrapper__radio" type="radio" name="about">
+              <h3 class="inner-wrapper__header">Trochę faktów o mnie: <span><i class="bi bi-plus"></i></span></h3>
+              <p class="inner-wrapper__text">Jestem samoukiem, który próboje przebić się do świata komercyjnego tworzenia stron oraz aplikacji internetowych, a także wszystkiego co związane jest z designem treści internetowych. Moja przygoda z "kodowaniem" zaczęła się ponad półtora roku temu, kiedy doszedłem do wniosku, że moja obecna praca jest mało rozwijająca i wypadało by znaleźć sobie nowe wyzwanie. Nie żebym jej nie lubił, ale potrzebowałem czegoś co będzie wymagało ode mnie ciągłego rozwoju. Jako entuzjasta nowych technologii oraz osoba ciekawa świata stwierdziłem, że warto by zainteresować się tematyką, na której opiera się połowa naszej obecnej cywilizacji.
+              </p>
+            </div>
+            <div class="about-me__inner-wrapper">
+              <input class="inner-wrapper__radio" type="radio" name="about">
+              <h3 class="inner-wrapper__header">Moja kariera: <span><i class="bi bi-plus"></i></span></h3>
+              <p class="inner-wrapper__text">Skończyłem studia inżynierskie na kierunku energetyka, ale w zasadzie od początku wiedziałem, że to nie jest dla mnie. W tamtym okresie również nie czułem jakiegoś większego zainteresowania informatyką, może dlatego iż zawsze kojarzyło mi się to z nudnym podpinaniem monitorów i myszek pod komputery, no cóż, byłem w błędzie. Przez ostatnie 7 lat kariery zawodowej zajmowałem się różnymi rzeczami. Głównie sprzedażą, zarówno na miejscu jak i internetową, opieką nad sklepami internetowymi, projektowaniem oświetlenia, a także pomocą przy rozwoju dużych projektów z zakresu fotowoltaiki. Generalnie kontakt z klientem nie jest mi obcy i potrafię rozmawiać z ludźmi ; ).
+              </p>
+            </div>
+            <div class="about-me__inner-wrapper">
+              <input class="inner-wrapper__radio" type="radio" name="about">
+              <h3 class="inner-wrapper__header">Moje cele: <span><i class="bi bi-plus"></i></span></h3>
+              <p class="inner-wrapper__text">Mam pełną świadomość, iż ciągle popełniam wiele błędów, mam braki w wiedzy, a także brak mi pewnych nawyków, które poprawiły by jakość mojego kodu dlatego też zależy mi na tym, aby podjąć współpracę z ludźmi, którzy w branży siędzą już jakiś czas i mogli by mnie odpowiednio nakierować, a także pokazać mi co jest naistotniejsze w tym środowisku.
+              </p>
+            </div>
           </div>
           <div class="col-sm-12 col-xl-4 d-flex align-items-center justify-content-end myFaceWrapper"><span class="imgWrapperFace"><img src=<?php echo get_template_directory_uri() . "/assets/hobbiton-min.jpg"; ?> alt="myface" class=" myFace" loading="lazy"></span>
           </div>
@@ -66,6 +77,7 @@ get_header(null, $args);
       </div>
 
     </div>
+
     <div class="quiz-container">
       <h3 id="quizH3">Chcesz dowiedzieć się wiecej o mnie, sprawdź mój quiz!</h3>
       <a href="<?php echo get_home_url() ?>/quiz/" target="_blank"><button class="custom-button">
@@ -156,6 +168,18 @@ get_header(null, $args);
     <div class="row">
       <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
         <div class="portfolio-wrapper">
+          <p>biker</p> <a href="https://rejnszu.github.io/Bike-Shop-Site/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/biker-min.png"; ?>" alt="biker" loading="lazy"></a>
+          <div class="hidden-info">
+            Przykładowy front page dla sklepu rowerowego, zrobiony żeby nie wyjść z wprawy oraz poćwiczyć nowa nabytą wiedzę.
+          </div>
+          <div class="info-btn d-flex flex-column ">
+            <p>Więcej informacji</p>
+            <p class="hide">Mniej informacji</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+        <div class="portfolio-wrapper">
           <p>Domsi</p> <a href="https://esklep.newtool.pl/"><img src="<?php echo get_template_directory_uri() . "/assets/domsi-min.png"; ?>" alt="domsi" loading="lazy"></a>
           <div class="hidden-info">
             Przy tej witrynie klient miał własny pomysł na stronę internetową, aczkolwiek nie miał żadnego gotowego projektu. Przy drobnej współpracy z projektantem, oraz narzuceniu mu naszej i klienta wizji na stronę, otrzymamliśmy projekt, który w pełni zadowolił zainteresowanego, bez jakichś większych zmian. Następnym krokim było zakodowanie strony oraz zaimplementowanie wszystkich niezbędnych do prawidłowego i płynnego działania strony rzeczy.
@@ -215,6 +239,7 @@ get_header(null, $args);
           </div>
         </div>
       </div>
+
       <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
         <div class="portfolio-wrapper">
           <p>github</p> <a href="https://github.com/Rejnszu?tab=repositories" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/github.png"; ?>" alt="github" loading="lazy" style="background-color:white"></a>
@@ -308,15 +333,18 @@ get_header(null, $args);
         <div class="h2-wrapper">
           <h2>
             <span class="h2-inside-contact h2-inside"> Bezpośrednio!</span>
-
-
           </h2>
-
         </div>
+        <form class="fetch-data__form">
+          <label class="fetch-data__label" for="fetchPassword">Żeby dostać moje dane kontaktowe wprowadz hasło (można je wygrać w <a href="<?php echo get_home_url() ?>/quiz/" target="_blank">quizie</a>)</label>
+          <input type="text" class="fetch-data__input" id="fetchPassword">
+          <span class="fetch-data__loading">Trwa pobieranie danych.</span>
+          <span class="fetch-data__error">Złe hasło, spróboj ponownie.</span>
+          <button type="submit" class="fetch-data__button">Zatwierdź</button>
+        </form>
         <ul class="contact-list">
-          <li>Numer telefonu: 609-660-472</li>
-          <li>E-mail: lukaszrejnsz@op.pl</li>
-
+          <li>Numer telefonu: </li>
+          <li>E-mail: </li>
         </ul>
         <ul class="social-list">
           <li class="social-list-li"><a href="#"> <i class="bi bi-facebook social-icon" title="facebook"></i></a></li>

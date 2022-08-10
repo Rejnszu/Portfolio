@@ -32,7 +32,7 @@ get_header(null, $args);
   <button class="go_top">Do góry!</button>
   <!-- O MNIE -->
 
-  <div class="container-fluid about-me__container section" data-name="aboutMe">
+  <section class="container-fluid about-me__container section" data-name="aboutMe">
     <h1 id="aboutMe">
       <p> &#10094</p> Witaj na mojej stronie wizytówce<p>&#10095</p>
 
@@ -60,7 +60,7 @@ get_header(null, $args);
             <div class="about-me__inner-wrapper">
               <input class="inner-wrapper__radio" type="radio" name="about">
               <h3 class="inner-wrapper__header">Moja kariera: <span><i class="bi bi-plus"></i></span></h3>
-              <p class="inner-wrapper__text">Skończyłem studia inżynierskie na kierunku energetyka, ale w zasadzie od początku wiedziałem, że to nie jest dla mnie. W tamtym okresie również nie czułem jakiegoś większego zainteresowania informatyką, może dlatego iż zawsze kojarzyło mi się to z nudnym podpinaniem monitorów i myszek pod komputery, no cóż, byłem w błędzie. Przez ostatnie 7 lat kariery zawodowej zajmowałem się różnymi rzeczami. Głównie sprzedażą, zarówno na miejscu jak i internetową, opieką nad sklepami internetowymi, projektowaniem oświetlenia, a także pomocą przy rozwoju dużych projektów z zakresu fotowoltaiki. Generalnie kontakt z klientem nie jest mi obcy i potrafię rozmawiać z ludźmi ; ).
+              <p class="inner-wrapper__text">Skończyłem studia inżynierskie na kierunku energetyka, ale w zasadzie od początku wiedziałem, że to nie jest dla mnie. W tamtym okresie również nie czułem jakiegoś większego zainteresowania informatyką, może dlatego iż zawsze kojarzyło mi się to z nudnym podpinaniem monitorów i myszek pod komputery, no cóż, byłem w błędzie. Przez ostatnie 7 lat kariery zawodowej zajmowałem się różnymi rzeczami. Głównie sprzedażą, zarówno na miejscu jak i internetową, opieką nad sklepami internetowymi, projektowaniem oświetlenia, a także pomocą przy rozwoju dużych projektów z zakresu fotowoltaiki. Generalnie kontakt z klientem nie jest mi obcy i potrafię rozmawiać z ludźmi.
               </p>
             </div>
             <div class="about-me__inner-wrapper">
@@ -84,9 +84,9 @@ get_header(null, $args);
           <p>QUIZ</p>
         </button></a>
     </div>
-  </div>
+  </section>
   <!-- UMIEJETNOŚCI -->
-  <div class="container-fluid section" data-name="mySkills">
+  <section class="container-fluid section" data-name="mySkills">
     <div class="h2-wrapper">
       <h2 id="mySkills">
         <p class="left-bracket"> &#10094</p> <span class="h2-inside"> Mój obecny stopień zaawansowania</span>
@@ -112,9 +112,9 @@ get_header(null, $args);
 
     </div>
 
-  </div>
+  </section>
   <!-- UMIEJĘTNOŚci Praktyczne -->
-  <div class="container-fluid section" data-name="mySkillsPractical">
+  <section class="container-fluid section" data-name="mySkillsPractical">
     <div class="h2-wrapper">
       <h2 id="mySkillsPractical">
         <p class="left-bracket"> &#10094</p><span class="h2-inside"> Co potrafię zrobić?</span>
@@ -125,39 +125,44 @@ get_header(null, $args);
       <div class="col-sm-12 d-flex flex-column align-items-start code-background ">
         <ul class="practice-skills-list">
           <li><i class="bi bi-check2-all"></i>
-            <p> Strony wizytówki</p>
+            <p>Strony wizytówki</p>
           </li>
           <li><i class="bi bi-check2-all"></i>
-            <p> Witryny wielostronnicowe</p>
+            <p>Witryny wielostronnicowe</p>
           </li>
           <li><i class="bi bi-check2-all"></i>
-            <p> Strony oparte na wordpressie</p>
+            <p>Strony oparte na wordpressie</p>
           </li>
           <li><i class="bi bi-check2-all"></i>
-            <p> Strony w pełni interaktywne</p>
+            <p>Strony w pełni interaktywne</p>
           </li>
           <li><i class="bi bi-check2-all"></i>
-            <p> Pomoc przy tworzeniu projektu wizualnego</p>
+            <p>Programowanie funkcjonalności</p>
           </li>
           <li><i class="bi bi-check2-all"></i>
-            <p> Programowanie</p>
+            <p>Aplikacje JS/React</p>
           </li>
           <li><i class="bi bi-check2-all"></i>
-            <p> Przygotowanie stron pod pozycjonowanie</p>
+            <p>Łączenie aplikacji/stron z api</p>
           </li>
           <li><i class="bi bi-check2-all"></i>
-            <p> Optymalizowanie pod kątem wydajności</p>
+            <p>Pomoc przy tworzeniu projektu wizualnego</p>
           </li>
-
+          <li><i class="bi bi-check2-all"></i>
+            <p>Przygotowanie stron pod pozycjonowanie</p>
+          </li>
+          <li><i class="bi bi-check2-all"></i>
+            <p>Optymalizowanie pod kątem wydajności</p>
+          </li>
         </ul>
       </div>
     </div>
 
 
 
-  </div>
+  </section>
   <!-- Portfolio -->
-  <div class="container-fluid section " data-name="port">
+  <section class="container-fluid section " data-name="port">
     <div class="h2-wrapper">
       <h2 id="port">
         <p class="left-bracket"> &#10094</p><span class="h2-inside">Moje portfolio</span>
@@ -165,7 +170,25 @@ get_header(null, $args);
 
       </h2>
     </div>
-    <div class="row">
+    <div class="nav__portfolio">
+      <ul>
+        <li><a href="javascript:void(0);" data-nav="websites">Strony</a> </li>
+        <li><a href="javascript:void(0);" data-nav="games">Aplikacje</a> </li>
+      </ul>
+    </div>
+    <div class="row row--portfolio active" data-row="websites">
+      <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+        <div class="portfolio-wrapper">
+          <p>Kursy szkolne</p> <a href="https://rejnszu.github.io/school-form/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/formularz szkolny.png"; ?>" alt="Kursy szkolne" loading="lazy"></a>
+          <div class="hidden-info">
+            Strona/aplikacja/moduł robiona na życzenie klienta. Projekt miał mieć formę mocno interaktywnego SPA, jednakże ze względu konieczność integracji z wordpressem, a dokładniej gotowym builderem postawiłem na podstawowego JS'a z dużą ilością CSS'a, gdyż tak najłatwiej było to zaimplementować do gotowej już strony. Klient poza gotowym diagramem na którym rozpisane były ścieżki rozwoju, nie miał żadnego pomysłu na design i w całości zdał się na mnie.
+          </div>
+          <div class="info-btn d-flex flex-column ">
+            <p>Więcej informacji</p>
+            <p class="hide">Mniej informacji</p>
+          </div>
+        </div>
+      </div>
       <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
         <div class="portfolio-wrapper">
           <p>biker</p> <a href="https://rejnszu.github.io/Bike-Shop-Site/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/biker-min.png"; ?>" alt="biker" loading="lazy"></a>
@@ -247,9 +270,95 @@ get_header(null, $args);
       </div>
 
     </div>
-  </div>
+    <div class="row row--portfolio " data-row="games">
+      <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+        <div class="portfolio-wrapper">
+          <p>Musify</p> <a href="https://rejnszu.github.io/Musify" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/musify-min.png"; ?>" alt="Musify" loading="lazy"></a>
+          <div class="hidden-info">
+            Moja prywatna aplikacja, stworzona w react js mająca na celu pomoc w tworzeniu playlist muzycznych. Z każdym dniem dodaje nowe drobne funkcjonalności, z nadzieją, że w końcu faktycznie zacznie być użyteczna. Przy okazji testuje swoją wiedze na temat reacta w praktyce.
+          </div>
+          <div class="info-btn d-flex flex-column ">
+            <p>Więcej informacji</p>
+            <p class="hide">Mniej informacji</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+        <div class="portfolio-wrapper">
+          <p>Tanks</p> <a href="https://rejnszu.github.io/Tanks-game/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/tanks-min.jpg"; ?>" alt="tanks" loading="lazy"></a>
+          <div class="hidden-info">
+            Gra tworzona w reactcie w celu praktycznego wykorzystania zdobytej wiedzy połączona z próbą odtworzenia chociaż w niewielkim stopniu starej gry z dzieciństwa.
+          </div>
+          <div class="info-btn d-flex flex-column ">
+            <p>Więcej informacji</p>
+            <p class="hide">Mniej informacji</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+        <div class="portfolio-wrapper">
+          <p>Tic Tac Toe</p> <a href="https://rejnszu.github.io/Tic-Tac-Toe-AI/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/tictactoe-min.jpg"; ?>" alt="tictactoe" loading="lazy"></a>
+          <div class="hidden-info">
+            Pierwsza gra stworzona w reactcie, chyba zakończona sukcesem. W grze został zaimplementowany "komputer", który z początkowo raczej mało rozgarniętego zmienił się w potwora ;).
+          </div>
+          <div class="info-btn d-flex flex-column ">
+            <p>Więcej informacji</p>
+            <p class="hide">Mniej informacji</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+        <div class="portfolio-wrapper">
+          <p>Crypto Compare</p> <a href=" https://rejnszu.github.io/React-Crypto-MarketCap-Compare/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/crypto-min.jpg"; ?>" alt="crypto" loading="lazy"></a>
+          <div class="hidden-info">
+            Aplikacja powstała pod pływem
+          </div>
+          <div class="info-btn d-flex flex-column ">
+            <p>Więcej informacji</p>
+            <p class="hide">Mniej informacji</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+        <div class="portfolio-wrapper">
+          <p>Calculator</p> <a href="https://rejnszu.github.io/React-Calculator/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/calculator-min.jpg"; ?>" alt="calculator" loading="lazy"></a>
+          <div class="hidden-info">
+            Gra tworzona w reactcie w celu praktycznego wykorzystania zdobytej wiedzy połączona z próbą odtworzenia chociaż w niewielkim stopniu starej gry z dzieciństwa.
+          </div>
+          <div class="info-btn d-flex flex-column ">
+            <p>Więcej informacji</p>
+            <p class="hide">Mniej informacji</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+        <div class="portfolio-wrapper">
+          <p>FitHits</p> <a href="https://rejnszu.github.io/FitHits/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/fithits-min.jpg"; ?>" alt="fithits" loading="lazy"></a>
+          <div class="hidden-info">
+            Gra tworzona w reactcie w celu praktycznego wykorzystania zdobytej wiedzy połączona z próbą odtworzenia chociaż w niewielkim stopniu starej gry z dzieciństwa.
+          </div>
+          <div class="info-btn d-flex flex-column ">
+            <p>Więcej informacji</p>
+            <p class="hide">Mniej informacji</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+        <div class="portfolio-wrapper">
+          <p>Currency Exchange</p> <a href="https://rejnszu.github.io/Currency-exchange/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/currency-min.jpg"; ?>" alt="tanks" loading="lazy"></a>
+          <div class="hidden-info">
+            Gra tworzona w reactcie w celu praktycznego wykorzystania zdobytej wiedzy połączona z próbą odtworzenia chociaż w niewielkim stopniu starej gry z dzieciństwa.
+          </div>
+          <div class="info-btn d-flex flex-column ">
+            <p>Więcej informacji</p>
+            <p class="hide">Mniej informacji</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Opinie -->
-  <div id="containerReview" class="container-fluid container-review section" data-name="containerReview">
+  <section id="containerReview" class="container-fluid container-review section" data-name="containerReview">
     <div class="h2-wrapper">
       <h2 id="port">
         <p class="left-bracket"> &#10094</p><span class="h2-inside"> Co ludzie o mnie mówią?</span>
@@ -303,9 +412,9 @@ get_header(null, $args);
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <!-- KONTAKT/FOOTER -->
-  <div class="container-fluid footer section" data-name="contact">
+  <footer class="container-fluid footer section" data-name="contact">
     <div class="h2-wrapper">
       <h2 id="contact">
         <p class="left-bracket"> &#10094</p> <span class="h2-inside"> Jeśli spodobała ci się moja praca, skontaktuj
@@ -354,7 +463,7 @@ get_header(null, $args);
         </ul>
       </div>
     </div>
-  </div>
+  </footer>
 </div>
 
 <?php get_footer(); ?>

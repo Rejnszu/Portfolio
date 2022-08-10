@@ -79,13 +79,13 @@ window.onscroll = function () {
 let skillObj = [
   { name: "HTML", percent: "80%" },
   { name: "CSS", percent: "80%" },
-  { name: "JAVASCRIPT", percent: "75%" },
+  { name: "Sass", percent: "50%" },
   { name: "BOOTSTRAP", percent: "80%" },
-  { name: "REACT", percent: "25%" },
-  { name: "GIT", percent: "60%" },
+  { name: "JAVASCRIPT", percent: "75%" },
+  { name: "REACT", percent: "65%" },
   { name: "WORDPRESS", percent: "40%" },
   { name: "PHP", percent: "30%" },
-  { name: "UI/UX", percent: "30%" },
+  { name: "GIT", percent: "60%" },
 ];
 let dataSkillTemplate = document.querySelector("[data-skill-template]");
 let skillCardContainer = document.querySelector("[skill-card-container]");
@@ -145,6 +145,32 @@ let moveObserverSkillsWrapper = new IntersectionObserver(function Moving(
 options1);
 
 skillDiv.forEach((move) => moveObserverSkillsWrapper.observe(move));
+
+// PORTFOLIO
+//<------Navigation------>
+const portfolioLinks = document.querySelectorAll(".nav__portfolio li a");
+const portfolioRows = document.querySelectorAll(".row--portfolio");
+
+portfolioLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    portfolioRows.forEach((row) => {
+      row.classList.remove("active");
+      if (link.getAttribute("data-nav") == row.getAttribute("data-row")) {
+        row.classList.add("active");
+      }
+    });
+  });
+});
+//<------More info------>
+let hiddenInfo = document.querySelectorAll(".hidden-info");
+let infoBtn = document.querySelectorAll(".info-btn");
+
+infoBtn.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    Array.from(this.children).forEach((btn) => btn.classList.toggle("hide"));
+    this.previousElementSibling.classList.toggle("active");
+  });
+});
 
 // HEADERY
 let leftBracket = document.querySelectorAll(".left-bracket");
@@ -230,6 +256,7 @@ reviews();
 
 // ANIMACJE ELEMENTÓW
 let portfolioColumns = document.querySelectorAll(".col-portfolio");
+const skillsLegend = document.querySelector(".skills__legend");
 let animateOptions = {
   root: null,
   rootMargin: "-60px 0px -60px 0px",
@@ -252,9 +279,10 @@ let moveObserverAnimate = new IntersectionObserver(function Moving(
 animateOptions);
 
 moveObserverAnimate.observe(containerReview);
+moveObserverAnimate.observe(skillsLegend);
 portfolioColumns.forEach((col) => moveObserverAnimate.observe(col));
 contactInput.forEach((input) => moveObserverAnimate.observe(input));
-
+portfolioLinks.forEach((link) => moveObserverAnimate.observe(link));
 // Elementy latajace w tle
 let backgroundElements = [
   { className: "background-element" },
@@ -471,17 +499,6 @@ let moveObserverPracticalSkills = new IntersectionObserver(function Moving(
 },
 practicalSkillsAnimate);
 practicalSkills.forEach((input) => moveObserverPracticalSkills.observe(input));
-
-// PORTFOLIO
-let hiddenInfo = document.querySelectorAll(".hidden-info");
-let infoBtn = document.querySelectorAll(".info-btn");
-
-infoBtn.forEach(function (btn) {
-  btn.addEventListener("click", function () {
-    Array.from(this.children).forEach((btn) => btn.classList.toggle("hide"));
-    this.previousElementSibling.classList.toggle("active");
-  });
-});
 
 // SCROLL TOP
 document.querySelectorAll(".go_top").forEach((n) =>

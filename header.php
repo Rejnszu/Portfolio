@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <div class="container-fluid nav-wrapper m-0 p-0 ">
+    <header class="container-fluid nav-wrapper m-0 p-0 ">
         <div class="row nav-row">
             <div class="openbtn-wrapper">
                 <span class=""></span>
@@ -34,7 +34,7 @@
                 </span><i class="bi bi-arrow-right-short"></i><span class="en">
                     <p>EN</p>
                 </span></div>
-            <div class="col-sm-12 navi-container-mobile">
+            <nav class="col-sm-12 navi-container-mobile">
 
                 <a href="#aboutMe" class="nav-link nav-link-mobile">O mnie</a>
                 <a href="#mySkills" class="nav-link nav-link-mobile">Umiejętności kodowania</a>
@@ -42,11 +42,11 @@
                 <a href="#port" class="nav-link nav-link-mobile">Portfolio</a>
                 <a href="#containerReview" class="nav-link nav-link-mobile">Opinie</a>
                 <a href="#contact" class="nav-link nav-link-mobile">Kontakt</a>
-            </div>
+            </nav>
 
 
 
-            <div class="col-sm-12 navi-container">
+            <nav class="col-sm-12 navi-container">
 
                 <span class="nav-link-wrapper"> <a href="#aboutMe" class="nav-link nav-link-desktop">O mnie <span class="borderBottom"></span></a></span>
                 <span class="nav-link-wrapper"> <a href="#mySkills" class="nav-link nav-link-desktop">Umiejętności
@@ -56,6 +56,6 @@
                 <span class="nav-link-wrapper"> <a href="#port" class="nav-link nav-link-desktop">Portfolio <span class="borderBottom"></span></a></span>
                 <span class="nav-link-wrapper"> <a href="#containerReview" class="nav-link nav-link-desktop">Opinie <span class="borderBottom"></span></a></span>
                 <span class="nav-link-wrapper"> <a href="#contact" class="nav-link nav-link-desktop">Kontakt <span class="borderBottom"></span></a></span>
-            </div>
+            </nav>
         </div>
-    </div>
+    </header>

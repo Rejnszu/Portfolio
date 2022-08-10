@@ -1,5 +1,12 @@
 .skills__legend {
   margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s;
+}
+.skills__legend.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 .skills__legend span {
   font-size: 1.2rem;

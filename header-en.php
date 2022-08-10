@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <div class="container-fluid nav-wrapper m-0 p-0 ">
+    <header class="container-fluid nav-wrapper m-0 p-0 ">
         <div class="row nav-row">
             <div class="openbtn-wrapper">
                 <span class=""></span>
@@ -34,18 +34,18 @@
                 </span><i class="bi bi-arrow-left-short"></i><span class="pl">
                     <p>PL</p>
                 </span></div>
-            <div class="col-sm-12 navi-container-mobile">
+            <nav class="col-sm-12 navi-container-mobile">
                 <a href="#aboutMe" class="nav-link nav-link-mobile">About me</a>
                 <a href="#mySkills" class="nav-link nav-link-mobile">Coding skills</a>
                 <a href="#mySkillsPractical" class="nav-link nav-link-mobile">Practical skills</a>
                 <a href="#port" class="nav-link nav-link-mobile">Portfolio</a>
                 <a href="#containerReview" class="nav-link nav-link-mobile">Reviews</a>
                 <a href="#contact" class="nav-link nav-link-mobile">Contact</a>
-            </div>
+            </nav>
 
 
 
-            <div class="col-sm-12 navi-container">
+            <nav class="col-sm-12 navi-container">
 
                 <span class="nav-link-wrapper"> <a href="#aboutMe" class="nav-link nav-link-desktop">About me <span class="borderBottom"></span></a></span>
                 <span class="nav-link-wrapper"> <a href="#mySkills" class="nav-link nav-link-desktop">Coding skills <span class="borderBottom"></span></a></span>
@@ -54,6 +54,6 @@
                 <span class="nav-link-wrapper"> <a href="#port" class="nav-link nav-link-desktop">Portfolio <span class="borderBottom"></span></a></span>
                 <span class="nav-link-wrapper"> <a href="#containerReview" class="nav-link nav-link-desktop">Reviews <span class="borderBottom"></span></a></span>
                 <span class="nav-link-wrapper"> <a href="#contact" class="nav-link nav-link-desktop">Contact <span class="borderBottom"></span></a></span>
-            </div>
+            </nav>
         </div>
-    </div>
+    </header>

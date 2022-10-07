@@ -285,16 +285,7 @@ h2 > p {
   overflow: hidden;
   position: relative;
 }
-.content > video {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 0.6;
-  box-shadow: 20px 0 50px 50px black;
-}
+
 .content > .background-elements {
   position: fixed;
   display: flex;
@@ -304,7 +295,7 @@ h2 > p {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background-color: var(--dimmed-main-color);
+  background-color: rgba(70, 70, 70, 0.4);
   box-shadow: inset 0 0 10px 5px black;
 }
 .content > .background-element {

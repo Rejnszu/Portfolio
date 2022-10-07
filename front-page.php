@@ -97,6 +97,7 @@ get_header(null, $args);
     <div class="skills__legend">
       <p class="legend__begginer"><span>*</span> 0% oznacza, że nie mam zielonego pojęcia co dana rzecz oznacza</p>
       <p class="legend__master"><span>*</span> 100% oznacza, iż mogę w danym języku programować rakiety kosmiczne</p>
+      <p class="legend__master"><span>*</span> Jednakże wszystko to jest subiektywne ; )</p>
     </div>
     <div class="row skills" skill-card-container>
 
@@ -179,9 +180,9 @@ get_header(null, $args);
     <div class="row row--portfolio active" data-row="websites">
       <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
         <div class="portfolio-wrapper">
-          <p>Kursy szkolne</p> <a href="https://rejnszu.github.io/school-form/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/formularz szkolny.png"; ?>" alt="Kursy szkolne" loading="lazy"></a>
+          <p>Kursy szkolne</p> <a href="https://www.ambitni.edu.pl/konfigurator/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/formularz szkolny.png"; ?>" alt="Kursy szkolne" loading="lazy"></a>
           <div class="hidden-info">
-            Strona/aplikacja/moduł robiona na życzenie klienta. Projekt miał mieć formę mocno interaktywnego SPA, jednakże ze względu konieczność integracji z wordpressem, a dokładniej gotowym builderem postawiłem na podstawowego JS'a z dużą ilością CSS'a, gdyż tak najłatwiej było to zaimplementować do gotowej już strony. Klient poza gotowym diagramem na którym rozpisane były ścieżki rozwoju, nie miał żadnego pomysłu na design i w całości zdał się na mnie.
+            Strona/aplikacja/moduł robiona na życzenie klienta. Projekt miał mieć formę mocno interaktywnego SPA, jednakże ze względu konieczność integracji z wordpressem, a dokładniej gotowym builderem postawiłem na podstawowego JS'a z dużą ilością CSS'a (brak bibliotek), gdyż tak najłatwiej było to zaimplementować do gotowej już strony. Klient poza gotowym diagramem na którym rozpisane były ścieżki rozwoju, nie miał żadnego pomysłu na design i w całości zdał się na mnie. Wykorzystane technologie to: HTML, CSS, SCSS, Javascript oraz podpięcię pod wordpressa wraz z konfiguracją formularzy. Największy wyzywania? Pozycjonowanie elementów tak by wszystko było płynnie animowane i wygladało dobrze na każdym urządzeniu, przy zachowaniu formuły SPA oraz dynamiczna zmiana treści formularzy w zależności od wybranej ścieżki.
           </div>
           <div class="info-btn d-flex flex-column ">
             <p>Więcej informacji</p>
@@ -193,7 +194,7 @@ get_header(null, $args);
         <div class="portfolio-wrapper">
           <p>biker</p> <a href="https://rejnszu.github.io/Bike-Shop-Site/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/biker-min.png"; ?>" alt="biker" loading="lazy"></a>
           <div class="hidden-info">
-            Przykładowy front page dla sklepu rowerowego, zrobiony żeby nie wyjść z wprawy oraz poćwiczyć nowa nabytą wiedzę.
+            Przykładowy front page dla sklepu rowerowego, zrobiony żeby nie wyjść z wprawy oraz poćwiczyć nowa nabytą wiedzę. Wykorzystane technologie: HTML, CSS, Javascript. Największe wyzwania? "Atrapa" tworzenia konta, oraz możliwości logowania się, aczkolwiek w tym przypadku była to bardzo uproszczona wersja, więc ciężko tu mówić o trudności wykonania.
           </div>
           <div class="info-btn d-flex flex-column ">
             <p>Więcej informacji</p>
@@ -205,7 +206,7 @@ get_header(null, $args);
         <div class="portfolio-wrapper">
           <p>Domsi</p> <a href="https://esklep.newtool.pl/"><img src="<?php echo get_template_directory_uri() . "/assets/domsi-min.png"; ?>" alt="domsi" loading="lazy"></a>
           <div class="hidden-info">
-            Przy tej witrynie klient miał własny pomysł na stronę internetową, aczkolwiek nie miał żadnego gotowego projektu. Przy drobnej współpracy z projektantem, oraz narzuceniu mu naszej i klienta wizji na stronę, otrzymamliśmy projekt, który w pełni zadowolił zainteresowanego, bez jakichś większych zmian. Następnym krokim było zakodowanie strony oraz zaimplementowanie wszystkich niezbędnych do prawidłowego i płynnego działania strony rzeczy.
+            Przy tej witrynie klient miał własny pomysł na stronę internetową, aczkolwiek nie miał żadnego gotowego projektu. Przy drobnej współpracy z projektantem, oraz narzuceniu mu naszej i klienta wizji na stronę, otrzymamliśmy projekt, który w pełni zadowolił zainteresowanego, bez jakichś większych zmian. Następnym krokim było zakodowanie strony oraz zaimplementowanie wszystkich niezbędnych do prawidłowego i płynnego działania strony rzeczy. Wykorzystane technologie: HTML, CSS, Javascript oraz przerzucenie wszystkiego na wordpressa. Największe wyzwania? Raczej żadnych. Strona była prosta w wykonaniu bez żadnych udziwnień i skomplikowanych zabiegów.
           </div>
           <div class="info-btn d-flex flex-column ">
             <p>Więcej informacji</p>
@@ -217,7 +218,7 @@ get_header(null, $args);
         <div class="portfolio-wrapper">
           <p>Sprawdzauto</p> <a href="https://www.sprawdzauto.com.pl/ " target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/sprawdzauto-min.png"; ?>" alt="sprawdzauto" loading="lazy"></a>
           <div class="hidden-info">
-            Praca nad tym projektem, nie ukrywam, była trudna. Klient nie do końca miał pojęcie czego by chciał, a ponad to, nie chciał zatrudnić profesjonalnego projektanta, który by mu to wszystko poukładał(brak jakichkolwiek materiałów i struktury strony nie ułatwiały sprawy). Musieliśmy improwizować, w związku z czym przedstawiliśmy mu kilka wizji projektu. Spodobało mu się to co zobaczył i zaakceptował jedną z wersji, aczkolwiek podczas całego procesu tworzenia często zmieniał zdanie i narzucał swoje pomysły co finalnie dało stronę, która mogła by wyglądać moim zdaniem lepiej i być bardziej spójna, ale nasz klient nasz pan. To co się liczy to fakt, że finalny efekt bardzo mu się podobał. Po wszystkim strona została zakodowana i w pełni przygotowana do podboju internetu. </div>
+            Praca nad tym projektem, nie ukrywam, była trudna. Klient nie do końca miał pojęcie czego by chciał, a ponad to, nie chciał zatrudnić profesjonalnego projektanta, który by mu to wszystko poukładał(brak jakichkolwiek materiałów i struktury strony nie ułatwiały sprawy). Musieliśmy improwizować, w związku z czym przedstawiliśmy mu kilka wizji projektu. Spodobało mu się to co zobaczył i zaakceptował jedną z wersji, aczkolwiek podczas całego procesu tworzenia często zmieniał zdanie i narzucał swoje pomysły co finalnie dało stronę, która mogła by wyglądać moim zdaniem lepiej i być bardziej spójna, ale nasz klient nasz pan. To co się liczy to fakt, że finalny efekt bardzo mu się podobał. Po wszystkim strona została zakodowana i w pełni przygotowana do podboju internetu. Wykorzystane technologie: HTML, CSS, Javascript oraz przerzucenie wszystkiego na wordpressa.</div>
           <div class="info-btn d-flex flex-column ">
             <p>Więcej informacji</p>
             <p class="hide">Mniej informacji</p>
@@ -229,7 +230,7 @@ get_header(null, $args);
           <p>Rebro</p> <a href="https://rebro.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/rebro-min.png"; ?>" alt="rebro" loading="lazy"></a>
 
           <div class="hidden-info">
-            Ta strona miała być bazą pod naszą firmę zajmującą się web-developingiem oraz dobrym sposobem na pocwiczenie swoich umiejętności w praktyce. Jeśli mam być szczery to w trakcie jej tworzenia często dochodziło do odmiennych zdań co do tego tego jak ma wyglądać, w związku z czym mam pełną świadomość, iż mogła by wyglądać nieco lepiej. Tworzona była w czasie kiedy moje umiejętności były już na poziomie zadowalającym oraz umożliwiającym mi samodzielną pracę nad projektem, aczkolwiek moja wiedza była nadal mocno ograniczona, a pomysły na design nie tak rozwinięte jak teraz. Dlatego też postanowiłem na nowo stworzyć swój własny projekt, którym jest obecna strona wizytówka. </div>
+            Ta strona miała być bazą pod naszą firmę zajmującą się web-developingiem oraz dobrym sposobem na pocwiczenie swoich umiejętności w praktyce. Jeśli mam być szczery to w trakcie jej tworzenia często dochodziło do odmiennych zdań co do tego tego jak ma wyglądać, w związku z czym mam pełną świadomość, iż mogła by wyglądać nieco lepiej. Tworzona była w czasie kiedy moje umiejętności były już na poziomie zadowalającym oraz umożliwiającym mi samodzielną pracę nad projektem, aczkolwiek moja wiedza była nadal mocno ograniczona, a pomysły na design nie tak rozwinięte jak teraz. Dlatego też postanowiłem na nowo stworzyć swój własny projekt, którym jest obecna strona wizytówka. Wykorzystane technologie: HTML, CSS, Javascript oraz przerzucenie wszystkiego na wordpressa. </div>
           <div class="info-btn d-flex flex-column ">
             <p>Więcej informacji</p>
             <p class="hide">Mniej informacji</p>
@@ -241,7 +242,7 @@ get_header(null, $args);
           <p>Newtool</p> <a href="https://newtool.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/newtool-min.png"; ?>" alt="newtool" loading="lazy"></a>
 
           <div class="hidden-info">
-            Ta strona miała być prostym landing pagem, który miał ukazać najistotniejsze informację na temat firmy. Klient nie oczekiwał niczego specjalnego, po prostu przejrzystą stronę, która będzie reprezentować jego biznes i wydaję mi się, że to właśnie dostał.
+            Ta strona miała być prostym landing pagem, który miał ukazać najistotniejsze informację na temat firmy. Klient nie oczekiwał niczego specjalnego, po prostu przejrzystą stronę, która będzie reprezentować jego biznes i wydaję mi się, że to właśnie dostał. Wykorzystane technologie: HTML, CSS, Javascript oraz przerzucenie wszystkiego na wordpressa.
           </div>
           <div class="info-btn d-flex flex-column ">
             <p>Więcej informacji</p>
@@ -254,7 +255,7 @@ get_header(null, $args);
           <p>rehasquad</p> <a href="https://rehasquad.pl/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/reha-min.png"; ?>" alt="rehasquad" loading="lazy"></a>
 
           <div class="hidden-info">
-            To była moja pierwsza strona robiona dla klienta. Mam świadomość iż nie jest ona pokazem umiejętności web-developera, ale była tworzona ona w bardzo któtkim czasie i praktycznie za darmo. Bardziej w ramach poćwiczenia, aniżeli chęci osiągnięcia spektakularnego efektu. Klientowi jednak nie zależało na wyglądzie, a na szybkim wdrożeniu "wizytówki" własnej działalności. Pomimo mojego ogólnego niezadowolenia, klient zaakceptował stronę i był z niej zadowolony.
+            To była moja pierwsza strona robiona dla klienta. Mam świadomość iż nie jest ona pokazem umiejętności web-developera, ale była tworzona ona w bardzo któtkim czasie i praktycznie bez żadnych wytycznych. Bardziej w ramach poćwiczenia, aniżeli chęci osiągnięcia spektakularnego efektu. Klientowi jednak nie zależało na wyglądzie, a na szybkim wdrożeniu "wizytówki" własnej działalności. Pomimo mojego ogólnego niezadowolenia, klient zaakceptował stronę i był z niej zadowolony. Wykorzystane technologie: HTML, CSS, Javascript oraz przerzucenie wszystkiego na wordpressa.
           </div>
           <div class="info-btn d-flex flex-column ">
             <p>Więcej informacji</p>
@@ -275,7 +276,7 @@ get_header(null, $args);
         <div class="portfolio-wrapper">
           <p>Musify</p> <a href="https://rejnszu.github.io/Musify" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/musify-min.png"; ?>" alt="Musify" loading="lazy"></a>
           <div class="hidden-info">
-            Moja prywatna aplikacja, stworzona w react js mająca na celu pomoc w tworzeniu playlist muzycznych. Z każdym dniem dodaje nowe drobne funkcjonalności, z nadzieją, że w końcu faktycznie zacznie być użyteczna. Przy okazji testuje swoją wiedze na temat reacta w praktyce.
+            Moja prywatna aplikacja, stworzona w react js mająca na celu pomoc w tworzeniu playlist muzycznych. Z każdym dniem dodaje nowe drobne funkcjonalności, z nadzieją, że w końcu faktycznie zacznie być użyteczna. Na chwilę obecną aplikacja posiada sporo funkcjonalności typowych dla aplikacji muzycznych oraz jest podpięta pod bazę danych. Wykorzystane technologie: HTML(JSX), CSS, Javascript, REST API, React JS, Redux, Routing, animacje Reactowe, Firebase. Największe wyzwania? Troche ich było. Początkowo aplikacja działała tylko lokalnie, a wszelkie dane przechowywane było tylko w przeglądarce. Z czasem jednak doszła możliwość tworzenia kont, a co za tym idzie indywidualne przechowywanie informacji dla każdego z użytkowników w bazie danych. Jako, że korzystałem z Firebase'a, cechującego się specyficznymi regułami przechowywania danych, musiałem robić dużo obejść, aby dane nagle nie znikały co powodowało błedy w aplikacji.
           </div>
           <div class="info-btn d-flex flex-column ">
             <p>Więcej informacji</p>

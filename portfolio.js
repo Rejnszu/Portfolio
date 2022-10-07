@@ -82,7 +82,8 @@ let skillObj = [
   { name: "Sass", percent: "50%" },
   { name: "BOOTSTRAP", percent: "80%" },
   { name: "JAVASCRIPT", percent: "75%" },
-  { name: "REACT", percent: "65%" },
+  { name: "REACT", percent: "75%" },
+  { name: "REDUX", percent: "80%" },
   { name: "WORDPRESS", percent: "40%" },
   { name: "PHP", percent: "30%" },
   { name: "GIT", percent: "60%" },
@@ -299,7 +300,7 @@ backgroundElements.forEach(function (element) {
   content.append(backgroundEl);
 });
 
-// ANIMACJA HEADErA QUIZU
+// ANIMACJA HEADERA QUIZU
 
 quizH3.innerHTML = quizH3.textContent.replace(
   /\S/g,

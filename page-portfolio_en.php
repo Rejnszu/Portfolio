@@ -50,7 +50,7 @@ wp_head();
           <div class="about-me__outer-wrapper col-sm-12 col-xl-8">
             <div class="about-me__inner-wrapper">
               <input class="inner-wrapper__radio" type="radio" name="about" checked>
-              <h3 class="inner-wrapper__header">Introduction:</h3>
+              <h3 class="inner-wrapper__header">Introduction:<span><i class="bi bi-plus"></i></span></h3>
               <p class="inner-wrapper__text">Hello everyone! My name is Lukas and Welcome to my portfolio site which was made to encourage You to
                 hire me as your professional or maybe semi-professional... nah just front-end/web developer. Everything You will
                 see here is the example of my skills and dedication to this job which I'm constantly trying to improve.
@@ -58,19 +58,19 @@ wp_head();
             </div>
             <div class="about-me__inner-wrapper">
               <input class="inner-wrapper__radio" type="radio" name="about">
-              <h3 class="inner-wrapper__header">Some facts about me:</h3>
+              <h3 class="inner-wrapper__header">Some facts about me:<span><i class="bi bi-plus"></i></span></h3>
               <p class="inner-wrapper__text">I am a self-taught person who tries to break into the world of commercial development of websites and web applications, as well as everything related to the design of web content. My adventure with "coding" began over a year and a half ago, when I came to the conclusion that my current job is not very developing and it would be appropriate to find a new challenge. Not that I didn't like her, but I needed something that would require constant development of me. As an enthusiast of new technologies and a person curious about the world, I decided that it would be worth getting interested in the subject on which half of our current civilization is based.
               </p>
             </div>
             <div class="about-me__inner-wrapper">
               <input class="inner-wrapper__radio" type="radio" name="about">
-              <h3 class="inner-wrapper__header">My career:</h3>
+              <h3 class="inner-wrapper__header">My career:<span><i class="bi bi-plus"></i></span></h3>
               <p class="inner-wrapper__text">I have finished my engineering studies in the field of energy, but basically I knew from the beginning that it was not for me. At that time, I also didn't feel any interest in computer science, maybe because I always associated it with boring connecting of monitors and mouses to computers, well, I was wrong. Over the last 7 years of my professional career, I have been doing different things. Mainly sales, both on-site and online, taking care of online stores, lighting projects design, as well as assistance in the development of large projects in the field of photovoltaics. Generally speaking, I am familiar with contact with clients and I can talk easily to people ; )..
               </p>
             </div>
             <div class="about-me__inner-wrapper">
               <input class="inner-wrapper__radio" type="radio" name="about">
-              <h3 class="inner-wrapper__header">Moje goals:</h3>
+              <h3 class="inner-wrapper__header">Moje goals:<span><i class="bi bi-plus"></i></span></h3>
               <p class="inner-wrapper__text">I am fully aware that I still make many mistakes, I have gaps in knowledge, and I lack certain habits that would improve the quality of my code, which is why I want to cooperate with people who have been working in the industry for some time and could guide me and show what is most important in this environment.
               </p>
             </div>
@@ -99,6 +99,7 @@ wp_head();
     <div class="skills__legend">
       <p class="legend__begginer"><span>*</span> 0% means I have no clue what's that thing means</p>
       <p class="legend__master"><span>*</span> 100% means I can code in that language a space rocket</p>
+      <p class="legend__master"><span>*</span> However everything is subjective ; )</p>
     </div>
     <div class="row skills" skill-card-container>
       <template data-skill-template>
@@ -182,7 +183,7 @@ wp_head();
     <div class="row row--portfolio active" data-row="websites">
       <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
         <div class="portfolio-wrapper">
-          <p>School courses</p> <a href="https://rejnszu.github.io/school-form/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/formularz szkolny.png"; ?>" alt="school courses" loading="lazy"></a>
+          <p>School courses</p> <a href="https://www.ambitni.edu.pl/konfigurator/" target="_blank"><img src="<?php echo get_template_directory_uri() . "/assets/formularz szkolny.png"; ?>" alt="school courses" loading="lazy"></a>
           <div class="hidden-info">
             Website/app/module made for client. The project was meant to have a form of strongly interactive SPA, however it required to be integrated with wordpress and to be more precise with built in page builder, that's why I went with vanilla JS and tons of CSS, because it was the easiest way to implement it in already built website. Client apart from having ready diagram of development paths, didn't have any idea for design and decided to trust me in this case in 100%.
           </div>

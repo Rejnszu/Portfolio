@@ -94,7 +94,7 @@ let linksObserver = new IntersectionObserver(function Moving(
         console.log(navLink.href);
         if (
           entry.target.dataset.name ==
-            navLink.href.replace(`${window.location.origin}/Portfolio#`, "") ||
+            navLink.href.replace(`${window.location.origin}/Portfolio/#`, "") ||
           entry.target.dataset.name ==
             navLink.href.replace(
               `${window.location.origin}/Portfolio/portfolio_en#`,

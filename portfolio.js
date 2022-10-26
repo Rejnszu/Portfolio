@@ -1,7 +1,7 @@
 ("use strict");
 
 // EKRAN ŁADOWANIA
-console.log(window.location.origin);
+
 let content = document.querySelector(".content");
 let loader = document.querySelector(".loader");
 
@@ -91,7 +91,7 @@ let linksObserver = new IntersectionObserver(function Moving(
     } else {
       navLinksDesktop.forEach(function (navLink) {
         navLink.children[0].classList.remove("active");
-        console.log(navLink.href);
+
         if (
           entry.target.dataset.name ==
             navLink.href.replace(`${window.location.origin}/Portfolio/#`, "") ||
@@ -110,6 +110,21 @@ let linksObserver = new IntersectionObserver(function Moving(
 linkOptions);
 
 containers.forEach((container) => linksObserver.observe(container));
+
+langWrapper.addEventListener("click", function () {
+  langButton.classList.toggle("active");
+  setTimeout(function () {
+    if (location.href == `${window.location.origin}/Portfolio/`) {
+      location.href = `${window.location.origin}/Portfolio/portfolio_en`;
+    } else {
+      location.href = `${window.location.origin}/Portfolio/`;
+    }
+  }, 500);
+});
+
+if (location.href == `${window.location.origin}/Portfolio/`) {
+  langButton.classList.toggle("active");
+}
 
 // UMIEJĘTNOŚCI KODOWANIA
 let skillObj = [
@@ -588,18 +603,3 @@ lazyLoadingOptions);
 
 moveObserverLazyLoading.observe(practicalSkillSectionBackground);
 moveObserverLazyLoading.observe(aboutMeSectionBackground);
-
-langWrapper.addEventListener("click", function () {
-  langButton.classList.toggle("active");
-  setTimeout(function () {
-    if (location.href == `${window.location.origin}/Portfolio/`) {
-      location.href = `${window.location.origin}/Portfolio/portfolio_en`;
-    } else {
-      location.href = `${window.location.origin}/Portfolio/`;
-    }
-  }, 500);
-});
-
-if (location.href == `${window.location.origin}/Portfolio/`) {
-  langButton.classList.toggle("active");
-}

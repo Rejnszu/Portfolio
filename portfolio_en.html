@@ -2,17 +2,16 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href="portfolio.css" />
   <title>Portfolio Rejnszu</title>
-  <script src="portoflio.js" defer></script>
+  <script src="portfolio.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"
     defer></script>
@@ -39,113 +38,153 @@
     <span class="loader-right"></span>
   </div>
   <!-- Nawigacja -->
-  <div class="container-fluid nav-wrapper m-0 p-0 ">
+  <header class="container-fluid nav-wrapper m-0 p-0 ">
     <div class="row nav-row">
       <div class="openbtn-wrapper">
         <span class=""></span>
         <span class=""></span>
         <span class=""></span>
       </div>
-      <div class="language-wrapper"><span class="language-button"></span><span class="en">
+      <div class="language-wrapper">
+        <span class="language-button"></span>
+        <span class="en">
           <p>EN</p>
-        </span><span class="pl">
+        </span>
+        <i class="bi bi-arrow-right-short"></i>
+        <span class="pl">
           <p>PL</p>
-        </span></div>
-      <div class="col-sm-12 navi-container-mobile">
-
-        <span class="nav-link-wrapper"> <a href="#aboutMe" class="nav-link nav-link-mobile">About me<span
-              class="borderBottom"></span></a></span>
-        <span class="nav-link-wrapper"> <a href="#mySkills" class="nav-link nav-link-mobile">Coding skills<span
-              class="borderBottom"></span></a></span>
-        <span class="nav-link-wrapper"> <a href="#mySkillsPractical" class="nav-link nav-link-mobile">Practical
-            skills<span class="borderBottom"></span></a></span>
-        <span class="nav-link-wrapper"> <a href="#port" class="nav-link nav-link-mobile">Portfolio<span
-              class="borderBottom"></span></a></span>
-        <span class="nav-link-wrapper"> <a href="#containerReview" class="nav-link nav-link-mobile">Reviews<span
-              class="borderBottom"></span></a></span>
-        <span class="nav-link-wrapper"> <a href="#contact" class="nav-link nav-link-mobile">Contact<span
-              class="borderBottom"></span></a></span>
+        </span>
       </div>
+      <nav class="col-sm-12 navi-container-mobile">
+
+        <a href="#aboutMe" class="nav-link nav-link-mobile">About me</a>
+        <a href="#mySkills" class="nav-link nav-link-mobile">Coding skills</a>
+        <a href="#mySkillsPractical" class="nav-link nav-link-mobile">Practical skills</a>
+        <a href="#portfolio" class="nav-link nav-link-mobile">Portfolio</a>
+        <a href="#containerReview" class="nav-link nav-link-mobile">Reviews</a>
+        <a href="#contact" class="nav-link nav-link-mobile">Contact</a>
+      </nav>
 
 
 
-      <div class="col-sm-12 navi-container">
+      <nav class="col-sm-12 navi-container">
 
-        <span class="nav-link-wrapper"> <a href="#aboutMe" class="nav-link nav-link-desktop">About me <span
-              class="borderBottom"></span></a></span>
-        <span class="nav-link-wrapper"> <a href="#mySkills" class="nav-link nav-link-desktop">Coding skills <span
-              class="borderBottom"></span></a></span>
-        <span class="nav-link-wrapper"> <a href="#mySkillsPractical" class="nav-link nav-link-desktop">Practical
-            skills <span class="borderBottom"></span></a></span>
-        <span class="nav-link-wrapper"> <a href="#port" class="nav-link nav-link-desktop">Portfolio <span
-              class="borderBottom"></span></a></span>
-        <span class="nav-link-wrapper"> <a href="#containerReview" class="nav-link nav-link-desktop">Reviews <span
-              class="borderBottom"></span></a></span>
-        <span class="nav-link-wrapper"> <a href="#contact" class="nav-link nav-link-desktop">Contact <span
-              class="borderBottom"></span></a></span>
-      </div>
+        <span class="nav-link-wrapper">
+          <a href="#aboutMe" class="nav-link nav-link-desktop">About me
+            <span class="borderBottom"></span>
+          </a>
+        </span>
+        <span class="nav-link-wrapper">
+          <a href="#mySkills" class="nav-link nav-link-desktop">Coding skills
+            <span class="borderBottom"></span>
+          </a>
+        </span>
+        <span class="nav-link-wrapper">
+          <a href="#mySkillsPractical" class="nav-link nav-link-desktop">Practical skills
+            <span class="borderBottom"></span>
+          </a>
+        </span>
+        <span class="nav-link-wrapper">
+          <a href="#portfolio" class="nav-link nav-link-desktop">Portfolio<span class="borderBottom"></span>
+          </a>
+        </span>
+        <span class="nav-link-wrapper">
+          <a href="#containerReview" class="nav-link nav-link-desktop">Reviews
+            <span class="borderBottom"></span>
+          </a>
+        </span>
+        <span class="nav-link-wrapper">
+          <a href="#contact" class="nav-link nav-link-desktop">Contact
+            <span class="borderBottom"></span>
+          </a>
+        </span>
+      </nav>
     </div>
-  </div>
+  </header>
   <!-- GŁOWNA TREŚĆ STRONY -->
   <div class="container-fluid content  text-center">
-
+    <button class="go_top">Do góry!</button>
     <!-- O MNIE -->
 
-    <div class="container-fluid about-me-container section" data-name="aboutMe">
+    <section class="container-fluid about-me__container section" data-name="aboutMe">
       <h1 id="aboutMe">
-        <p> &#10094</p> Welcome to my portfolio site<p>&#10095</p>
+        <p> &#10094</p>Welcome to my portfolio site<p>&#10095</p>
 
       </h1>
 
-      <video src="assets/about-black-1.webm" autoplay loop muted> Your browser does not support the video
-        tag.</video>
-      <!-- <img src="assets/aboutme.gif" alt="aboutgif"> -->
+      <video class="aboutMe-Video" src="assets/about-black-1.webm" autoplay loop muted>
+        autoplay loop muted> Your browser does not support the video tag.</video>
+
       <div class="row">
-        <div class="col-sm-12 col-lg-7 about-me-col d-flex justify-content-center align-items-center">
-          <fieldset class="about-me">
-            <legend id="word" align="center">About me:</legend>
-            <div class="about-me-inside-wrapper">
-              <h3>Introduction:</h3>
-              <p>Hello everyone! My name is Lukas and Welcome to my portfolio site which was made to encourage You to
-                hire me as your professional or maybe semi-professional... nah just web developer. Everything You will
-                see here is the example of my skills and dedication to this job which I'm constantly trying to improve.
-              </p>
-              <h3>Some facts about me:</h3>
-              <p>I am self-taught web developer trying to get into the professional world of creating websites,
-                applications and everything connected with design. My journey with coding started around one and a half
-                year ago,
-                when I decided that my current job is quite boring and won't get me anywhere, I liked it but I needed
-                something
-                more
-                challenging. As a big fan of new technologies and also enquiring person I wanted to see by myself how
-                the programming word looks from the inside.
-              </p>
-              <h3>My career:</h3>
-              <p>I have finished university of technology with engineering degree in energy production, but I knew
-                that's not
-                for
-                me. When I was choosing it I didn't really know what I want to do in the future. I was thinking about
-                going
-                on computer science course, but at that time I wasn't really intrested in it. In my last 7 year work
-                career I've been doing many different activities including sales, lighting projecting, managing online
-                stores, helping to develop some big projects from different industries.
-              </p>
+        <div class="col-sm-12  about-me__col d-flex justify-content-center align-items-center">
+          <fieldset class="about-me__fieldset d-flex ">
+            <legend id="legend" align="center">About me:</legend>
+            <div class="about-me__outer-wrapper col-sm-12 col-xl-8">
+              <div class="about-me__inner-wrapper">
+                <input class="inner-wrapper__radio" type="radio" name="about" checked>
+                <h3 class="inner-wrapper__header">Introduction: <span><i class="bi bi-plus"></i></span></h3>
+                <p class="inner-wrapper__text">Hello everyone! My name is Lukas and Welcome to my portfolio site which
+                  was made to encourage You to
+                  hire me as your professional or maybe semi-professional... nah just front-end/web developer.
+                  Everything You will
+                  see here is the example of my skills and dedication to this job which I'm constantly trying to
+                  improve.
+                </p>
+              </div>
+              <div class="about-me__inner-wrapper">
+                <input class="inner-wrapper__radio" type="radio" name="about">
+                <h3 class="inner-wrapper__header">Some facts about me: <span><i class="bi bi-plus"></i></span></h3>
+                <p class="inner-wrapper__text">I am a self-taught person who tries to break into the world of commercial
+                  development of websites and web applications, as well as everything related to the design of web
+                  content. My adventure with "coding" began over a year and a half ago, when I came to the conclusion
+                  that my current job is not very developing and it would be appropriate to find a new challenge. Not
+                  that I didn't like her, but I needed something that would require constant development of me. As an
+                  enthusiast of new technologies and a person curious about the world, I decided that it would be worth
+                  getting interested in the subject on which half of our current civilization is based.
+                </p>
+              </div>
+              <div class="about-me__inner-wrapper">
+                <input class="inner-wrapper__radio" type="radio" name="about">
+                <h3 class="inner-wrapper__header">My career: <span><i class="bi bi-plus"></i></span></h3>
+                <p class="inner-wrapper__text">I have finished my engineering studies in the field of energy, but
+                  basically I knew from the beginning that it was not for me. At that time, I also didn't feel any
+                  interest in computer science, maybe because I always associated it with boring connecting of monitors
+                  and mouses to computers, well, I was wrong. Over the last 7 years of my professional career, I have
+                  been doing different things. Mainly sales, both on-site and online, taking care of online stores,
+                  lighting projects design, as well as assistance in the development of large projects in the field of
+                  photovoltaics. Generally speaking, I am familiar with contact with clients and I can talk easily to
+                  people ; ).
+                </p>
+              </div>
+              <div class="about-me__inner-wrapper">
+                <input class="inner-wrapper__radio" type="radio" name="about">
+                <h3 class="inner-wrapper__header">My goals: <span><i class="bi bi-plus"></i></span></h3>
+                <p class="inner-wrapper__text">I am fully aware that I still make many mistakes, I have gaps in
+                  knowledge, and I lack certain habits that would improve the quality of my code, which is why I want to
+                  cooperate with people who have been working in the industry for some time and could guide me and show
+                  what is most important in this environment.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-12 col-xl-4 d-flex align-items-center justify-content-end myFaceWrapper"><span
+                class="imgWrapperFace"><img src="assets/hobbiton-min.jpg" alt="myface" class=" myFace"
+                  loading="lazy"></span>
             </div>
           </fieldset>
+
         </div>
-        <div class="col-sm-12 col-lg-5 d-flex align-items-center justify-content-center myFaceWrapper"><span
-            class="imgWrapperFace"><img src="assets/hobbiton-min.png" alt="myface" class=" myFace"></span>
-        </div>
+
       </div>
+
       <div class="quiz-container">
         <h3 id="quizH3">If u want to know me better try out my quiz!</h3>
-        <a href="esklep.newtool.pl"><button class="custom-button">
+        <a href="https://rejnszu.github.io/Quiz/" target="_blank"><button class="custom-button">
             <p>QUIZ</p>
           </button></a>
       </div>
-    </div>
-    <!-- UMIEJETNOŚCI Kodowania-->
-    <div class="container-fluid section" data-name="mySkills">
+    </section>
+    <!-- UMIEJETNOŚCI -->
+    <section class="container-fluid section" data-name="mySkills">
       <div class="h2-wrapper">
         <h2 id="mySkills">
           <p class="left-bracket"> &#10094</p> <span class="h2-inside"> Current level of my coding skills</span>
@@ -153,7 +192,13 @@
 
         </h2>
       </div>
+      <div class="skills__legend">
+        <p class="legend__begginer"><span>*</span> 0% means I have no clue what's that thing means</p>
+        <p class="legend__master"><span>*</span> 100% means I can code in that language a space rocket</p>
+        <p class="legend__master"><span>*</span> However everything is subjective ; )</p>
+      </div>
       <div class="row skills" skill-card-container>
+
         <template data-skill-template>
           <div class="col-sm-12 col-md-4 col-lg-3 skills-div">
             <p data-skill></p>
@@ -166,12 +211,12 @@
 
       </div>
 
-    </div>
+    </section>
     <!-- UMIEJĘTNOŚci Praktyczne -->
-    <div class="container-fluid section" data-name="mySkillsPractical">
+    <section class="container-fluid section" data-name="mySkillsPractical">
       <div class="h2-wrapper">
         <h2 id="mySkillsPractical">
-          <p class="left-bracket"> &#10094</p><span class="h2-inside"> What Can I do?</span>
+          <p class="left-bracket"> &#10094</p><span class="h2-inside"> What can I do?</span>
           <p class='right-bracket'>&#10095</p>
         </h2>
       </div>
@@ -179,28 +224,35 @@
         <div class="col-sm-12 d-flex flex-column align-items-start code-background ">
           <ul class="practice-skills-list">
             <li><i class="bi bi-check2-all"></i>
-              <p> Landing pages</p>
+              <p>Landing pages</p>
             </li>
             <li><i class="bi bi-check2-all"></i>
-              <p> Full websites</p>
+              <p>Multi-site websites</p>
             </li>
             <li><i class="bi bi-check2-all"></i>
-              <p> Wordpress based pages</p>
+              <p>Wordpress based pages</p>
             </li>
             <li><i class="bi bi-check2-all"></i>
-              <p> Fully interactive pages</p>
+              <p>Fully interactive pages</p>
             </li>
             <li><i class="bi bi-check2-all"></i>
-              <p> Help with creating projects</p>
+              <p>Coding functionalities</p>
+            </li>
+
+            <li><i class="bi bi-check2-all"></i>
+              <p>Connecting webpages/apps with API</p>
             </li>
             <li><i class="bi bi-check2-all"></i>
-              <p> Custom themes</p>
+              <p>JS/React apps</p>
             </li>
             <li><i class="bi bi-check2-all"></i>
-              <p> Jakis jescze tekst</p>
+              <p>Help with creating projects</p>
             </li>
             <li><i class="bi bi-check2-all"></i>
-              <p> Oraz kolejny dodatowy tekst</p>
+              <p>Preparing sites for SEO</p>
+            </li>
+            <li><i class="bi bi-check2-all"></i>
+              <p> Making sites perform smoothly</p>
             </li>
           </ul>
         </div>
@@ -208,71 +260,248 @@
 
 
 
-    </div>
+    </section>
     <!-- Portfolio -->
-    <div class="h2-wrapper">
-      <h2 id="port">
-        <p class="left-bracket"> &#10094</p><span class="h2-inside"> My portfolio</span>
-        <p class='right-bracket'>&#10095</p>
+    <section class="container-fluid section" data-name="portfolio">
+      <div class="h2-wrapper">
+        <h2 id="portfolio">
+          <p class="left-bracket"> &#10094</p><span class="h2-inside">My portfolio</span>
+          <p class='right-bracket'>&#10095</p>
 
-      </h2>
-    </div>
-    <div id="sliderContainer" class="container-fluid  slider-container section" data-name="port">
+        </h2>
+      </div>
+      <div class="nav__portfolio">
+        <ul>
+          <li><a href="javascript:void(0);" data-nav="websites">Websites</a> </li>
+          <li><a href="javascript:void(0);" data-nav="games">Apps</a> </li>
+        </ul>
+      </div>
+      <div class="row row--portfolio active" data-row="websites">
+        <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+          <div class="portfolio-wrapper">
+            <p>Kursy szkolne</p> <a href="https://www.ambitni.edu.pl/konfigurator/" target="_blank"><img
+                src="assets/formularz szkolny.png" alt="Kursy
+                szkolne" loading="lazy"></a>
+            <div class="hidden-info">
+              Website/app/module made for client. The project was meant to have a form of strongly interactive SPA,
+              however it required to be integrated with wordpress and to be more precise with built in page builder,
+              that's why I went with vanilla JS and tons of CSS, because it was the easiest way to implement it in
+              already built website. Client apart from having ready diagram of development paths, didn't have any idea
+              for design and decided to trust me in this case in 100%.
+            </div>
+            <div class="info-btn d-flex flex-column ">
+              <p>More info</p>
+              <p class="hide">Less info</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+          <div class="portfolio-wrapper">
+            <p>biker</p> <a href="https://rejnszu.github.io/Bike-Shop-Site/" target="_blank"><img
+                src="assets/biker-min.png" alt="biker" loading="lazy"></a>
+            <div class="hidden-info">
+              Sample front page made for online bike store, just to practice new skills and not get rusty.
+            </div>
+            <div class="info-btn d-flex flex-column ">
+              <p>More info</p>
+              <p class="hide">Less info</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+          <div class="portfolio-wrapper">
+            <p>Domsi</p> <a href="https://esklep.newtool.pl/" target="_blank"><img src="assets/domsi-min.png"
+                alt="domsi" loading="lazy"></a>
+            <div class="hidden-info">
+              In this website client had his own idea for the webiste, however he didn't have any ready project, and
+              needed some help with styling. With a little help of proffesional designer, we created a rough design for
+              him which he accepted with very little changes. After that we coded it and implemented all the necessary
+              things to keep the site working smoothly.
+            </div>
+            <div class="info-btn d-flex flex-column ">
+              <p>More info</p>
+              <p class="hide">Less info</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+          <div class="portfolio-wrapper">
+            <p>Sprawdzauto</p> <a href="https://www.sprawdzauto.com.pl/ " target="_blank"><img
+                src="assets/sprawdzauto-min.png" alt="sprawdzauto" loading="lazy"></a>
+            <div class="hidden-info">
+              Working on this project was pretty tough. Client had no idea what he wanted and in addition didn't want to
+              hire any professional designer, to cut the costs. We had to improvise, so we presented him few different
+              project layouts. He accepted it and was happy what he saw, however in the whole process of creating
+              website he was changing his mind all the time, which finally resulted with the website, that in my opinion
+              could look better, but customer is always right, and was really pleased with what he got. It included
+              coding and optimalization.</div>
+            <div class="info-btn d-flex flex-column ">
+              <p>More info</p>
+              <p class="hide">Less info</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+          <div class="portfolio-wrapper">
+            <p>Rebro</p> <a href="https://rebro.pl/" target="_blank"><img src="assets/rebro-min.png" alt="rebro"
+                loading="lazy"></a>
 
-      <span class="prev"><i class="bi bi-arrow-left-square"></i></span>
-      <span class="next"><i class="bi bi-arrow-right-square"></i></span>
-      <div class="row slider">
-        <div class="dot-wrapper">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
+            <div class="hidden-info">
+              This website was meant to be the base of my web-developing business and also a good practice. To be honest
+              it could be better, but it was made at the time I was at the beginning of my coding journey and my styling
+              skills weren't at the level they are at now. That's why I made my own portfolio site. </div>
+            <div class="info-btn d-flex flex-column ">
+              <p>More info</p>
+              <p class="hide">Less info</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+          <div class="portfolio-wrapper">
+            <p>Newtool</p> <a href="https://newtool.pl/" target="_blank"><img src="assets/newtool-min.png" alt="newtool"
+                loading="lazy"></a>
 
+            <div class="hidden-info">
+              This website was made as a simple landing page to show the most important information about company.
+              Client didn't want to have anything reallly fancy, just a smoothly working "business card", and that's
+              what he got.
+            </div>
+            <div class="info-btn d-flex flex-column ">
+              <p>More info</p>
+              <p class="hide">Less info</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+          <div class="portfolio-wrapper">
+            <p>rehasquad</p> <a href="https://rehasquad.pl/" target="_blank"><img src="assets/reha-min.png"
+                alt="rehasquad" loading="lazy"></a>
+
+            <div class="hidden-info">
+              This was my first website I made for a client. I know it isn't a showcase of web-developer skills, but it
+              was made really fast and almost for free. Client didn't really care how it would look, however he didn't
+              have any objection about design. The plan was to make a simple website containing all the necessary
+              informations about His business.
+            </div>
+            <div class="info-btn d-flex flex-column ">
+              <p>More info</p>
+              <p class="hide">Less info</p>
+            </div>
+          </div>
         </div>
 
-
-        <a class="slide slide_1" href="https://rebro.pl/">
-          <div class="slide-inside ">
-            <ul>
-              <li>Design</li>
-              <li>Coding</li>
-              <li>Copywriting</li>
-
-            </ul>
+        <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+          <div class="portfolio-wrapper">
+            <p>github</p> <a href="https://github.com/Rejnszu?tab=repositories" target="_blank"><img
+                src="assets/github.png" alt="github" loading="lazy" style="background-color:white"></a>
           </div>
-        </a>
-        <a class=" slide slide_2" href="https://newtool.pl/">
-          <div class="slide-inside ">
-            <ul>
-              <li>Design</li>
-              <li>Coding</li>
-              <li>Copywriting</li>
-            </ul>
-          </div>
-        </a>
-        <a class=" slide slide_3" href="https://www.sprawdzauto.com.pl/">
-          <div class="slide-inside ">
-            <ul>
-              <li>Design</li>
-              <li>Coding</li>
-              <li>Copywriting</li>
-            </ul>
-          </div>
-        </a>
-        <a class=" slide slide_4" href="https://rehasquad.pl/">
-          <div class="slide-inside ">
-            <ul>
-              <li>Design</li>
-              <li>Coding</li>
-              <li>Copywriting</li>
-            </ul>
-          </div>
-        </a>
+        </div>
 
       </div>
-    </div>
+      <div class="row row--portfolio " data-row="games">
+        <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+          <div class="portfolio-wrapper">
+            <p>Musify</p> <a href="https://rejnszu.github.io/Musify" target="_blank"><img src="assets/musify-min.png"
+                alt="Musify" loading="lazy"></a>
+            <div class="hidden-info">
+              My private app, made in react, designed for creating music playlists. Everyday I'm trying to improve it,
+              in hope that one day it will become useful. In addition it's a nice way to check my knowledge in react in
+              practice.
+            </div>
+            <div class="info-btn d-flex flex-column ">
+              <p>More info</p>
+              <p class="hide">Less info</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+          <div class="portfolio-wrapper">
+            <p>Tanks</p> <a href="https://rejnszu.github.io/Tanks-game/" target="_blank"><img src="assets/tanks-min.jpg"
+                alt="tanks" loading="lazy"></a>
+            <div class="hidden-info">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s
+            </div>
+            <div class="info-btn d-flex flex-column ">
+              <p>More info</p>
+              <p class="hide">Less info</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+          <div class="portfolio-wrapper">
+            <p>Tic Tac Toe</p> <a href="https://rejnszu.github.io/Tic-Tac-Toe-AI/" target="_blank"><img
+                src="assets/tictactoe-min.jpg" alt="tictactoe" loading="lazy"></a>
+            <div class="hidden-info">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500sz
+            </div>
+            <div class="info-btn d-flex flex-column ">
+              <p>More info</p>
+              <p class="hide">Less info</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+          <div class="portfolio-wrapper">
+            <p>Crypto Compare</p> <a href="https://rejnszu.github.io/React-Crypto-MarketCap-Compare/"
+              target="_blank"><img src="assets/crypto-min.jpg" alt="crypto" loading="lazy"></a>
+            <div class="hidden-info">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s
+            </div>
+            <div class="info-btn d-flex flex-column ">
+              <p>More info</p>
+              <p class="hide">Less info</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+          <div class="portfolio-wrapper">
+            <p>Calculator</p> <a href="https://rejnszu.github.io/React-Calculator/" target="_blank"><img
+                src="assets/calculator-min.jpg" alt="calculator" loading="lazy"></a>
+            <div class="hidden-info">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s
+            </div>
+            <div class="info-btn d-flex flex-column ">
+              <p>More info</p>
+              <p class="hide">Less info</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+          <div class="portfolio-wrapper">
+            <p>FitHits</p> <a href="https://rejnszu.github.io/FitHits/" target="_blank"><img
+                src="assets/fithits-min.jpg" alt="fithits" loading="lazy"></a>
+            <div class="hidden-info">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s
+            </div>
+            <div class="info-btn d-flex flex-column ">
+              <p>More info</p>
+              <p class="hide">Less info</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6 col-xl-4 col-portfolio">
+          <div class="portfolio-wrapper">
+            <p>Currency Exchange</p> <a href="https://rejnszu.github.io/Currency-exchange/" target="_blank"><img
+                src="assets/currency-min.jpg" alt="tanks" loading="lazy"></a>
+            <div class="hidden-info">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s
+            </div>
+            <div class="info-btn d-flex flex-column ">
+              <p>More info</p>
+              <p class="hide">Less info</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Opinie -->
-    <div id="containerReview" class="container-fluid container-review section" data-name="containerReview">
+    <section id="containerReview" class="container-fluid container-review section" data-name="containerReview">
       <div class="h2-wrapper">
         <h2 id="port">
           <p class="left-bracket"> &#10094</p><span class="h2-inside"> What people think about me?</span>
@@ -285,11 +514,12 @@
           <div class="wrapper-review text-center wrapper-review-1">
             <span class="arrow-review-left"><i class="bi bi-arrow-left-circle"></i></span>
             <span class="arrow-review-right"><i class="bi bi-arrow-right-circle"></i></span>
-            <span class="img-wrapper"><i class="bi bi-quote"></i> <img src="assets/happy1.png" alt="happy1"> </span>
+            <span class="img-wrapper"><i class="bi bi-quote"></i> <img src="assets/anon.png" alt="anon" loading="lazy">
+            </span>
             <h2 class="fullname">My Future boss</h2>
             <h3 class="proffesion">Boss</h3>
-            <p class="random-text">I have no idea how it is possible that i didn't hire him years ago, he is the person
-              everyone is looking for.</p>
+            <p class="random-text">"I have no idea how it is possible that i didn't hire him years ago, he is the person
+              everyone is looking for."</p>
 
           </div>
         </div>
@@ -297,11 +527,12 @@
           <div class="wrapper-review text-center wrapper-review-2">
             <span class="arrow-review-left"><i class="bi bi-arrow-left-circle"></i></span>
             <span class="arrow-review-right"><i class="bi bi-arrow-right-circle"></i></span>
-            <span class="img-wrapper"><i class="bi bi-quote"></i> <img src="assets/happy2.jpg" alt="happy2"></span>
+            <span class="img-wrapper"><i class="bi bi-quote"></i> <img src="assets/anon.png" alt="anon"
+                loading="lazy"></span>
             <h2 class="fullname">My ex boss</h2>
             <h3 class="proffesion">Boss</h3>
-            <p class="random-text">I hate that guy from previous review, he stole my best employee, where will I find
-              another one like that.</p>
+            <p class="random-text">"I hate that guy from previous review, he stole my best employee, where will I find
+              another one like that."</p>
 
           </div>
         </div>
@@ -309,10 +540,12 @@
           <div class="wrapper-review  text-center wrapper-review-3">
             <span class="arrow-review-left"><i class="bi bi-arrow-left-circle"></i></span>
             <span class="arrow-review-right"><i class="bi bi-arrow-right-circle"></i></span>
-            <span class="img-wrapper"><i class="bi bi-quote"></i><img src="assets/happy3.png" alt="happy3"></span>
+            <span class="img-wrapper"><i class="bi bi-quote"></i><img src="assets/anon.png" alt="anon"
+                loading="lazy"></span>
             <h2 class="fullname">Wiesław Rejnsz</h2>
             <h3 class="proffesion">Father</h3>
-            <p class="random-text">Talented, but lazy.</p>
+            <p class="random-text">"Talented, but lazy. Sitting all they on computer."</p>
+
 
           </div>
         </div>
@@ -320,17 +553,19 @@
           <div class="wrapper-review text-center wrapper-review-4">
             <span class="arrow-review-left"><i class="bi bi-arrow-left-circle"></i></span>
             <span class="arrow-review-right"><i class="bi bi-arrow-right-circle"></i></span>
-            <span class="img-wrapper"><i class="bi bi-quote"></i> <img src="assets/happy2.jpg" alt="happy2"></span>
-            <h2 class="fullname">Joanna Rejnsz</h2>
-            <h3 class="proffesion">Mother</h3>
-            <p class="random-text">Get, a job already and leave this house!</p>
+            <span class="img-wrapper"><i class="bi bi-quote"></i> <img src="assets/anon.png" alt="anon"
+                loading="lazy"></span>
+            <h2 class="fullname">Didn't want to share</h2>
+            <h3 class="proffesion">Coworker</h3>
+            <p class="random-text">"There are some things to improve, but after all working with him was a pure
+              pleasure."</p>
 
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- KONTAKT/FOOTER -->
-    <div class="container-fluid footer section" data-name="contact">
+    <footer class="container-fluid footer section" data-name="contact">
       <div class="h2-wrapper">
         <h2 id="contact">
           <p class="left-bracket"> &#10094</p> <span class="h2-inside"> If you like my work, contact me!</span>
@@ -340,7 +575,7 @@
       </div>
 
       <div class="row">
-        <div class="col-sm-12 col-md-6 form-input">
+        <form class="col-sm-12 col-md-6 form">
           <div class="h2-wrapper">
             <h2>
               <span class="h2-inside-contact h2-inside"> Through form!</span>
@@ -352,68 +587,79 @@
 
             <div class="col-sm-12">
               <div class="styled-input wide">
-                <input type="text" required />
-                <label>Name</label>
+                <input type="text" id="name" required />
+
               </div>
             </div>
             <div class="col-md-6 col-sm-12">
               <div class="styled-input">
-                <input type="text" required />
-                <label>Email</label>
+                <input id="email" type="text" required />
+
               </div>
             </div>
             <div class="col-md-6 col-sm-12">
               <div class="styled-input">
-                <input type="text" required />
-                <label>Phone Number</label>
+                <input id="phone" type="text" required />
+
               </div>
             </div>
             <div class="col-sm-12">
 
               <select id="reason" name="reason" class="styled-input">
-                <option value="australia">Website</option>
+                <option value="Website">Website</option>
 
-                <option value="usa">Job offer</option>
+                <option value="Job offer">Job offer</option>
               </select>
             </div>
             <div class="col-sm-12">
               <div class="styled-input wide">
-                <textarea required></textarea>
-                <label>Message</label>
+                <textarea id="message" required></textarea>
+
               </div>
             </div>
             <div class="col-sm-12 d-flex justify-content-center">
               <div id="sendBtn" class="custom-button-contact">
-                <p>Send Message</p> <i class="bi bi-send-check"></i>
+                <p>Send message</p> <i class="bi bi-send-check"></i>
               </div>
             </div>
+            <p style="margin:2rem auto">Form was disabled because website is no longer hosted on wordpress.</p>
           </div>
-        </div>
+        </form>
+
+
         <div class="col-sm-12 col-md-6">
 
           <div class="h2-wrapper">
             <h2>
               <span class="h2-inside-contact h2-inside"> Directly!</span>
-
-
             </h2>
-
           </div>
+          <form class="fetch-data__form">
+            <label class="fetch-data__label" for="fetchPassword">To get my contact informations enter password (you may
+              win it in my <a href="https://rejnszu.github.io/Quiz/" target="_blank">quiz</a>)</label>
+            <input type="text" class="fetch-data__input" id="fetchPassword">
+            <span class="fetch-data__loading">Loading data.</span>
+            <span class="fetch-data__error">Wrong password.</span>
+            <button type="submit" class="fetch-data__button">Submit</button>
+          </form>
           <ul class="contact-list">
-            <li> Phone number: 609-660-472</li>
-            <li>E-mail: lukaszrejnsz@op.pl</li>
-
+            <li>Phone number: </li>
+            <li>E-mail: </li>
           </ul>
           <ul class="social-list">
-            <li class="social-list-li"><a> <i class="bi bi-facebook social-icon"></i></a></li>
-            <li class="social-list-li"><a> <i class="bi bi-instagram social-icon"></i></a></li>
-            <li class="social-list-li"><a> <i class="bi bi-twitter social-icon"></i></a></li>
-            <li class="social-list-li"><a> <i class="bi bi-linkedin social-icon"></i></a></li>
+            <li class="social-list-li"><a href="#"> <i class="bi bi-facebook social-icon" title="facebook"></i></a>
+            </li>
+            <li class="social-list-li"><a href="https://github.com/Rejnszu" target="_blank" title="github"> <i
+                  class="bi bi-github social-icon"></i></a></li>
+            <li class="social-list-li"><a href="#"> <i class="bi bi-twitter social-icon" title="twitter"></i></a></li>
+            <li class="social-list-li"><a href="https://www.linkedin.com/in/%C5%82ukasz-rejnsz-167492238/"
+                title="linkedin"> <i class="bi bi-linkedin social-icon"></i></a></li>
           </ul>
         </div>
       </div>
-    </div>
+    </footer>
   </div>
+
 
 
 </body>

@@ -97,7 +97,7 @@ let linksObserver = new IntersectionObserver(function Moving(
             navLink.href.replace(`${window.location.origin}/Portfolio/#`, "") ||
           entry.target.dataset.name ==
             navLink.href.replace(
-              `${window.location.origin}/Portfolio/portfolio_en#`,
+              `${window.location.origin}/Portfolio/portfolio_en/#`,
               ""
             )
         ) {
@@ -589,18 +589,17 @@ lazyLoadingOptions);
 moveObserverLazyLoading.observe(practicalSkillSectionBackground);
 moveObserverLazyLoading.observe(aboutMeSectionBackground);
 
-// langWrapper.addEventListener("click", function () {
-//   langButton.classList.toggle("active");
-//   setTimeout(function () {
-//     if (location.href == "http://127.0.0.1:5500/portfolio.html") {
-//       location.href = "http://127.0.0.1:5500/portfolioPL.html";
-//     } else {
-//       location.href = "http://127.0.0.1:5500/portfolio.html";
-//     }
-//   }, 500);
-// });
+langWrapper.addEventListener("click", function () {
+  langButton.classList.toggle("active");
+  setTimeout(function () {
+    if (location.href == `${window.location.origin}/Portfolio/`) {
+      location.href = `${window.location.origin}/Portfolio/portfolio_en`;
+    } else {
+      location.href = `${window.location.origin}/Portfolio/`;
+    }
+  }, 500);
+});
 
-// if (location.href == "http://127.0.0.1:5500/portfolioPL.html") {
-//   langButton.classList.toggle("active");
-//   html[0].setAttribute("lang", "pl");
-// }
+if (location.href == `${window.location.origin}/Portfolio/`) {
+  langButton.classList.toggle("active");
+}

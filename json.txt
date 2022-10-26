@@ -1,7 +1,0 @@
- <div class="h2-wrapper">
-        <h2 id="contact">
-          <p class="left-bracket"> &#10094</p> <span class="h2-inside"> If you like my work, contact me!</span>
-          <p class='right-bracket'>&#10095</p>
-
-        </h2>
-      </div>

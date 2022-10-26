@@ -1,0 +1,79 @@
+.skills__legend {
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s;
+}
+.skills__legend.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+.skills__legend span {
+  font-size: 1.2rem;
+}
+.legend__begginer,
+.legend__master {
+  font-size: clamp(0.7rem, 3vw, 1rem);
+  font-family: var(--my-font);
+  font-weight: 500;
+}
+.skills-div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(100px);
+  opacity: 0;
+
+  transition: opacity 1s, transform 1s;
+}
+.skills-div p {
+  margin: 0;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--my-font);
+  letter-spacing: 0.2rem;
+}
+.skills-div.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.skill-box-new {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 3rem;
+  width: 12rem;
+  border-radius: 10px;
+  background-color: black;
+  border: 3px solid var(--dimmed-main-color);
+  margin: 2rem;
+  padding: 0.2rem;
+  color: black;
+  overflow: hidden;
+}
+
+.skill-box-dot {
+  height: 100%;
+  transform: translateX(-100%);
+  border-radius: 5px;
+  box-shadow: 0 0 40px 0px black;
+  transition: all 1s;
+  opacity: 0;
+  background-color: white;
+}
+.skill-box-dot.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+.skill-box-dot > p {
+  margin: 0;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--my-font);
+  letter-spacing: 0.1rem;
+}

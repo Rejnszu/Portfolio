@@ -1,0 +1,57 @@
+.practice-skills-list {
+  list-style: none;
+  padding-left: 2rem;
+  font-family: var(--my-font);
+  text-align: left;
+  font-size: clamp(1rem, 3vw, 2rem);
+}
+.practice-skills-list > li {
+  color: black;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0 0.5rem 0;
+  padding-right: 1rem;
+  opacity: 0;
+  transition: all 1s;
+  position: relative;
+}
+.practice-skills-list > li.active {
+  transform: translate(0px, 0px) !important;
+  opacity: 1;
+}
+.practice-skills-list > li > p {
+  color: black;
+  margin: 0;
+  padding: 1rem;
+  width: clamp(10rem, 50vw, 30rem);
+  background-color: white;
+  border-radius: var(--border-radius);
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.practice-skills-list > li > p:hover {
+  background-color: transparent;
+  color: white;
+}
+.practice-skills-list > li > i {
+  color: white;
+  padding-right: 1rem;
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+
+.code-background {
+  max-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: grayscale(1);
+  box-shadow: inset 0 0 20px 30px black;
+}
+.code-background.load {
+  background-image: url(../assets/code.jpg);
+}
+@media (max-width: 1150px) {
+  .code-background {
+    background-size: cover;
+  }
+}
